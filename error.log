@@ -1,0 +1,192 @@
+{
+  message: 'Username is already in use: Alight',
+  level: 'error',
+  timestamp: '2023-06-05T02:39:48.739Z'
+}
+{
+  message: 'Username is already in use: Alight',
+  level: 'error',
+  timestamp: '2023-06-05T02:42:28.347Z'
+}
+{
+  message: 'Error: validateSchema is not a function',
+  userName: 'Alight',
+  level: 'error',
+  timestamp: '2023-06-06T03:04:22.519Z'
+}
+{
+  message: "Error: Cannot read properties of undefined (reading 'validate')",
+  userName: 'Alight',
+  level: 'error',
+  timestamp: '2023-06-06T03:04:51.450Z'
+}
+{
+  message: 'Error: Role is not defined',
+  level: 'error',
+  timestamp: '2023-06-06T07:19:53.291Z'
+}
+{
+  message: 'Error: Role is not defined',
+  level: 'error',
+  timestamp: '2023-06-06T07:20:29.065Z'
+}
+{
+  message: "Error: Employee is associated to User using an alias. You've included an alias (employee), but it does not match the alias(es) defined in your association (Employee).",
+  level: 'error',
+  timestamp: '2023-06-06T07:24:51.217Z'
+}
+{
+  message: "Error: Employee is associated to User using an alias. You've included an alias (employee), but it does not match the alias(es) defined in your association (Employee).",
+  level: 'error',
+  timestamp: '2023-06-06T07:25:25.477Z'
+}
+{
+  message: "Error: Employee is associated to User using an alias. You've included an alias (employee), but it does not match the alias(es) defined in your association (Employee).",
+  level: 'error',
+  timestamp: '2023-06-06T07:29:35.799Z'
+}
+{
+  message: "Error: Employee is associated to User using an alias. You've included an alias (employee), but it does not match the alias(es) defined in your association (Employee).",
+  level: 'error',
+  timestamp: '2023-06-06T07:31:39.934Z'
+}
+{
+  message: "Error: Employee is associated to User using an alias. You've included an alias (employee), but it does not match the alias(es) defined in your association (Employee).",
+  level: 'error',
+  timestamp: '2023-06-06T07:32:46.852Z'
+}
+{
+  message: "Error: Employee is associated to User using an alias. You've included an alias (employee), but it does not match the alias(es) defined in your association (Employee).",
+  level: 'error',
+  timestamp: '2023-06-06T07:34:52.261Z'
+}
+{
+  message: 'Error: User or corresponding employee information not found.',
+  level: 'error',
+  timestamp: '2023-06-06T08:07:21.659Z'
+}
+{
+  message: 'Error: User or corresponding employee information not found.',
+  level: 'error',
+  timestamp: '2023-06-06T08:07:30.298Z'
+}
+{
+  message: 'Error: User or corresponding employee information not found.',
+  level: 'error',
+  timestamp: '2023-06-06T08:30:47.167Z'
+}
+{
+  message: 'Error: User or corresponding employee information not found.',
+  level: 'error',
+  timestamp: '2023-06-06T09:55:23.422Z'
+}
+{
+  message: "Error: Employee is associated to User using an alias. You must use the 'as' keyword to specify the alias within your include statement.",
+  level: 'error',
+  timestamp: '2023-06-06T09:55:41.950Z'
+}
+{
+  message: "Error: Employee is associated to User using an alias. You must use the 'as' keyword to specify the alias within your include statement.",
+  level: 'error',
+  timestamp: '2023-06-06T09:55:43.669Z'
+}
+{
+  message: "Error: Employee is associated to User using an alias. You must use the 'as' keyword to specify the alias within your include statement.",
+  level: 'error',
+  timestamp: '2023-06-06T09:56:26.791Z'
+}
+{
+  message: 'Error: User or corresponding employee information not found.',
+  level: 'error',
+  timestamp: '2023-06-07T02:12:42.169Z'
+}
+{
+  message: 'Error: User or corresponding employee information not found.',
+  level: 'error',
+  timestamp: '2023-06-07T03:45:06.720Z'
+}
+{
+  message: 'Error: User or corresponding employee information not found.',
+  level: 'error',
+  timestamp: '2023-06-07T03:47:52.911Z'
+}
+{
+  message: 'Error: User or corresponding employee information not found.',
+  level: 'error',
+  timestamp: '2023-06-07T03:49:29.166Z'
+}
+{
+  message: 'Error: User or corresponding employee information not found.',
+  level: 'error',
+  timestamp: '2023-06-07T03:50:57.360Z'
+}
+{
+  message: 'Error: User or corresponding employee information not found.',
+  level: 'error',
+  timestamp: '2023-06-07T03:54:28.191Z'
+}
+{
+  message: 'Error: User or corresponding employee information not found.',
+  level: 'error',
+  timestamp: '2023-06-07T03:55:36.270Z'
+}
+{
+  message: 'Error: User or corresponding employee information not found.',
+  level: 'error',
+  timestamp: '2023-06-07T03:56:25.956Z'
+}
+{
+  message: 'Error: User or corresponding employee information not found.',
+  level: 'error',
+  timestamp: '2023-06-07T04:00:32.736Z'
+}
+{
+  message: 'Error: User or corresponding employee information not found.',
+  level: 'error',
+  timestamp: '2023-06-07T04:06:48.206Z'
+}
+{
+  message: 'Error: User or corresponding employee information not found.',
+  level: 'error',
+  timestamp: '2023-06-07T04:07:41.998Z'
+}
+{
+  message: 'Error: User or corresponding employee information not found.',
+  level: 'error',
+  timestamp: '2023-06-07T04:11:01.713Z'
+}
+{
+  message: 'Unauthorized access attempt',
+  level: 'error',
+  timestamp: '2023-06-07T04:13:38.017Z'
+}
+{
+  message: 'Username is already in use: Alight3',
+  level: 'error',
+  timestamp: '2023-06-07T04:25:16.317Z'
+}
+{
+  message: "Error during registration: Table 'test.users' doesn't exist",
+  level: 'error',
+  timestamp: '2023-06-07T04:27:12.430Z'
+}
+{
+  message: "Error during registration: Table 'test.users' doesn't exist",
+  level: 'error',
+  timestamp: '2023-06-07T04:27:15.052Z'
+}
+{
+  message: 'Error during registration: Validation error',
+  level: 'error',
+  timestamp: '2023-06-07T04:28:12.524Z'
+}
+{
+  message: 'Error during registration: Validation error',
+  level: 'error',
+  timestamp: '2023-06-07T04:30:34.890Z'
+}
+{
+  message: 'Incorrect username or password: Alight2',
+  level: 'error',
+  timestamp: '2023-06-07T04:30:39.184Z'
+}

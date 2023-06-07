@@ -1,0 +1,407 @@
+{
+  message: 'Retrieved employees successfully',
+  level: 'info',
+  timestamp: '2023-06-01T04:18:17.854Z'
+}
+{"level":"info","message":"Log message","timestamp":"2023-06-01T07:34:13.447Z"}
+{
+  message: 'Retrieved employees successfully',
+  level: 'info',
+  timestamp: '2023-06-02T02:34:23.987Z'
+}
+{
+  message: 'Retrieved employees successfully',
+  level: 'info',
+  timestamp: '2023-06-02T02:37:56.425Z'
+}
+{
+  message: 'Retrieved employees successfully',
+  level: 'info',
+  timestamp: '2023-06-02T02:38:22.663Z'
+}
+{
+  message: 'Retrieved employees successfully',
+  level: 'info',
+  timestamp: '2023-06-02T04:07:48.072Z'
+}
+{
+  message: 'Retrieved employees successfully',
+  level: 'info',
+  timestamp: '2023-06-02T04:15:41.137Z'
+}
+{
+  message: 'Username is already in use: Alight',
+  level: 'error',
+  timestamp: '2023-06-05T02:39:48.739Z'
+}
+{
+  message: 'Username is already in use: Alight',
+  level: 'error',
+  timestamp: '2023-06-05T02:42:28.347Z'
+}
+{
+  message: 'Retrieved employees successfully',
+  level: 'info',
+  timestamp: '2023-06-05T02:47:38.940Z'
+}
+{
+  message: 'Retrieved employees successfully',
+  level: 'info',
+  timestamp: '2023-06-05T02:54:18.798Z'
+}
+{
+  message: 'Retrieved employees successfully',
+  level: 'info',
+  timestamp: '2023-06-05T02:55:16.208Z'
+}
+{
+  message: 'Retrieved employees successfully',
+  level: 'info',
+  timestamp: '2023-06-05T03:52:13.260Z'
+}
+{
+  message: 'Retrieved employees successfully',
+  level: 'info',
+  timestamp: '2023-06-05T03:52:57.850Z'
+}
+{
+  message: 'Retrieved employees successfully',
+  level: 'info',
+  timestamp: '2023-06-05T03:53:41.725Z'
+}
+{
+  message: 'Retrieved employees successfully',
+  level: 'info',
+  timestamp: '2023-06-05T03:54:29.216Z'
+}
+{
+  level: 'info',
+  message: 'Retrieved employees successfully',
+  timestamp: '2023-06-05T03:55:45.679Z'
+}
+2023-06-05T03:57:05.243Z [info] undefined: Retrieved employees successfully
+2023-06-05T03:57:42.231Z [info] undefined: Retrieved employees successfully
+{
+  level: 'info',
+  message: 'Retrieved employees successfully',
+  timestamp: '2023-06-05T04:01:20.624Z'
+}
+{
+  message: 'Retrieved employees successfully',
+  userName: undefined,
+  level: 'info',
+  timestamp: '2023-06-05T04:03:45.489Z'
+}
+{
+  message: 'Retrieved employees successfully',
+  userName: undefined,
+  level: 'info',
+  timestamp: '2023-06-05T04:04:38.509Z'
+}
+{
+  message: 'Retrieved employees successfully',
+  userName: 'Alight',
+  level: 'info',
+  timestamp: '2023-06-05T04:05:03.355Z'
+}
+{
+  message: 'Retrieved employees successfully',
+  userName: 'Alight',
+  level: 'info',
+  timestamp: '2023-06-05T04:05:44.098Z'
+}
+{
+  message: 'Retrieved employees successfully',
+  userName: 'Alight',
+  level: 'info',
+  timestamp: '2023-06-05T04:06:10.756Z'
+}
+{
+  message: 'Retrieved employees successfully',
+  userName: 'Alight',
+  level: 'info',
+  timestamp: '2023-06-05T04:06:56.901Z'
+}
+{
+  message: 'Retrieved employees successfully',
+  userName: 'Alight',
+  level: 'info',
+  timestamp: '2023-06-05T07:10:41.261Z'
+}
+{
+  message: 'Retrieved employee successfully',
+  userName: 'Alight',
+  level: 'info',
+  timestamp: '2023-06-06T03:04:07.980Z'
+}
+{
+  message: 'Error: validateSchema is not a function',
+  userName: 'Alight',
+  level: 'error',
+  timestamp: '2023-06-06T03:04:22.519Z'
+}
+{
+  message: "Error: Cannot read properties of undefined (reading 'validate')",
+  userName: 'Alight',
+  level: 'error',
+  timestamp: '2023-06-06T03:04:51.450Z'
+}
+{
+  message: 'Employee updated successfully',
+  userName: 'Alight',
+  level: 'info',
+  timestamp: '2023-06-06T03:18:32.629Z'
+}
+{
+  message: 'Employee updated successfully',
+  userName: 'Alight',
+  level: 'info',
+  timestamp: '2023-06-06T03:33:20.270Z'
+}
+{
+  message: 'Retrieved employee successfully',
+  userName: 'Alight',
+  level: 'info',
+  timestamp: '2023-06-06T03:40:09.986Z'
+}
+{
+  message: 'Employee updated successfully',
+  userName: 'Alight',
+  level: 'info',
+  timestamp: '2023-06-06T03:40:18.081Z'
+}
+{
+  message: 'Retrieved employee successfully',
+  userName: 'Alight',
+  level: 'info',
+  timestamp: '2023-06-06T03:40:23.827Z'
+}
+{
+  message: 'Employee updated successfully',
+  userName: 'Alight',
+  level: 'info',
+  timestamp: '2023-06-06T03:41:38.033Z'
+}
+{
+  message: 'Retrieved customers successfully',
+  level: 'info',
+  timestamp: '2023-06-06T03:41:50.797Z'
+}
+{
+  message: 'Error: Role is not defined',
+  level: 'error',
+  timestamp: '2023-06-06T07:19:53.291Z'
+}
+{
+  message: 'Error: Role is not defined',
+  level: 'error',
+  timestamp: '2023-06-06T07:20:29.065Z'
+}
+{
+  message: "Error: Employee is associated to User using an alias. You've included an alias (employee), but it does not match the alias(es) defined in your association (Employee).",
+  level: 'error',
+  timestamp: '2023-06-06T07:24:51.217Z'
+}
+{
+  message: "Error: Employee is associated to User using an alias. You've included an alias (employee), but it does not match the alias(es) defined in your association (Employee).",
+  level: 'error',
+  timestamp: '2023-06-06T07:25:25.477Z'
+}
+{
+  message: "Error: Employee is associated to User using an alias. You've included an alias (employee), but it does not match the alias(es) defined in your association (Employee).",
+  level: 'error',
+  timestamp: '2023-06-06T07:29:35.799Z'
+}
+{
+  message: "Error: Employee is associated to User using an alias. You've included an alias (employee), but it does not match the alias(es) defined in your association (Employee).",
+  level: 'error',
+  timestamp: '2023-06-06T07:31:39.934Z'
+}
+{
+  message: "Error: Employee is associated to User using an alias. You've included an alias (employee), but it does not match the alias(es) defined in your association (Employee).",
+  level: 'error',
+  timestamp: '2023-06-06T07:32:46.852Z'
+}
+{
+  message: "Error: Employee is associated to User using an alias. You've included an alias (employee), but it does not match the alias(es) defined in your association (Employee).",
+  level: 'error',
+  timestamp: '2023-06-06T07:34:52.261Z'
+}
+{
+  message: 'Retrieved employee successfully',
+  userName: 'Alight',
+  level: 'info',
+  timestamp: '2023-06-06T07:36:57.480Z'
+}
+{
+  message: 'Retrieved employee successfully',
+  userName: 'Alight',
+  level: 'info',
+  timestamp: '2023-06-06T07:37:20.763Z'
+}
+{
+  message: 'Error: User or corresponding employee information not found.',
+  level: 'error',
+  timestamp: '2023-06-06T08:07:21.659Z'
+}
+{
+  message: 'Error: User or corresponding employee information not found.',
+  level: 'error',
+  timestamp: '2023-06-06T08:07:30.298Z'
+}
+{
+  message: 'Error: User or corresponding employee information not found.',
+  level: 'error',
+  timestamp: '2023-06-06T08:30:47.167Z'
+}
+{
+  message: 'Error: User or corresponding employee information not found.',
+  level: 'error',
+  timestamp: '2023-06-06T09:55:23.422Z'
+}
+{
+  message: "Error: Employee is associated to User using an alias. You must use the 'as' keyword to specify the alias within your include statement.",
+  level: 'error',
+  timestamp: '2023-06-06T09:55:41.950Z'
+}
+{
+  message: "Error: Employee is associated to User using an alias. You must use the 'as' keyword to specify the alias within your include statement.",
+  level: 'error',
+  timestamp: '2023-06-06T09:55:43.669Z'
+}
+{
+  message: "Error: Employee is associated to User using an alias. You must use the 'as' keyword to specify the alias within your include statement.",
+  level: 'error',
+  timestamp: '2023-06-06T09:56:26.791Z'
+}
+{
+  message: 'Retrieved employee successfully',
+  userName: 'Alight',
+  level: 'info',
+  timestamp: '2023-06-06T09:57:03.838Z'
+}
+{
+  message: 'Error: User or corresponding employee information not found.',
+  level: 'error',
+  timestamp: '2023-06-07T02:12:42.169Z'
+}
+{
+  message: 'Retrieved employee successfully',
+  userName: 'Alight',
+  level: 'info',
+  timestamp: '2023-06-07T02:14:59.167Z'
+}
+{
+  message: 'Error: User or corresponding employee information not found.',
+  level: 'error',
+  timestamp: '2023-06-07T03:45:06.720Z'
+}
+{
+  message: 'Error: User or corresponding employee information not found.',
+  level: 'error',
+  timestamp: '2023-06-07T03:47:52.911Z'
+}
+{
+  message: 'Error: User or corresponding employee information not found.',
+  level: 'error',
+  timestamp: '2023-06-07T03:49:29.166Z'
+}
+{
+  message: 'Error: User or corresponding employee information not found.',
+  level: 'error',
+  timestamp: '2023-06-07T03:50:57.360Z'
+}
+{
+  message: 'Error: User or corresponding employee information not found.',
+  level: 'error',
+  timestamp: '2023-06-07T03:54:28.191Z'
+}
+{
+  message: 'Error: User or corresponding employee information not found.',
+  level: 'error',
+  timestamp: '2023-06-07T03:55:36.270Z'
+}
+{
+  message: 'Error: User or corresponding employee information not found.',
+  level: 'error',
+  timestamp: '2023-06-07T03:56:25.956Z'
+}
+{
+  message: 'Error: User or corresponding employee information not found.',
+  level: 'error',
+  timestamp: '2023-06-07T04:00:32.736Z'
+}
+{
+  message: 'Retrieved employees successfully',
+  userName: 'Alight',
+  level: 'info',
+  timestamp: '2023-06-07T04:06:06.493Z'
+}
+{
+  message: 'Error: User or corresponding employee information not found.',
+  level: 'error',
+  timestamp: '2023-06-07T04:06:48.206Z'
+}
+{
+  message: 'Error: User or corresponding employee information not found.',
+  level: 'error',
+  timestamp: '2023-06-07T04:07:41.998Z'
+}
+{
+  message: 'Error: User or corresponding employee information not found.',
+  level: 'error',
+  timestamp: '2023-06-07T04:11:01.713Z'
+}
+{
+  message: 'Retrieved employees successfully',
+  userName: 'Alight',
+  level: 'info',
+  timestamp: '2023-06-07T04:12:43.612Z'
+}
+{
+  message: 'Retrieved employee successfully',
+  userName: 'Alight',
+  level: 'info',
+  timestamp: '2023-06-07T04:13:24.602Z'
+}
+{
+  message: 'Unauthorized access attempt',
+  level: 'error',
+  timestamp: '2023-06-07T04:13:38.017Z'
+}
+{
+  message: 'Username is already in use: Alight3',
+  level: 'error',
+  timestamp: '2023-06-07T04:25:16.317Z'
+}
+{
+  message: "Error during registration: Table 'test.users' doesn't exist",
+  level: 'error',
+  timestamp: '2023-06-07T04:27:12.430Z'
+}
+{
+  message: "Error during registration: Table 'test.users' doesn't exist",
+  level: 'error',
+  timestamp: '2023-06-07T04:27:15.052Z'
+}
+{
+  message: 'Error during registration: Validation error',
+  level: 'error',
+  timestamp: '2023-06-07T04:28:12.524Z'
+}
+{
+  message: 'Error during registration: Validation error',
+  level: 'error',
+  timestamp: '2023-06-07T04:30:34.890Z'
+}
+{
+  message: 'Incorrect username or password: Alight2',
+  level: 'error',
+  timestamp: '2023-06-07T04:30:39.184Z'
+}
+{
+  message: 'Retrieved employees successfully',
+  userName: 'Alight',
+  level: 'info',
+  timestamp: '2023-06-07T04:30:45.221Z'
+}
