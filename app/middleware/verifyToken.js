@@ -26,6 +26,7 @@ const checkTokenMiddleware = async (req, res, next) => {
       userName: user.userName,
       role: user.employeeAccount.role.roleName.toLowerCase(),
       officeCode: user.employeeAccount.officeCode,
+      employeeNumber: user.employeeAccount.employeeNumber,
     };
 
     next();

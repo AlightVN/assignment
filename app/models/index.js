@@ -8,7 +8,7 @@ const Employee = require('../models/employeeModel');
 const Permission = require('../models/permissionModel');
 
 // models/customerModel.js
-const Custmer = require('../models/customerModel');
+const Customer = require('../models/customerModel');
 
 // models/loggerModel.js
 const logger = require('../models/loggerModel');
@@ -21,7 +21,7 @@ module.exports = {
   User,
   Employee,
   Permission,
-  Custmer,
+  Customer,
   logger,
   Office,
 };

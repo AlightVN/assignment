@@ -4,7 +4,7 @@ const { Op } = require('sequelize');
 const logger = require('../database/winstonConfig');
 
 // Get a list of customers
-const getCustomers = async (req, res) => {
+const getCustomers = async (req, res, next) => {
   try {
     const queryOptions = {};
 
@@ -28,7 +28,7 @@ const getCustomers = async (req, res) => {
 
     // Retrieve all customers from the database
     const customers = await Customer.findAll({ where: queryOptions });
-    logger.info('Retrieved customers successfully');
+    logger.info({ message: 'Retrieved customers successfully', userName: req.userData.userName });
     return res.status(200).json({
       status: 'Success',
       message: 'Retrieved customers successfully',
@@ -40,8 +40,7 @@ const getCustomers = async (req, res) => {
 };
 
 // Create a new customer
-const createCustomer = async (req, res) => {
-  // Extract customer information from the request body
+const createCustomer = async (req, res, next) => {
   const {
     contractLastName, contractFirstName, phone, addressLine1,
     addressLine2, city, state, postalCode,
@@ -49,6 +48,28 @@ const createCustomer = async (req, res) => {
   } = req.body;
 
   try {
+    // Check if the user has permission to create a customer for the specified salesRepEmployeeNumber
+    if (req.userData.role === 'staff' && req.userData.employeeNumber !== salesRepEmployeeNumber) {
+      return res.status(403).json({
+        status: 'Forbidden',
+        message: 'You are not allowed to create a customer for another employee.',
+      });
+    }
+    if (req.userData.role === 'leader') {
+      const employeesInSameOffice = await Employee.findAll({
+        where: { officeCode: req.userData.officeCode },
+        attributes: ['employeeNumber'],
+      });
+      const employeeNumbersInSameOffice = employeesInSameOffice.map((e) => e.employeeNumber);
+
+      if (!employeeNumbersInSameOffice.includes(salesRepEmployeeNumber)) {
+        return res.status(403).json({
+          status: 'Forbidden',
+          message: 'You are not allowed to create a customer for an employee in another office.',
+        });
+      }
+    }
+
     // Create a new customer record in the database
     const customer = await Customer.create({
       contractLastName, contractFirstName, phone,
@@ -56,7 +77,7 @@ const createCustomer = async (req, res) => {
       state, postalCode, country,
       salesRepEmployeeNumber, creditLimit,
     });
-    logger.info('Created customer successfully');
+    logger.info({ message: 'Created customers successfully', userName: req.userData.userName });
     return res.status(201).json({
       status: 'Success',
       message: 'Created customer successfully',
@@ -69,7 +90,6 @@ const createCustomer = async (req, res) => {
 
 // Update information of a customer
 const updateCustomerById = async (req, res, next) => {
-  // Define allowed fields for updating
   const allowedFields = [
     'contractLastName', 'contractFirstName', 'phone',
     'addressLine1', 'addressLine2', 'city',
@@ -78,14 +98,37 @@ const updateCustomerById = async (req, res, next) => {
   ];
   const { id } = req.params;
   try {
-    // Find the customer by primary key
     const customer = await Customer.findByPk(id);
+
     if (!customer) {
       logger.error(`Customer not found: ${id}`);
       return res.status(404).json({
         status: 'Not Found',
         message: 'Customer not found',
       });
+    }
+
+    // Check if the user has permission to update the customer
+    if (req.userData.role === 'staff' && req.userData.employeeNumber !== customer.salesRepEmployeeNumber) {
+      return res.status(403).json({
+        status: 'Forbidden',
+        message: 'You are not allowed to update another employee\'s customer.',
+      });
+    }
+
+    if (req.userData.role === 'leader') {
+      const employeesInSameOffice = await Employee.findAll({
+        where: { officeCode: req.userData.officeCode },
+        attributes: ['employeeNumber'],
+      });
+      const employeeNumbersInSameOffice = employeesInSameOffice.map((e) => e.employeeNumber);
+
+      if (!employeeNumbersInSameOffice.includes(customer.salesRepEmployeeNumber)) {
+        return res.status(403).json({
+          status: 'Forbidden',
+          message: 'You are not allowed to update a customer for an employee in another office.',
+        });
+      }
     }
 
     // Update allowed fields of the customer object
@@ -97,7 +140,7 @@ const updateCustomerById = async (req, res, next) => {
 
     // Save the updated customer to the database
     await customer.save();
-    logger.info('Updated customer successfully');
+    logger.info({ message: 'Created customers successfully', userName: req.userData.userName });
     return res.status(200).json({
       status: 'Success',
       message: 'Updated customer successfully',
@@ -109,11 +152,10 @@ const updateCustomerById = async (req, res, next) => {
 };
 
 // Delete a customer
-const deleteCustomer = async (req, res) => {
+const deleteCustomer = async (req, res, next) => {
   const { id } = req.params;
 
   try {
-    // Find the customer by primary key
     const customer = await Customer.findByPk(id);
     if (!customer) {
       logger.error(`Customer not found: ${id}`);
@@ -122,9 +164,33 @@ const deleteCustomer = async (req, res) => {
         message: 'Customer not found',
       });
     }
+
+    // Check if the user has permission to delete the customer
+    if (req.userData.role === 'staff') {
+      return res.status(403).json({
+        status: 'Forbidden',
+        message: 'You are not allowed to delete a customer.',
+      });
+    }
+
+    if (req.userData.role === 'leader') {
+      const employeesInSameOffice = await Employee.findAll({
+        where: { officeCode: req.userData.officeCode },
+        attributes: ['employeeNumber'],
+      });
+      const employeeNumbersInSameOffice = employeesInSameOffice.map((e) => e.employeeNumber);
+
+      if (!employeeNumbersInSameOffice.includes(customer.salesRepEmployeeNumber)) {
+        return res.status(403).json({
+          status: 'Forbidden',
+          message: 'You are not allowed to delete a customer for an employee in another office.',
+        });
+      }
+    }
+
     // Delete the customer record from the database
     await customer.destroy();
-    logger.info('Customer deleted successfully');
+    logger.info({ message: 'Deleted customers successfully', userName: req.userData.userName });
     return res.status(204).json({
       status: 'Success',
       message: 'Deleted customer successfully',
@@ -135,8 +201,7 @@ const deleteCustomer = async (req, res) => {
 };
 
 // Get detailed information of a customer
-// Get detailed information of a customer
-const getCustomerById = async (req, res) => {
+const getCustomerById = async (req, res, next) => {
   const { id } = req.params;
   const { role, userName } = req.userData;
 
@@ -176,7 +241,7 @@ const getCustomerById = async (req, res) => {
     }
 
     // Return the retrieved customer information
-    logger.info('Retrieved customer successfully');
+    logger.info({ message: 'Retrieved customers successfully', userName: req.userData.userName });
     return res.status(200).json({
       status: 'Success',
       message: 'Retrieved customer successfully',
