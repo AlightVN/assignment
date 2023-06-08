@@ -14,13 +14,18 @@ exports.login = async (req, res) => {
 
     // Check if user not found or password is incorrect
     if (!user || !(await bcrypt.compare(password, user.password))) {
-      logger.error(`Incorrect username or password: ${userName}`);
+      logger.error({ message: `Error: user or password Incorrect`, userName: 'notLogin' });
       return res.status(401).json({ message: 'Incorrect username or password. You trying to cheat?' });
     }
     // Create JWT token
     const token = jwt.sign({ userName }, process.env.JWT_SECRET);
     // Return token to user
-    res.json({ token });
+    logger.info({ message: 'Login Account successfully', userName: user.userName });
+    res.json({
+      status: 'Success',
+      message: 'Login Account successfully',
+      token: token,
+    });
   } catch (error) {
     next(error);
   }
@@ -33,7 +38,7 @@ exports.register = async (req, res) => {
     // Check if username is already in use
     const existingUser = await User.findOne({ where: { userName } });
     if (existingUser) {
-      logger.error(`Username is already in use: ${userName}`);
+      logger.error({ message: `Username is already in use`, userName: 'registerNew' });
       return res.status(400).json({ message: 'Username is already in use. Please choose another one.' });
     }
     // Generate secure password
@@ -43,7 +48,7 @@ exports.register = async (req, res) => {
     const newUser = await User.create({ userName, password: hashedPassword, employeeNumber });
     // Check if newUser was created successfully
     if (!newUser) {
-      logger.error('Error creating new user');
+      logger.error({ message: `An error occurred. Please try again later`, userName: 'registerNew' });
       return res.status(500).json({ message: 'An error occurred. Please try again later.' });
     }
     // Create JWT token
@@ -57,7 +62,7 @@ exports.register = async (req, res) => {
       token,
     });
   } catch (error) {
-    logger.error(`Error during registration: ${error.message}`);
+    logger.error({ message: `An error occurred. Please try again later`, userName: 'registerNew' });
     console.error(error);
     return res.status(500).json({ message: 'An error occurred. Please try again later.' });
   }

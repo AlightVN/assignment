@@ -214,3 +214,25 @@
   level: 'error',
   timestamp: '2023-06-08T02:58:10.649Z'
 }
+{
+  message: 'Incorrect username or password',
+  userName: 'notLogin',
+  level: 'error',
+  timestamp: '2023-06-08T03:47:29.956Z'
+}
+{
+  message: 'Incorrect username or password: Alight',
+  level: 'error',
+  timestamp: '2023-06-08T03:52:19.706Z'
+}
+{
+  message: 'Incorrect username or password: Alight',
+  level: 'error',
+  timestamp: '2023-06-08T03:54:49.225Z'
+}
+{
+  message: 'Error: user or pass',
+  userName: 'notLogin',
+  level: 'error',
+  timestamp: '2023-06-08T04:00:04.668Z'
+}
