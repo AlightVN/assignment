@@ -318,3 +318,104 @@
   level: 'error',
   timestamp: '2023-06-12T03:23:26.803Z'
 }
+{
+  message: 'Error: jwt malformed',
+  level: 'error',
+  timestamp: '2023-06-12T09:56:57.807Z'
+}
+{
+  message: 'Error: jwt malformed',
+  userName: 'Not login',
+  level: 'error',
+  timestamp: '2023-06-12T10:03:33.677Z'
+}
+{
+  message: 'Error: jwt malformed',
+  userName: 'Not login',
+  level: 'error',
+  timestamp: '2023-06-12T10:04:02.823Z'
+}
+{
+  message: 'Username is already in use',
+  userName: 'registerNew',
+  level: 'error',
+  timestamp: '2023-06-12T10:05:47.932Z'
+}
+{
+  message: 'Error: jwt malformed',
+  userName: 'Not login',
+  level: 'error',
+  timestamp: '2023-06-12T10:05:48.059Z'
+}
+{
+  message: 'Error: user or password Incorrect',
+  userName: 'notLogin',
+  level: 'error',
+  timestamp: '2023-06-12T12:37:01.921Z'
+}
+{
+  message: 'Error: user or password Incorrect',
+  userName: 'notLogin',
+  level: 'error',
+  timestamp: '2023-06-12T12:37:47.619Z'
+}
+{
+  message: 'Error: user or password Incorrect',
+  userName: 'notLogin',
+  level: 'error',
+  timestamp: '2023-06-12T12:38:09.779Z'
+}
+{
+  message: 'Error: user or password Incorrect',
+  userName: 'notLogin',
+  level: 'error',
+  timestamp: '2023-06-12T12:38:50.458Z'
+}
+{
+  message: 'Error: user or password Incorrect',
+  userName: 'notLogin',
+  level: 'error',
+  timestamp: '2023-06-12T12:39:32.777Z'
+}
+{
+  message: 'Error: user or password Incorrect',
+  userName: 'notLogin',
+  level: 'error',
+  timestamp: '2023-06-12T12:40:13.135Z'
+}
+{
+  message: 'Error: jwt malformed',
+  userName: 'Not login',
+  level: 'error',
+  timestamp: '2023-06-12T13:05:04.088Z'
+}
+{
+  message: 'Error: jwt malformed',
+  userName: 'Not login',
+  level: 'error',
+  timestamp: '2023-06-12T13:05:34.048Z'
+}
+{
+  message: 'Error: jwt malformed',
+  userName: 'Not login',
+  level: 'error',
+  timestamp: '2023-06-12T13:06:48.568Z'
+}
+{
+  message: 'Error: jwt malformed',
+  userName: 'Not login',
+  level: 'error',
+  timestamp: '2023-06-12T13:07:31.116Z'
+}
+{
+  message: 'Error: jwt malformed',
+  userName: 'Not login',
+  level: 'error',
+  timestamp: '2023-06-12T13:07:52.335Z'
+}
+{
+  message: 'Error: jwt malformed',
+  userName: 'Not login',
+  level: 'error',
+  timestamp: '2023-06-12T13:08:55.774Z'
+}

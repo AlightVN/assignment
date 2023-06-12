@@ -609,3 +609,284 @@
   level: 'error',
   timestamp: '2023-06-12T03:23:26.803Z'
 }
+{
+  message: 'Error: jwt malformed',
+  level: 'error',
+  timestamp: '2023-06-12T09:56:57.807Z'
+}
+{
+  message: 'Error: jwt malformed',
+  userName: 'Not login',
+  level: 'error',
+  timestamp: '2023-06-12T10:03:33.677Z'
+}
+{
+  message: 'Error: jwt malformed',
+  userName: 'Not login',
+  level: 'error',
+  timestamp: '2023-06-12T10:04:02.823Z'
+}
+{
+  message: 'Username is already in use',
+  userName: 'registerNew',
+  level: 'error',
+  timestamp: '2023-06-12T10:05:47.932Z'
+}
+{
+  message: 'Error: jwt malformed',
+  userName: 'Not login',
+  level: 'error',
+  timestamp: '2023-06-12T10:05:48.059Z'
+}
+{
+  message: 'Error: user or password Incorrect',
+  userName: 'notLogin',
+  level: 'error',
+  timestamp: '2023-06-12T12:37:01.921Z'
+}
+{
+  message: 'Error: user or password Incorrect',
+  userName: 'notLogin',
+  level: 'error',
+  timestamp: '2023-06-12T12:37:47.619Z'
+}
+{
+  message: 'Error: user or password Incorrect',
+  userName: 'notLogin',
+  level: 'error',
+  timestamp: '2023-06-12T12:38:09.779Z'
+}
+{
+  message: 'Error: user or password Incorrect',
+  userName: 'notLogin',
+  level: 'error',
+  timestamp: '2023-06-12T12:38:50.458Z'
+}
+{
+  message: 'Error: user or password Incorrect',
+  userName: 'notLogin',
+  level: 'error',
+  timestamp: '2023-06-12T12:39:32.777Z'
+}
+{
+  message: 'Error: user or password Incorrect',
+  userName: 'notLogin',
+  level: 'error',
+  timestamp: '2023-06-12T12:40:13.135Z'
+}
+{
+  message: 'Login Account successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-12T12:42:03.757Z'
+}
+{
+  message: 'Login Account successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-12T13:00:34.362Z'
+}
+{
+  message: 'Login Account successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-12T13:03:35.912Z'
+}
+{
+  message: 'Login Account successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-12T13:04:43.823Z'
+}
+{
+  message: 'Login Account successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-12T13:05:04.042Z'
+}
+{
+  message: 'Error: jwt malformed',
+  userName: 'Not login',
+  level: 'error',
+  timestamp: '2023-06-12T13:05:04.088Z'
+}
+{
+  message: 'Login Account successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-12T13:05:33.971Z'
+}
+{
+  message: 'Error: jwt malformed',
+  userName: 'Not login',
+  level: 'error',
+  timestamp: '2023-06-12T13:05:34.048Z'
+}
+{
+  message: 'Login Account successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-12T13:06:48.505Z'
+}
+{
+  message: 'Error: jwt malformed',
+  userName: 'Not login',
+  level: 'error',
+  timestamp: '2023-06-12T13:06:48.568Z'
+}
+{
+  message: 'Login Account successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-12T13:07:31.064Z'
+}
+{
+  message: 'Error: jwt malformed',
+  userName: 'Not login',
+  level: 'error',
+  timestamp: '2023-06-12T13:07:31.116Z'
+}
+{
+  message: 'Login Account successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-12T13:07:52.291Z'
+}
+{
+  message: 'Error: jwt malformed',
+  userName: 'Not login',
+  level: 'error',
+  timestamp: '2023-06-12T13:07:52.335Z'
+}
+{
+  message: 'Login Account successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-12T13:08:55.726Z'
+}
+{
+  message: 'Error: jwt malformed',
+  userName: 'Not login',
+  level: 'error',
+  timestamp: '2023-06-12T13:08:55.774Z'
+}
+{
+  message: 'Login Account successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-12T13:13:57.609Z'
+}
+{
+  message: 'Login Account successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-12T13:14:20.083Z'
+}
+{
+  message: 'Login Account successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-12T13:14:49.691Z'
+}
+{
+  message: 'Login Account successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-12T13:14:49.876Z'
+}
+{
+  message: 'Retrieved employees successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-12T13:14:49.928Z'
+}
+{
+  message: 'Login Account successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-12T13:15:19.485Z'
+}
+{
+  message: 'Login Account successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-12T13:15:19.737Z'
+}
+{
+  message: 'Retrieved employees successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-12T13:15:19.795Z'
+}
+{
+  message: 'Login Account successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-12T13:16:06.356Z'
+}
+{
+  message: 'Login Account successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-12T13:16:06.587Z'
+}
+{
+  message: 'Retrieved employees successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-12T13:16:06.641Z'
+}
+{
+  message: 'Login Account successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-12T13:16:34.397Z'
+}
+{
+  message: 'Login Account successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-12T13:16:34.616Z'
+}
+{
+  message: 'Retrieved employees successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-12T13:16:34.715Z'
+}
+{
+  message: 'Login Account successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-12T13:20:43.716Z'
+}
+{
+  message: 'Login Account successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-12T13:20:43.938Z'
+}
+{
+  message: 'Retrieved employees successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-12T13:20:43.996Z'
+}
+{
+  message: 'Login Account successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-12T13:22:52.205Z'
+}
+{
+  message: 'Login Account successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-12T13:22:52.415Z'
+}
+{
+  message: 'Retrieved employees successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-12T13:22:52.465Z'
+}

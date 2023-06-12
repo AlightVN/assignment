@@ -31,7 +31,7 @@ const checkTokenMiddleware = async (req, res, next) => {
 
     next();
   } catch (error) {
-    logger.error(`Error: ${error.message}`);
+    logger.error({ message: `Error: ${error.message}`, userName: 'Not login'});
     return res.status(401).json({ message: error.message });
   }
 };
