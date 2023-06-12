@@ -5,7 +5,7 @@ const logger = require('../database/winstonConfig');
 require('dotenv').config();
 
 // Login
-exports.login = async (req, res) => {
+exports.login = async (req, res, next) => {
   try {
     const { userName, password } = req.body;
 

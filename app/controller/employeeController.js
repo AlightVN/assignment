@@ -2,7 +2,7 @@ const Employee = require('../models/employeeModel');
 const logger = require('../database/winstonConfig');
 
 // Get a list of employees
-const getEmployees = async (req, res) => {
+const getEmployees = async (req, res, next) => {
   try {
     const employees = await Employee.findAll();
     logger.info({ message: 'Retrieved employees successfully', userName: req.userData.userName });
@@ -17,7 +17,7 @@ const getEmployees = async (req, res) => {
 };
 
 // Create a new employee
-const createEmployee = async (req, res) => {
+const createEmployee = async (req, res, next) => {
   const { firstName, lastName, extension, email, officeCode, reportsTo, jobTitle } = req.body;
   try {
     const employee = await Employee.create({
@@ -32,16 +32,12 @@ const createEmployee = async (req, res) => {
       data: { id: employee.employeeNumber },
     });
   } catch (error) {
-    logger.error({ message: `Error creating employee: ${error.message}`, userName: req.userData.userName });
-    return res.status(500).json({
-      status: 'Internal Server Error',
-      message: 'Error creating employee',
-    });
+   next(error)
   }
 };
 
 // Update information of an employee
-const updateEmployeeById = async (req, res) => {
+const updateEmployeeById = async (req, res, next) => {
   const { id } = req.params;
   try {
     const employee = await Employee.findByPk(id);
@@ -74,7 +70,7 @@ const updateEmployeeById = async (req, res) => {
 
 
 // Delete an employee
-const deleteEmployee = async (req, res) => {
+const deleteEmployee = async (req, res, next) => {
   const { id } = req.params;
   try {
     const employee = await Employee.findByPk(id);
@@ -97,7 +93,7 @@ const deleteEmployee = async (req, res) => {
 };
 
 // Get detailed information about an employee
-const getEmployeeById = async (req, res) => {
+const getEmployeeById = async (req, res, next) => {
   const { id } = req.params;
   try {
     const employee = await Employee.findByPk(id);

@@ -1,6 +1,6 @@
 // Import required modules
 const { Customer, Employee } = require('../models');
-const { Op } = require('sequelize');
+const { Op, Sequelize } = require('sequelize');
 const logger = require('../database/winstonConfig');
 
 // Get a list of customers
@@ -211,7 +211,6 @@ const getCustomerById = async (req, res, next) => {
       include: [
         {
           model: Employee,
-          as: 'salesRep',
           where: {
             officeCode: Sequelize.col('Employee.officeCode'),
           },
@@ -228,11 +227,8 @@ const getCustomerById = async (req, res, next) => {
     }
 
     // Check user's role and their associated customers
-    if (
-      role === 'staff' &&
-      customer.salesRepEmployeeNumber !== userName ||
-      role === 'leader' &&
-      customer.salesRep.officeCode !== req.userData.officeCode
+    if (role === 'staff' && customer.salesRepEmployeeNumber !== userName ||
+      role === 'leader' && customer.salesRep.officeCode !== req.userData.officeCode
     ) {
       return res.status(403).json({
         status: 'Forbidden',

@@ -67,3 +67,9 @@ const insertSamplePermissions = async () => {
   }
 })();
 
+module.exports = {
+  insertSamplePermissions,
+  insertSampleEmployees,
+  insertOffices,
+  insertCustomers,
+};

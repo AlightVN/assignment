@@ -479,3 +479,104 @@
   level: 'error',
   timestamp: '2023-06-08T04:00:04.668Z'
 }
+{
+  message: 'Error: jwt malformed',
+  level: 'error',
+  timestamp: '2023-06-09T03:42:57.075Z'
+}
+{
+  message: 'Error: user or password Incorrect',
+  userName: 'notLogin',
+  level: 'error',
+  timestamp: '2023-06-09T03:43:28.519Z'
+}
+{
+  message: 'Error: user or password Incorrect',
+  userName: 'notLogin',
+  level: 'error',
+  timestamp: '2023-06-09T03:43:33.061Z'
+}
+{
+  message: 'Error: user or password Incorrect',
+  userName: 'notLogin',
+  level: 'error',
+  timestamp: '2023-06-09T03:43:35.970Z'
+}
+{
+  message: 'Error: user or password Incorrect',
+  userName: 'notLogin',
+  level: 'error',
+  timestamp: '2023-06-09T03:43:41.543Z'
+}
+{
+  message: 'Error: user or password Incorrect',
+  userName: 'notLogin',
+  level: 'error',
+  timestamp: '2023-06-09T03:43:42.835Z'
+}
+{
+  message: 'Error: user or password Incorrect',
+  userName: 'notLogin',
+  level: 'error',
+  timestamp: '2023-06-09T03:44:05.665Z'
+}
+{
+  message: 'An error occurred. Please try again later',
+  userName: 'registerNew',
+  level: 'error',
+  timestamp: '2023-06-09T03:44:41.437Z'
+}
+{
+  message: 'An error occurred. Please try again later',
+  userName: 'registerNew',
+  level: 'error',
+  timestamp: '2023-06-09T03:45:06.605Z'
+}
+{
+  message: 'An error occurred. Please try again later',
+  userName: 'registerNew',
+  level: 'error',
+  timestamp: '2023-06-09T03:46:02.594Z'
+}
+{
+  message: 'Login Account successfully',
+  userName: 'Alight',
+  level: 'info',
+  timestamp: '2023-06-09T03:47:00.537Z'
+}
+{
+  message: 'Retrieved employees successfully',
+  userName: 'Alight',
+  level: 'info',
+  timestamp: '2023-06-09T03:47:05.715Z'
+}
+{
+  message: 'Retrieved customers successfully',
+  userName: 'Alight',
+  level: 'info',
+  timestamp: '2023-06-09T03:47:17.870Z'
+}
+{
+  message: "Error: Employee is associated to Customer using an alias. You've included an alias (salesRep), but it does not match the alias(es) defined in your association (Employee).",
+  userName: 'Alight',
+  level: 'error',
+  timestamp: '2023-06-09T03:47:23.739Z'
+}
+{
+  message: 'Retrieved customers successfully',
+  userName: 'Alight',
+  level: 'info',
+  timestamp: '2023-06-09T03:52:00.440Z'
+}
+{
+  message: "Error: Employee is associated to Customer using an alias. You've included an alias (salesRep), but it does not match the alias(es) defined in your association (Employee).",
+  userName: 'Alight',
+  level: 'error',
+  timestamp: '2023-06-09T03:52:05.748Z'
+}
+{
+  message: 'Retrieved customers successfully',
+  userName: 'Alight',
+  level: 'info',
+  timestamp: '2023-06-09T03:53:06.920Z'
+}

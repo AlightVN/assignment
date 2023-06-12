@@ -1,4 +1,8 @@
-require('dotenv').config();
+require('dotenv').config({
+  // path: process.env.NODE_ENV === 'test' ?
+  //   __dirname + '.env.test'
+  //   : __dirname + '.env.development'
+});
 const express = require('express');
 const swaggerUi = require('swagger-ui-express');
 const yaml = require('yamljs');
@@ -32,3 +36,5 @@ const port = process.env.PORT || 3000;
 app.listen(port, () => {
   console.log(`Server listening on port ${port}`);
 });
+
+module.exports = app;

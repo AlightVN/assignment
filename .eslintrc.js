@@ -2,8 +2,10 @@ module.exports = {
   'env': {
     'browser': true,
     'es2021': true,
+    'node': true,
+    'mocha': true
   },
-  'extends': 'google',
+  extends: ["eslint:recommended", "prettier"],
   'overrides': [
   ],
 
@@ -11,9 +13,16 @@ module.exports = {
     'ecmaVersion': 'latest',
     'sourceType': 'module',
   },
-  'rules': {
-    'semi': 'error',
-    'max-len': ['error', { 'code': 120 }],
-    'object-curly-spacing': ['error', 'always'],
+  ignorePatterns: [".eslintrc.js"],
+
+  rules: {
+    "interface-name-prefix": "off",
+    "explicit-function-return-type": "off",
+    "explicit-module-boundary-types": "off",
+    "no-explicit-any": "off",
+    "no-unused-vars": [
+      "warn",
+      { argsIgnorePattern: "^_", varsIgnorePattern: "^_" },
+    ],
   },
 };
