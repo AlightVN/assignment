@@ -21,9 +21,8 @@ const createEmployee = async (req, res, next) => {
   const { firstName, lastName, extension, email, officeCode, reportsTo, jobTitle } = req.body;
   try {
     const employee = await Employee.create({
-      firstName, lastName, extension,
-      email, officeCode,
-      reportsTo, jobTitle,
+      firstName, lastName, extension, email,
+      officeCode, reportsTo, jobTitle,
     });
     logger.info({ message: 'Employee created successfully', userName: req.userData.userName });
     return res.status(201).json({
@@ -32,7 +31,7 @@ const createEmployee = async (req, res, next) => {
       data: { id: employee.employeeNumber },
     });
   } catch (error) {
-   next(error)
+    next(error)
   }
 };
 
@@ -42,11 +41,9 @@ const updateEmployeeById = async (req, res, next) => {
   try {
     const employee = await Employee.findByPk(id);
     if (!employee) {
-      logger.error({ message: `Employee not found: ${id}`, userName: req.userData.userName });
-      return res.status(404).json({
-        status: 'Not Found',
-        message: 'Employee not found',
-      });
+      const notFoundError = new Error('Employee not found');
+      notFoundError.statusCode = 404;
+      return next(notFoundError);
     }
 
     const allowedUpdates = ['firstName', 'lastName', 'extension', 'email', 'officeCode', 'reportsTo', 'jobTitle'];
@@ -55,7 +52,6 @@ const updateEmployeeById = async (req, res, next) => {
         employee[key] = req.body[key];
       }
     }
-
     await employee.save();
     logger.info({ message: 'Employee updated successfully', userName: req.userData.userName });
     return res.status(200).json({
@@ -68,18 +64,15 @@ const updateEmployeeById = async (req, res, next) => {
   }
 };
 
-
 // Delete an employee
 const deleteEmployee = async (req, res, next) => {
   const { id } = req.params;
   try {
     const employee = await Employee.findByPk(id);
     if (!employee) {
-      logger.error({ message: `Employee not found: ${id}`, userName: req.userData.userName });
-      return res.status(404).json({
-        status: 'Not Found',
-        message: 'Employee not found',
-      });
+      const notFoundError = new Error('Employee not found');
+      notFoundError.statusCode = 404;
+      return next(notFoundError);
     }
     await employee.destroy();
     logger.info({ message: 'Employee deleted successfully', userName: req.userData.userName });
@@ -98,11 +91,9 @@ const getEmployeeById = async (req, res, next) => {
   try {
     const employee = await Employee.findByPk(id);
     if (!employee) {
-      logger.error({ message: `Employee not found: id-${id}`, userName: req.userData.userName });
-      return res.status(404).json({
-        status: 'Not Found',
-        message: 'Employee not found',
-      });
+      const notFoundError = new Error('Employee not found');
+      notFoundError.statusCode = 404;
+      return next(notFoundError);
     }
     logger.info({ message: 'Retrieved employee successfully', userName: req.userData.userName });
     return res.status(200).json({

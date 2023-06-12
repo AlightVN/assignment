@@ -50,10 +50,9 @@ const createCustomer = async (req, res, next) => {
   try {
     // Check if the user has permission to create a customer for the specified salesRepEmployeeNumber
     if (req.userData.role === 'staff' && req.userData.employeeNumber !== salesRepEmployeeNumber) {
-      return res.status(403).json({
-        status: 'Forbidden',
-        message: 'You are not allowed to create a customer for another employee.',
-      });
+      const forbiddenError = new Error('You are not allowed to create a customer for another employee.');
+      forbiddenError.statusCode = 403;
+      return next(forbiddenError);
     }
     if (req.userData.role === 'leader') {
       const employeesInSameOffice = await Employee.findAll({
@@ -63,10 +62,9 @@ const createCustomer = async (req, res, next) => {
       const employeeNumbersInSameOffice = employeesInSameOffice.map((e) => e.employeeNumber);
 
       if (!employeeNumbersInSameOffice.includes(salesRepEmployeeNumber)) {
-        return res.status(403).json({
-          status: 'Forbidden',
-          message: 'You are not allowed to create a customer for an employee in another office.',
-        });
+        const forbiddenError = new Error('You are not allowed to create a customer for an employee in another office.');
+        forbiddenError.statusCode = 403;
+        return next(forbiddenError);
       }
     }
 
@@ -101,19 +99,16 @@ const updateCustomerById = async (req, res, next) => {
     const customer = await Customer.findByPk(id);
 
     if (!customer) {
-      logger.error(`Customer not found: ${id}`);
-      return res.status(404).json({
-        status: 'Not Found',
-        message: 'Customer not found',
-      });
+      const notFoundError = new Error('Customer not found');
+      notFoundError.statusCode = 404;
+      return next(notFoundError);
     }
 
     // Check if the user has permission to update the customer
     if (req.userData.role === 'staff' && req.userData.employeeNumber !== customer.salesRepEmployeeNumber) {
-      return res.status(403).json({
-        status: 'Forbidden',
-        message: 'You are not allowed to update another employee\'s customer.',
-      });
+      const forbiddenError = new Error('You are not allowed to update another employee\'s customer.');
+      forbiddenError.statusCode = 403;
+      return next(forbiddenError);
     }
 
     if (req.userData.role === 'leader') {
@@ -124,10 +119,9 @@ const updateCustomerById = async (req, res, next) => {
       const employeeNumbersInSameOffice = employeesInSameOffice.map((e) => e.employeeNumber);
 
       if (!employeeNumbersInSameOffice.includes(customer.salesRepEmployeeNumber)) {
-        return res.status(403).json({
-          status: 'Forbidden',
-          message: 'You are not allowed to update a customer for an employee in another office.',
-        });
+        const forbiddenError = new Error('You are not allowed to update a customer for an employee in another office.');
+        forbiddenError.statusCode = 403;
+        return next(forbiddenError);
       }
     }
 
@@ -158,19 +152,16 @@ const deleteCustomer = async (req, res, next) => {
   try {
     const customer = await Customer.findByPk(id);
     if (!customer) {
-      logger.error(`Customer not found: ${id}`);
-      return res.status(404).json({
-        status: 'Not Found',
-        message: 'Customer not found',
-      });
+      const notFoundError = new Error('Customer not found');
+      notFoundError.statusCode = 404;
+      return next(notFoundError);
     }
 
     // Check if the user has permission to delete the customer
     if (req.userData.role === 'staff') {
-      return res.status(403).json({
-        status: 'Forbidden',
-        message: 'You are not allowed to delete a customer.',
-      });
+      const forbiddenError = new Error('You are not allowed to delete a customer.');
+      forbiddenError.statusCode = 403;
+      return next(forbiddenError);
     }
 
     if (req.userData.role === 'leader') {
@@ -181,10 +172,9 @@ const deleteCustomer = async (req, res, next) => {
       const employeeNumbersInSameOffice = employeesInSameOffice.map((e) => e.employeeNumber);
 
       if (!employeeNumbersInSameOffice.includes(customer.salesRepEmployeeNumber)) {
-        return res.status(403).json({
-          status: 'Forbidden',
-          message: 'You are not allowed to delete a customer for an employee in another office.',
-        });
+        const forbiddenError = new Error('You are not allowed to delete a customer for an employee in another office.');
+        forbiddenError.statusCode = 403;
+        return next(forbiddenError);
       }
     }
 
@@ -219,28 +209,24 @@ const getCustomerById = async (req, res, next) => {
     });
 
     if (!customer) {
-      logger.error(`Customer not found: id-${id}`);
-      return res.status(404).json({
-        status: 'Not Found',
-        message: 'Customer not found',
-      });
+      const notFoundError = new Error('Customer not found');
+      notFoundError.statusCode = 404;
+      return next(notFoundError);
     }
 
     // Check user's role and their associated customers
     if (role === 'staff' && customer.salesRepEmployeeNumber !== userName ||
       role === 'leader' && customer.salesRep.officeCode !== req.userData.officeCode
     ) {
-      return res.status(403).json({
-        status: 'Forbidden',
-        message: 'You are not allowed to access this customer information.',
-      });
+      const forbiddenError = new Error('You are not allowed to access this customer information.');
+      forbiddenError.statusCode = 403;
+      return next(forbiddenError);
     }
-
     // Return the retrieved customer information
-    logger.info({ message: 'Retrieved customers successfully', userName: req.userData.userName });
+    logger.info({ message: 'Retrieved customer information successfully', userName: req.userData.userName });
     return res.status(200).json({
       status: 'Success',
-      message: 'Retrieved customer successfully',
+      message: 'Retrieved customer information successfully',
       data: customer,
     });
   } catch (error) {
@@ -248,8 +234,7 @@ const getCustomerById = async (req, res, next) => {
   }
 };
 
-
-// Export controller functions
+// Export the controller functions
 module.exports = {
   getCustomers,
   createCustomer,
@@ -257,3 +242,7 @@ module.exports = {
   deleteCustomer,
   getCustomerById,
 };
+
+
+  
+

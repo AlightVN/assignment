@@ -307,3 +307,14 @@
   level: 'error',
   timestamp: '2023-06-09T03:52:05.748Z'
 }
+{
+  message: 'Customer not found: id-44',
+  level: 'error',
+  timestamp: '2023-06-12T02:54:23.986Z'
+}
+{
+  message: 'Error: Customer not found',
+  userName: 'Alight',
+  level: 'error',
+  timestamp: '2023-06-12T03:23:26.803Z'
+}

@@ -580,3 +580,32 @@
   level: 'info',
   timestamp: '2023-06-09T03:53:06.920Z'
 }
+{
+  message: 'Retrieved customers successfully',
+  userName: 'Alight',
+  level: 'info',
+  timestamp: '2023-06-12T02:54:16.228Z'
+}
+{
+  message: 'Customer not found: id-44',
+  level: 'error',
+  timestamp: '2023-06-12T02:54:23.986Z'
+}
+{
+  message: 'Retrieved customers successfully',
+  userName: 'Alight',
+  level: 'info',
+  timestamp: '2023-06-12T02:57:35.530Z'
+}
+{
+  message: 'Retrieved customer information successfully',
+  userName: 'Alight',
+  level: 'info',
+  timestamp: '2023-06-12T03:23:02.190Z'
+}
+{
+  message: 'Error: Customer not found',
+  userName: 'Alight',
+  level: 'error',
+  timestamp: '2023-06-12T03:23:26.803Z'
+}
