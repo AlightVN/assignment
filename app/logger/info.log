@@ -1237,3 +1237,842 @@
   level: 'error',
   timestamp: '2023-06-13T02:47:33.195Z'
 }
+{
+  message: 'Error: "userName" length must be at least 3 characters long',
+  userName: 'registerFail',
+  level: 'error',
+  timestamp: '2023-06-13T02:52:37.582Z'
+}
+{
+  message: 'Login Account successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-13T02:52:37.749Z'
+}
+{
+  message: 'Login Account successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-13T02:52:37.913Z'
+}
+{
+  message: 'Retrieved employees successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-13T02:52:37.983Z'
+}
+{
+  message: 'Token not found',
+  level: 'error',
+  timestamp: '2023-06-13T02:52:37.995Z'
+}
+{
+  message: 'Error: "userName" length must be at least 3 characters long',
+  userName: 'registerFail',
+  level: 'error',
+  timestamp: '2023-06-13T03:03:38.368Z'
+}
+{
+  message: 'Login Account successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-13T03:03:38.566Z'
+}
+{
+  message: 'Login Account successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-13T03:03:38.730Z'
+}
+{
+  message: 'Retrieved employees successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-13T03:03:38.764Z'
+}
+{
+  message: 'Token not found',
+  level: 'error',
+  timestamp: '2023-06-13T03:03:38.777Z'
+}
+{
+  message: 'Error: Employee not found',
+  userName: 'testuser',
+  level: 'error',
+  timestamp: '2023-06-13T03:03:38.857Z'
+}
+{
+  message: 'Token not found',
+  level: 'error',
+  timestamp: '2023-06-13T03:03:38.875Z'
+}
+{
+  message: 'Error: "userName" length must be at least 3 characters long',
+  userName: 'registerFail',
+  level: 'error',
+  timestamp: '2023-06-13T03:04:34.364Z'
+}
+{
+  message: 'Login Account successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-13T03:04:34.575Z'
+}
+{
+  message: 'Login Account successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-13T03:04:34.798Z'
+}
+{
+  message: 'Retrieved employees successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-13T03:04:34.929Z'
+}
+{
+  message: 'Token not found',
+  level: 'error',
+  timestamp: '2023-06-13T03:04:34.943Z'
+}
+{
+  message: 'Error: Employee not found',
+  userName: 'testuser',
+  level: 'error',
+  timestamp: '2023-06-13T03:04:34.985Z'
+}
+{
+  message: 'Token not found',
+  level: 'error',
+  timestamp: '2023-06-13T03:04:35.004Z'
+}
+{
+  message: 'Error: "userName" length must be at least 3 characters long',
+  userName: 'registerFail',
+  level: 'error',
+  timestamp: '2023-06-13T03:05:25.637Z'
+}
+{
+  message: 'Login Account successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-13T03:05:25.829Z'
+}
+{
+  message: 'Login Account successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-13T03:05:25.988Z'
+}
+{
+  message: 'Retrieved employees successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-13T03:05:26.044Z'
+}
+{
+  message: 'Token not found',
+  level: 'error',
+  timestamp: '2023-06-13T03:05:26.056Z'
+}
+{
+  message: 'Error: Employee not found',
+  userName: 'testuser',
+  level: 'error',
+  timestamp: '2023-06-13T03:05:26.092Z'
+}
+{
+  message: 'Token not found',
+  level: 'error',
+  timestamp: '2023-06-13T03:05:26.113Z'
+}
+{
+  message: 'Error: "userName" length must be at least 3 characters long',
+  userName: 'registerFail',
+  level: 'error',
+  timestamp: '2023-06-13T03:07:18.471Z'
+}
+{
+  message: 'Login Account successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-13T03:07:18.657Z'
+}
+{
+  message: 'Login Account successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-13T03:07:18.844Z'
+}
+{
+  message: 'Retrieved employees successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-13T03:07:18.907Z'
+}
+{
+  message: 'Error: "lastName" is required',
+  userName: 'registerFail',
+  level: 'error',
+  timestamp: '2023-06-13T03:07:18.934Z'
+}
+{
+  message: 'Error: Employee not found',
+  userName: 'testuser',
+  level: 'error',
+  timestamp: '2023-06-13T03:07:18.972Z'
+}
+{
+  message: 'Token not found',
+  level: 'error',
+  timestamp: '2023-06-13T03:07:18.989Z'
+}
+{
+  message: 'Error: "userName" length must be at least 3 characters long',
+  userName: 'registerFail',
+  level: 'error',
+  timestamp: '2023-06-13T03:07:53.615Z'
+}
+{
+  message: 'Login Account successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-13T03:07:53.798Z'
+}
+{
+  message: 'Login Account successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-13T03:07:53.967Z'
+}
+{
+  message: 'Retrieved employees successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-13T03:07:54.077Z'
+}
+{
+  message: 'Error: "officeCode" must be a string',
+  userName: 'registerFail',
+  level: 'error',
+  timestamp: '2023-06-13T03:07:54.101Z'
+}
+{
+  message: 'Error: Employee not found',
+  userName: 'testuser',
+  level: 'error',
+  timestamp: '2023-06-13T03:07:54.141Z'
+}
+{
+  message: 'Token not found',
+  level: 'error',
+  timestamp: '2023-06-13T03:07:54.161Z'
+}
+{
+  message: 'Error: "userName" length must be at least 3 characters long',
+  userName: 'registerFail',
+  level: 'error',
+  timestamp: '2023-06-13T03:10:44.853Z'
+}
+{
+  message: 'Login Account successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-13T03:10:45.029Z'
+}
+{
+  message: 'Login Account successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-13T03:10:45.209Z'
+}
+{
+  message: 'Retrieved employees successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-13T03:10:45.258Z'
+}
+{
+  message: 'Error: "reportTo" is not allowed',
+  userName: 'registerFail',
+  level: 'error',
+  timestamp: '2023-06-13T03:10:45.283Z'
+}
+{
+  message: 'Error: Employee not found',
+  userName: 'testuser',
+  level: 'error',
+  timestamp: '2023-06-13T03:10:45.321Z'
+}
+{
+  message: 'Token not found',
+  level: 'error',
+  timestamp: '2023-06-13T03:10:45.332Z'
+}
+{
+  message: 'Error: "userName" length must be at least 3 characters long',
+  userName: 'registerFail',
+  level: 'error',
+  timestamp: '2023-06-13T03:11:20.977Z'
+}
+{
+  message: 'Login Account successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-13T03:11:21.204Z'
+}
+{
+  message: 'Login Account successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-13T03:11:21.383Z'
+}
+{
+  message: 'Retrieved employees successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-13T03:11:21.476Z'
+}
+{
+  message: 'Error: "reportTo" is not allowed',
+  userName: 'registerFail',
+  level: 'error',
+  timestamp: '2023-06-13T03:11:21.499Z'
+}
+{
+  message: 'Error: Employee not found',
+  userName: 'testuser',
+  level: 'error',
+  timestamp: '2023-06-13T03:11:21.544Z'
+}
+{
+  message: 'Token not found',
+  level: 'error',
+  timestamp: '2023-06-13T03:11:21.561Z'
+}
+{
+  message: 'Error: "userName" length must be at least 3 characters long',
+  userName: 'registerFail',
+  level: 'error',
+  timestamp: '2023-06-13T03:12:34.243Z'
+}
+{
+  message: 'Login Account successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-13T03:12:34.453Z'
+}
+{
+  message: 'Login Account successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-13T03:12:34.647Z'
+}
+{
+  message: 'Retrieved employees successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-13T03:12:34.726Z'
+}
+{
+  message: 'Error: "reportTo" is not allowed',
+  userName: 'registerFail',
+  level: 'error',
+  timestamp: '2023-06-13T03:12:34.760Z'
+}
+{
+  message: 'Error: Employee not found',
+  userName: 'testuser',
+  level: 'error',
+  timestamp: '2023-06-13T03:12:34.799Z'
+}
+{
+  message: 'Token not found',
+  level: 'error',
+  timestamp: '2023-06-13T03:12:34.816Z'
+}
+{
+  message: 'Error: "userName" length must be at least 3 characters long',
+  userName: 'registerFail',
+  level: 'error',
+  timestamp: '2023-06-13T03:13:35.552Z'
+}
+{
+  message: 'Login Account successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-13T03:13:35.732Z'
+}
+{
+  message: 'Login Account successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-13T03:13:35.911Z'
+}
+{
+  message: 'Retrieved employees successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-13T03:13:35.959Z'
+}
+{
+  message: 'Error: "reportsTo" must be a number',
+  userName: 'registerFail',
+  level: 'error',
+  timestamp: '2023-06-13T03:13:36.008Z'
+}
+{
+  message: 'Error: Employee not found',
+  userName: 'testuser',
+  level: 'error',
+  timestamp: '2023-06-13T03:13:36.061Z'
+}
+{
+  message: 'Token not found',
+  level: 'error',
+  timestamp: '2023-06-13T03:13:36.078Z'
+}
+{
+  message: 'Error: "userName" length must be at least 3 characters long',
+  userName: 'registerFail',
+  level: 'error',
+  timestamp: '2023-06-13T03:14:09.475Z'
+}
+{
+  message: 'Login Account successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-13T03:14:09.789Z'
+}
+{
+  message: 'Login Account successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-13T03:14:10.045Z'
+}
+{
+  message: 'Retrieved employees successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-13T03:14:10.114Z'
+}
+{
+  message: 'Error: notNull Violation: Employee.roleId cannot be null',
+  userName: 'testuser',
+  level: 'error',
+  timestamp: '2023-06-13T03:14:10.153Z'
+}
+{
+  message: 'Error: Employee not found',
+  userName: 'testuser',
+  level: 'error',
+  timestamp: '2023-06-13T03:14:10.214Z'
+}
+{
+  message: 'Token not found',
+  level: 'error',
+  timestamp: '2023-06-13T03:14:10.233Z'
+}
+{
+  message: 'Error: "userName" length must be at least 3 characters long',
+  userName: 'registerFail',
+  level: 'error',
+  timestamp: '2023-06-13T03:15:30.603Z'
+}
+{
+  message: 'Login Account successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-13T03:15:30.825Z'
+}
+{
+  message: 'Login Account successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-13T03:15:31.026Z'
+}
+{
+  message: 'Retrieved employees successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-13T03:15:31.090Z'
+}
+{
+  message: 'Error: notNull Violation: Employee.roleId cannot be null',
+  userName: 'testuser',
+  level: 'error',
+  timestamp: '2023-06-13T03:15:31.123Z'
+}
+{
+  message: 'Error: Employee not found',
+  userName: 'testuser',
+  level: 'error',
+  timestamp: '2023-06-13T03:15:31.162Z'
+}
+{
+  message: 'Token not found',
+  level: 'error',
+  timestamp: '2023-06-13T03:15:31.188Z'
+}
+{
+  message: 'Error: User or corresponding employee information not found.',
+  userName: 'Not login',
+  level: 'error',
+  timestamp: '2023-06-13T03:17:13.528Z'
+}
+{
+  message: 'Error: user or password Incorrect',
+  userName: 'notLogin',
+  level: 'error',
+  timestamp: '2023-06-13T03:17:28.234Z'
+}
+{
+  message: 'An error occurred. Please try again later',
+  userName: 'registerNew',
+  level: 'error',
+  timestamp: '2023-06-13T03:17:38.230Z'
+}
+{
+  message: 'An error occurred. Please try again later',
+  userName: 'registerNew',
+  level: 'error',
+  timestamp: '2023-06-13T03:17:40.945Z'
+}
+{
+  message: 'Error: user or password Incorrect',
+  userName: 'notLogin',
+  level: 'error',
+  timestamp: '2023-06-13T03:18:02.671Z'
+}
+{
+  message: 'Login Account successfully',
+  userName: 'Alight3',
+  level: 'info',
+  timestamp: '2023-06-13T03:18:10.162Z'
+}
+{
+  message: 'Retrieved employees successfully',
+  userName: 'Alight3',
+  level: 'info',
+  timestamp: '2023-06-13T03:18:16.120Z'
+}
+{
+  message: 'Error: notNull Violation: Employee.roleId cannot be null',
+  userName: 'Alight3',
+  level: 'error',
+  timestamp: '2023-06-13T03:18:20.947Z'
+}
+{
+  message: 'Employee created successfully',
+  userName: 'Alight3',
+  level: 'info',
+  timestamp: '2023-06-13T03:19:01.467Z'
+}
+{
+  message: 'Error: "userName" length must be at least 3 characters long',
+  userName: 'registerFail',
+  level: 'error',
+  timestamp: '2023-06-13T03:20:39.455Z'
+}
+{
+  message: 'Login Account successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-13T03:20:39.741Z'
+}
+{
+  message: 'Login Account successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-13T03:20:39.939Z'
+}
+{
+  message: 'Retrieved employees successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-13T03:20:40.027Z'
+}
+{
+  message: 'Employee created successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-13T03:20:40.102Z'
+}
+{
+  message: 'Error: Employee not found',
+  userName: 'testuser',
+  level: 'error',
+  timestamp: '2023-06-13T03:20:40.150Z'
+}
+{
+  message: 'Token not found',
+  level: 'error',
+  timestamp: '2023-06-13T03:20:40.166Z'
+}
+{
+  message: 'Error: "userName" length must be at least 3 characters long',
+  userName: 'registerFail',
+  level: 'error',
+  timestamp: '2023-06-13T03:24:23.210Z'
+}
+{
+  message: 'Login Account successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-13T03:24:23.416Z'
+}
+{
+  message: 'Login Account successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-13T03:24:23.585Z'
+}
+{
+  message: 'Retrieved employees successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-13T03:24:23.678Z'
+}
+{
+  message: 'Employee created successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-13T03:24:23.723Z'
+}
+{
+  message: 'Error: Employee not found',
+  userName: 'testuser',
+  level: 'error',
+  timestamp: '2023-06-13T03:24:23.772Z'
+}
+{
+  message: 'Token not found',
+  level: 'error',
+  timestamp: '2023-06-13T03:24:23.785Z'
+}
+{
+  message: 'Error: "userName" length must be at least 3 characters long',
+  userName: 'registerFail',
+  level: 'error',
+  timestamp: '2023-06-13T03:29:10.028Z'
+}
+{
+  message: 'Login Account successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-13T03:29:10.234Z'
+}
+{
+  message: 'Login Account successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-13T03:29:10.456Z'
+}
+{
+  message: 'Retrieved employees successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-13T03:29:10.513Z'
+}
+{
+  message: 'Employee created successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-13T03:29:10.550Z'
+}
+{
+  message: 'Error: Employee not found',
+  userName: 'testuser',
+  level: 'error',
+  timestamp: '2023-06-13T03:29:10.604Z'
+}
+{
+  message: 'Token not found',
+  level: 'error',
+  timestamp: '2023-06-13T03:29:10.628Z'
+}
+{
+  message: 'Error: "userName" length must be at least 3 characters long',
+  userName: 'registerFail',
+  level: 'error',
+  timestamp: '2023-06-13T03:31:10.474Z'
+}
+{
+  message: 'Login Account successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-13T03:31:10.682Z'
+}
+{
+  message: 'Login Account successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-13T03:31:10.878Z'
+}
+{
+  message: 'Retrieved employees successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-13T03:31:10.928Z'
+}
+{
+  message: 'Employee created successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-13T03:31:11.021Z'
+}
+{
+  message: 'Retrieved employee successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-13T03:31:11.057Z'
+}
+{
+  message: 'Token not found',
+  level: 'error',
+  timestamp: '2023-06-13T03:31:11.084Z'
+}
+{
+  message: 'Error: "userName" length must be at least 3 characters long',
+  userName: 'registerFail',
+  level: 'error',
+  timestamp: '2023-06-13T03:32:42.301Z'
+}
+{
+  message: 'Login Account successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-13T03:32:42.495Z'
+}
+{
+  message: 'Login Account successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-13T03:32:42.682Z'
+}
+{
+  message: 'Retrieved employees successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-13T03:32:42.781Z'
+}
+{
+  message: 'Employee created successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-13T03:32:42.924Z'
+}
+{
+  message: 'Retrieved employee successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-13T03:32:43.036Z'
+}
+{
+  message: 'Error: "officeCode" must be a string',
+  userName: 'registerFail',
+  level: 'error',
+  timestamp: '2023-06-13T03:32:43.074Z'
+}
+{
+  message: 'Employee deleted successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-13T03:32:43.129Z'
+}
+{
+  message: 'Error: "userName" length must be at least 3 characters long',
+  userName: 'registerFail',
+  level: 'error',
+  timestamp: '2023-06-13T03:33:33.807Z'
+}
+{
+  message: 'Login Account successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-13T03:33:34.012Z'
+}
+{
+  message: 'Login Account successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-13T03:33:34.205Z'
+}
+{
+  message: 'Retrieved employees successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-13T03:33:34.275Z'
+}
+{
+  message: 'Employee created successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-13T03:33:34.314Z'
+}
+{
+  message: 'Retrieved employee successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-13T03:33:34.357Z'
+}
+{
+  message: 'Error: "reportTo" is not allowed',
+  userName: 'registerFail',
+  level: 'error',
+  timestamp: '2023-06-13T03:33:34.405Z'
+}
+{
+  message: 'Employee deleted successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-13T03:33:34.472Z'
+}
+{
+  message: 'Error: "userName" length must be at least 3 characters long',
+  userName: 'registerFail',
+  level: 'error',
+  timestamp: '2023-06-13T03:34:03.073Z'
+}
+{
+  message: 'Login Account successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-13T03:34:03.288Z'
+}
+{
+  message: 'Login Account successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-13T03:34:03.500Z'
+}
+{
+  message: 'Retrieved employees successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-13T03:34:03.578Z'
+}
+{
+  message: 'Employee created successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-13T03:34:03.615Z'
+}
+{
+  message: 'Retrieved employee successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-13T03:34:03.642Z'
+}
+{
+  message: 'Employee updated successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-13T03:34:03.706Z'
+}
+{
+  message: 'Employee deleted successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-13T03:34:03.757Z'
+}

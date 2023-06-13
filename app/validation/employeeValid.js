@@ -7,9 +7,10 @@ const POST = Joi.object().keys({
   firstName: Joi.string().min(3).max(50).required(),
   extension: Joi.string().max(50).required(),
   email: Joi.string().email().min(10).max(100).required(),
-  officeCode: Joi.string().max(10).required(),
+  officeCode: Joi.number().max(10).required(),
   reportsTo: Joi.number().positive().allow(null),
   jobTitle: Joi.string().valid('president', 'manager', 'leader').required(),
+  roleId: Joi.number().required(),
 });
   // PUT
 const PUT = Joi.object().keys({
@@ -18,9 +19,10 @@ const PUT = Joi.object().keys({
   firstName: Joi.string().min(3).max(50),
   extension: Joi.string().max(50),
   email: Joi.string().email().min(10).max(100),
-  officeCode: Joi.string().max(10),
+  officeCode: Joi.number().max(10),
   reportsTo: Joi.number().positive().allow(null),
   jobTitle: Joi.string().valid('president', 'manager', 'leader'),
+  roleId: Joi.number()
 });
 
 module.exports = {

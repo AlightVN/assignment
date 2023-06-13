@@ -1,76 +1,111 @@
+// Import required libraries
 const chai = require('chai');
 const chaiHttp = require('chai-http');
-const { Employee, User, Permission } = require('../app/models');
 const app = require('../index');
+const { loginUser } = require('./auth.test');
 
-// eslint-disable-next-line no-unused-vars
-const should = chai.should();
+// Configure chai for HTTP requests
 chai.use(chaiHttp);
+chai.should();
 
-let token;
+let idTest;
 
-async function loginUser() {
-  const res = await chai.request(app)
-    .post('/user/login')
-    .send({ userName: 'testuser', password: 'Test@123' });
+// Employee test suite
+describe('Employee Test', () => {
+  let token;
 
-  token = res.body.token;
-  return res;
-}
-describe('POST /users', () => {
+  // Get the token for authentication before running tests
   before(async () => {
-    // Xóa tất cả dữ liệu người dùng hiện có trước mỗi bài kiểm tra
-    await User.destroy({ where: {} });
+    const loginResponse = await loginUser();
+    token = loginResponse.body.token;
   });
-  it('Tạo người dùng mới thành công', (done) => {
-    const newUser = {
-      userName: 'testuser',
-      password: 'Test@123',
-      employeeNumber: 1,
-    };
-  
+
+  // Test GET (fetch employees)
+  it('Fetch list of employees', (done) => {
     chai.request(app)
-      .post('/user/register')
-      .send(newUser)
+      .get('/employees')
+      .set('Authorization', `Bearer ${token}`)
+      .end((err, res) => {
+        res.should.have.status(200);
+        res.body.data.should.be.a('array');
+        done();
+      });
+  });
+
+  // Test POST (create employee)
+  it('Create new employee successfully', (done) => {
+    const newEmployee = {
+      firstName: "Alight",
+      lastName: "Legend",
+      extension: "Legend",
+      email: "111@gmail.com",
+      officeCode: 3,
+      reportsTo: null,
+      jobTitle: "president",
+      roleId: 1
+    };
+
+    chai.request(app)
+      .post('/employees')
+      .set('Authorization', `Bearer ${token}`)
+      .send(newEmployee)
+      .end((err, res) => {
+        res.should.have.status(201);
+        res.body.should.be.a('object');
+        res.body.should.have.property('status').eql("Success");
+        res.body.should.have.property('message').eql("Employee created successfully");
+        idTest = res.body.data.id;
+        done();
+      });
+  });
+
+  // Test GET (fetch employee by ID)
+  it('Fetch employee by newly created ID', (done) => {
+    chai.request(app)
+      .get(`/employees/${idTest}`)
+      .set('Authorization', `Bearer ${token}`)
+      .end((err, res) => {
+        res.should.have.status(200);
+        res.body.data.should.be.a('object');
+        done();
+      });
+  });
+
+  // Test PUT (update employee)
+  it('Update employee successfully', (done) => {
+    const updatedEmployee = {
+      firstName: "Updated",
+      extension: "Legend",
+      email: "updated@gmail.com",
+      officeCode:  3,
+      reportsTo: 2,
+      jobTitle: "president",
+      roleId: 1
+    };
+
+    chai.request(app)
+      .put(`/employees/${idTest}`)
+      .set('Authorization', `Bearer ${token}`)
+      .send(updatedEmployee)
       .end((err, res) => {
         res.should.have.status(200);
         res.body.should.be.a('object');
-        res.body.should.have.property('user');
-        res.body.user.should.have.property('userName').eql(newUser.userName);
-        res.body.user.should.have.property('employeeNumber').eql(newUser.employeeNumber);
-        res.body.should.have.property('token');
+        res.body.should.have.property('message').eql('Employee updated successfully');
         done();
       });
   });
 
-  it('Tạo người dùng mới thất bại với dữ liệu không hợp lệ', (done) => {
-    const invalidUser = {
-      userName: 'te',
-      password: 'Test123',
-      employeeNumber: 2,
-    };
-
+  // Test DELETE (delete employee)
+  it('Delete employee successfully', (done) => {
     chai.request(app)
-      .post('/user/register')
-      .send(invalidUser)
+      .delete(`/employees/${idTest}`)
+      .set('Authorization', `Bearer ${token}`)
       .end((err, res) => {
-        res.should.have.status.oneOf([400, 500]);
+        res.should.have.status(200);
         res.body.should.be.a('object');
-        res.body.should.have.property('message');
+        res.body.should.have.property('message').eql('Employee deleted successfully');
         done();
       });
-  });
-
-  it('Đăng nhập người dùng với thông tin hợp lệ', (done) => {
-    loginUser().then((res) => {
-      res.should.have.status(200);
-      res.body.should.be.a('object');
-      res.body.should.have.property('token');
-      done();
-    });
   });
 
 });
-module.exports = {
-  loginUser,
-};
