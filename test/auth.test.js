@@ -1,111 +1,87 @@
 // Import required libraries
 const chai = require('chai');
 const chaiHttp = require('chai-http');
+const { User } = require('../app/models');
 const app = require('../index');
-const { loginUser } = require('./auth.test');
 
-// Configure chai for HTTP requests
+// eslint-disable-next-line no-unused-vars
+const should = chai.should();
 chai.use(chaiHttp);
-chai.should();
 
-let idTest;
+// eslint-disable-next-line no-unused-vars
+let token;
 
-// Employee test suite
-describe('Employee Test', () => {
-  let token;
+// Function to login a user and return the login response
+async function loginUser() {
+  const res = await chai.request(app)
+    .post('/user/login')
+    .send({ userName: 'testuser', password: 'Test@123' });
 
-  // Get the token for authentication before running tests
+  token = res.body.token;
+  return res;
+}
+
+// User test suite
+describe('POST /users', () => {
   before(async () => {
-    const loginResponse = await loginUser();
-    token = loginResponse.body.token;
+    // Delete all existing users before each test
+    await User.destroy({ where: {} });
   });
 
-  // Test GET (fetch employees)
-  it('Fetch list of employees', (done) => {
-    chai.request(app)
-      .get('/employees')
-      .set('Authorization', `Bearer ${token}`)
-      .end((err, res) => {
-        res.should.have.status(200);
-        res.body.data.should.be.a('array');
-        done();
-      });
-  });
-
-  // Test POST (create employee)
-  it('Create new employee successfully', (done) => {
-    const newEmployee = {
-      firstName: "Alight",
-      lastName: "Legend",
-      extension: "Legend",
-      email: "111@gmail.com",
-      officeCode: 3,
-      reportsTo: null,
-      jobTitle: "president",
-      roleId: 1
+  // Test POST (create user)
+  it('Create new user successfully', (done) => {
+    const newUser = {
+      userName: 'testuser',
+      password: 'Test@123',
+      employeeNumber: 1,
     };
 
     chai.request(app)
-      .post('/employees')
-      .set('Authorization', `Bearer ${token}`)
-      .send(newEmployee)
-      .end((err, res) => {
-        res.should.have.status(201);
-        res.body.should.be.a('object');
-        res.body.should.have.property('status').eql("Success");
-        res.body.should.have.property('message').eql("Employee created successfully");
-        idTest = res.body.data.id;
-        done();
-      });
-  });
-
-  // Test GET (fetch employee by ID)
-  it('Fetch employee by newly created ID', (done) => {
-    chai.request(app)
-      .get(`/employees/${idTest}`)
-      .set('Authorization', `Bearer ${token}`)
+      .post('/user/register')
+      .send(newUser)
       .end((err, res) => {
         res.should.have.status(200);
-        res.body.data.should.be.a('object');
+        res.body.should.be.a('object');
+        res.body.should.have.property('user');
+        res.body.user.should.have.property('userName').eql(newUser.userName);
+        res.body.user.should.have.property('employeeNumber').eql(newUser.employeeNumber);
+        res.body.should.have.property('token');
         done();
       });
   });
 
-  // Test PUT (update employee)
-  it('Update employee successfully', (done) => {
-    const updatedEmployee = {
-      firstName: "Updated",
-      extension: "Legend",
-      email: "updated@gmail.com",
-      officeCode:  3,
-      reportsTo: 2,
-      jobTitle: "president",
-      roleId: 1
+  // Test POST (create user with invalid data)
+  it('Create new user fails with invalid data', (done) => {
+    const invalidUser = {
+      userName: 'te',
+      password: 'Test123',
+      employeeNumber: 2,
     };
 
     chai.request(app)
-      .put(`/employees/${idTest}`)
-      .set('Authorization', `Bearer ${token}`)
-      .send(updatedEmployee)
+      .post('/user/register')
+      .send(invalidUser)
       .end((err, res) => {
-        res.should.have.status(200);
+        res.should.have.status(400);
         res.body.should.be.a('object');
-        res.body.should.have.property('message').eql('Employee updated successfully');
+        res.body.should.have.property('message');
         done();
       });
   });
 
-  // Test DELETE (delete employee)
-  it('Delete employee successfully', (done) => {
-    chai.request(app)
-      .delete(`/employees/${idTest}`)
-      .set('Authorization', `Bearer ${token}`)
-      .end((err, res) => {
-        res.should.have.status(200);
-        res.body.should.be.a('object');
-        res.body.should.have.property('message').eql('Employee deleted successfully');
-        done();
-      });
+  // Test login with valid user credentials
+  it('Login user with valid credentials', (done) => {
+    loginUser().then((res) => {
+      res.should.have.status(200);
+      res.body.should.be.a('object');
+      res.body.should.have.property('token');
+      done();
+    });
   });
 
 });
+
+// Export loginUser function
+module.exports = {
+  loginUser,
+};

@@ -2076,3 +2076,51 @@
   level: 'info',
   timestamp: '2023-06-13T03:34:03.757Z'
 }
+{
+  message: 'Error: "userName" length must be at least 3 characters long',
+  userName: 'registerFail',
+  level: 'error',
+  timestamp: '2023-06-13T03:42:31.646Z'
+}
+{
+  message: 'Login Account successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-13T03:42:31.972Z'
+}
+{
+  message: 'Login Account successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-13T03:42:32.192Z'
+}
+{
+  message: 'Retrieved employees successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-13T03:42:32.253Z'
+}
+{
+  message: 'Employee created successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-13T03:42:32.322Z'
+}
+{
+  message: 'Retrieved employee successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-13T03:42:32.355Z'
+}
+{
+  message: 'Employee updated successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-13T03:42:32.410Z'
+}
+{
+  message: 'Employee deleted successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-13T03:42:32.462Z'
+}
