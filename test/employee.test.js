@@ -25,6 +25,29 @@ describe('Employee Test', () => {
         done();
       });
   });
+  //test post 
+  it('Tạo employees mới thành công', (done) => {
+    const newEmployee = {
+      firstName: "Alight",
+      extension: "Legend",
+      email: "111@gmail.com",
+      officeCode: "PA_HY",
+      reportTo: 2,
+      jobTitle: "president"
+    };
 
+    chai.request(app)
+      .post('/employees')
+      .send(newEmployee)
+      .end((err, res) => {
+        res.should.have.status(200);
+        res.body.should.be.a('object');
+        res.body.should.have.property('user');
+        res.body.user.should.have.property('userName').eql(newEmployee.userName);
+        res.body.user.should.have.property('employeeNumber').eql(newEmployee.employeeNumber);
+        res.body.should.have.property('token');
+        done();
+      });
+  });
   // ... thêm các bài kiểm tra khác liên quan đến Employee
 });

@@ -1,35 +1,4 @@
 {
-  message: 'Retrieved employees successfully',
-  level: 'info',
-  timestamp: '2023-06-01T04:18:17.854Z'
-}
-{"level":"info","message":"Log message","timestamp":"2023-06-01T07:34:13.447Z"}
-{
-  message: 'Retrieved employees successfully',
-  level: 'info',
-  timestamp: '2023-06-02T02:34:23.987Z'
-}
-{
-  message: 'Retrieved employees successfully',
-  level: 'info',
-  timestamp: '2023-06-02T02:37:56.425Z'
-}
-{
-  message: 'Retrieved employees successfully',
-  level: 'info',
-  timestamp: '2023-06-02T02:38:22.663Z'
-}
-{
-  message: 'Retrieved employees successfully',
-  level: 'info',
-  timestamp: '2023-06-02T04:07:48.072Z'
-}
-{
-  message: 'Retrieved employees successfully',
-  level: 'info',
-  timestamp: '2023-06-02T04:15:41.137Z'
-}
-{
   message: 'Username is already in use: Alight',
   level: 'error',
   timestamp: '2023-06-05T02:39:48.739Z'
@@ -38,101 +7,6 @@
   message: 'Username is already in use: Alight',
   level: 'error',
   timestamp: '2023-06-05T02:42:28.347Z'
-}
-{
-  message: 'Retrieved employees successfully',
-  level: 'info',
-  timestamp: '2023-06-05T02:47:38.940Z'
-}
-{
-  message: 'Retrieved employees successfully',
-  level: 'info',
-  timestamp: '2023-06-05T02:54:18.798Z'
-}
-{
-  message: 'Retrieved employees successfully',
-  level: 'info',
-  timestamp: '2023-06-05T02:55:16.208Z'
-}
-{
-  message: 'Retrieved employees successfully',
-  level: 'info',
-  timestamp: '2023-06-05T03:52:13.260Z'
-}
-{
-  message: 'Retrieved employees successfully',
-  level: 'info',
-  timestamp: '2023-06-05T03:52:57.850Z'
-}
-{
-  message: 'Retrieved employees successfully',
-  level: 'info',
-  timestamp: '2023-06-05T03:53:41.725Z'
-}
-{
-  message: 'Retrieved employees successfully',
-  level: 'info',
-  timestamp: '2023-06-05T03:54:29.216Z'
-}
-{
-  level: 'info',
-  message: 'Retrieved employees successfully',
-  timestamp: '2023-06-05T03:55:45.679Z'
-}
-2023-06-05T03:57:05.243Z [info] undefined: Retrieved employees successfully
-2023-06-05T03:57:42.231Z [info] undefined: Retrieved employees successfully
-{
-  level: 'info',
-  message: 'Retrieved employees successfully',
-  timestamp: '2023-06-05T04:01:20.624Z'
-}
-{
-  message: 'Retrieved employees successfully',
-  userName: undefined,
-  level: 'info',
-  timestamp: '2023-06-05T04:03:45.489Z'
-}
-{
-  message: 'Retrieved employees successfully',
-  userName: undefined,
-  level: 'info',
-  timestamp: '2023-06-05T04:04:38.509Z'
-}
-{
-  message: 'Retrieved employees successfully',
-  userName: 'Alight',
-  level: 'info',
-  timestamp: '2023-06-05T04:05:03.355Z'
-}
-{
-  message: 'Retrieved employees successfully',
-  userName: 'Alight',
-  level: 'info',
-  timestamp: '2023-06-05T04:05:44.098Z'
-}
-{
-  message: 'Retrieved employees successfully',
-  userName: 'Alight',
-  level: 'info',
-  timestamp: '2023-06-05T04:06:10.756Z'
-}
-{
-  message: 'Retrieved employees successfully',
-  userName: 'Alight',
-  level: 'info',
-  timestamp: '2023-06-05T04:06:56.901Z'
-}
-{
-  message: 'Retrieved employees successfully',
-  userName: 'Alight',
-  level: 'info',
-  timestamp: '2023-06-05T07:10:41.261Z'
-}
-{
-  message: 'Retrieved employee successfully',
-  userName: 'Alight',
-  level: 'info',
-  timestamp: '2023-06-06T03:04:07.980Z'
 }
 {
   message: 'Error: validateSchema is not a function',
@@ -145,47 +19,6 @@
   userName: 'Alight',
   level: 'error',
   timestamp: '2023-06-06T03:04:51.450Z'
-}
-{
-  message: 'Employee updated successfully',
-  userName: 'Alight',
-  level: 'info',
-  timestamp: '2023-06-06T03:18:32.629Z'
-}
-{
-  message: 'Employee updated successfully',
-  userName: 'Alight',
-  level: 'info',
-  timestamp: '2023-06-06T03:33:20.270Z'
-}
-{
-  message: 'Retrieved employee successfully',
-  userName: 'Alight',
-  level: 'info',
-  timestamp: '2023-06-06T03:40:09.986Z'
-}
-{
-  message: 'Employee updated successfully',
-  userName: 'Alight',
-  level: 'info',
-  timestamp: '2023-06-06T03:40:18.081Z'
-}
-{
-  message: 'Retrieved employee successfully',
-  userName: 'Alight',
-  level: 'info',
-  timestamp: '2023-06-06T03:40:23.827Z'
-}
-{
-  message: 'Employee updated successfully',
-  userName: 'Alight',
-  level: 'info',
-  timestamp: '2023-06-06T03:41:38.033Z'
-}
-{
-  message: 'Retrieved customers successfully',
-  level: 'info',
-  timestamp: '2023-06-06T03:41:50.797Z'
 }
 {
   message: 'Error: Role is not defined',
@@ -228,18 +61,6 @@
   timestamp: '2023-06-06T07:34:52.261Z'
 }
 {
-  message: 'Retrieved employee successfully',
-  userName: 'Alight',
-  level: 'info',
-  timestamp: '2023-06-06T07:36:57.480Z'
-}
-{
-  message: 'Retrieved employee successfully',
-  userName: 'Alight',
-  level: 'info',
-  timestamp: '2023-06-06T07:37:20.763Z'
-}
-{
   message: 'Error: User or corresponding employee information not found.',
   level: 'error',
   timestamp: '2023-06-06T08:07:21.659Z'
@@ -275,21 +96,9 @@
   timestamp: '2023-06-06T09:56:26.791Z'
 }
 {
-  message: 'Retrieved employee successfully',
-  userName: 'Alight',
-  level: 'info',
-  timestamp: '2023-06-06T09:57:03.838Z'
-}
-{
   message: 'Error: User or corresponding employee information not found.',
   level: 'error',
   timestamp: '2023-06-07T02:12:42.169Z'
-}
-{
-  message: 'Retrieved employee successfully',
-  userName: 'Alight',
-  level: 'info',
-  timestamp: '2023-06-07T02:14:59.167Z'
 }
 {
   message: 'Error: User or corresponding employee information not found.',
@@ -332,12 +141,6 @@
   timestamp: '2023-06-07T04:00:32.736Z'
 }
 {
-  message: 'Retrieved employees successfully',
-  userName: 'Alight',
-  level: 'info',
-  timestamp: '2023-06-07T04:06:06.493Z'
-}
-{
   message: 'Error: User or corresponding employee information not found.',
   level: 'error',
   timestamp: '2023-06-07T04:06:48.206Z'
@@ -351,18 +154,6 @@
   message: 'Error: User or corresponding employee information not found.',
   level: 'error',
   timestamp: '2023-06-07T04:11:01.713Z'
-}
-{
-  message: 'Retrieved employees successfully',
-  userName: 'Alight',
-  level: 'info',
-  timestamp: '2023-06-07T04:12:43.612Z'
-}
-{
-  message: 'Retrieved employee successfully',
-  userName: 'Alight',
-  level: 'info',
-  timestamp: '2023-06-07T04:13:24.602Z'
 }
 {
   message: 'Unauthorized access attempt',
@@ -400,18 +191,6 @@
   timestamp: '2023-06-07T04:30:39.184Z'
 }
 {
-  message: 'Retrieved employees successfully',
-  userName: 'Alight',
-  level: 'info',
-  timestamp: '2023-06-07T04:30:45.221Z'
-}
-{
-  message: 'Retrieved employees successfully',
-  userName: 'Alight',
-  level: 'info',
-  timestamp: '2023-06-07T08:14:56.760Z'
-}
-{
   message: "Error: Cannot read properties of undefined (reading 'findAll')",
   userName: 'Alight2',
   level: 'error',
@@ -436,32 +215,10 @@
   timestamp: '2023-06-08T02:58:10.649Z'
 }
 {
-  message: 'Retrieved customers successfully',
-  level: 'info',
-  timestamp: '2023-06-08T03:09:21.155Z'
-}
-{
-  message: 'Retrieved customers successfully',
-  level: 'info',
-  timestamp: '2023-06-08T03:10:22.560Z'
-}
-{
   message: 'Incorrect username or password',
   userName: 'notLogin',
   level: 'error',
   timestamp: '2023-06-08T03:47:29.956Z'
-}
-{
-  message: 'Login Account successfully',
-  userName: 'Alight2',
-  level: 'info',
-  timestamp: '2023-06-08T03:51:00.484Z'
-}
-{
-  message: 'Login Account successfully',
-  userName: 'Alight2',
-  level: 'info',
-  timestamp: '2023-06-08T03:52:03.799Z'
 }
 {
   message: 'Incorrect username or password: Alight',
@@ -539,34 +296,10 @@
   timestamp: '2023-06-09T03:46:02.594Z'
 }
 {
-  message: 'Login Account successfully',
-  userName: 'Alight',
-  level: 'info',
-  timestamp: '2023-06-09T03:47:00.537Z'
-}
-{
-  message: 'Retrieved employees successfully',
-  userName: 'Alight',
-  level: 'info',
-  timestamp: '2023-06-09T03:47:05.715Z'
-}
-{
-  message: 'Retrieved customers successfully',
-  userName: 'Alight',
-  level: 'info',
-  timestamp: '2023-06-09T03:47:17.870Z'
-}
-{
   message: "Error: Employee is associated to Customer using an alias. You've included an alias (salesRep), but it does not match the alias(es) defined in your association (Employee).",
   userName: 'Alight',
   level: 'error',
   timestamp: '2023-06-09T03:47:23.739Z'
-}
-{
-  message: 'Retrieved customers successfully',
-  userName: 'Alight',
-  level: 'info',
-  timestamp: '2023-06-09T03:52:00.440Z'
 }
 {
   message: "Error: Employee is associated to Customer using an alias. You've included an alias (salesRep), but it does not match the alias(es) defined in your association (Employee).",
@@ -575,33 +308,9 @@
   timestamp: '2023-06-09T03:52:05.748Z'
 }
 {
-  message: 'Retrieved customers successfully',
-  userName: 'Alight',
-  level: 'info',
-  timestamp: '2023-06-09T03:53:06.920Z'
-}
-{
-  message: 'Retrieved customers successfully',
-  userName: 'Alight',
-  level: 'info',
-  timestamp: '2023-06-12T02:54:16.228Z'
-}
-{
   message: 'Customer not found: id-44',
   level: 'error',
   timestamp: '2023-06-12T02:54:23.986Z'
-}
-{
-  message: 'Retrieved customers successfully',
-  userName: 'Alight',
-  level: 'info',
-  timestamp: '2023-06-12T02:57:35.530Z'
-}
-{
-  message: 'Retrieved customer information successfully',
-  userName: 'Alight',
-  level: 'info',
-  timestamp: '2023-06-12T03:23:02.190Z'
 }
 {
   message: 'Error: Customer not found',
@@ -675,46 +384,10 @@
   timestamp: '2023-06-12T12:40:13.135Z'
 }
 {
-  message: 'Login Account successfully',
-  userName: 'testuser',
-  level: 'info',
-  timestamp: '2023-06-12T12:42:03.757Z'
-}
-{
-  message: 'Login Account successfully',
-  userName: 'testuser',
-  level: 'info',
-  timestamp: '2023-06-12T13:00:34.362Z'
-}
-{
-  message: 'Login Account successfully',
-  userName: 'testuser',
-  level: 'info',
-  timestamp: '2023-06-12T13:03:35.912Z'
-}
-{
-  message: 'Login Account successfully',
-  userName: 'testuser',
-  level: 'info',
-  timestamp: '2023-06-12T13:04:43.823Z'
-}
-{
-  message: 'Login Account successfully',
-  userName: 'testuser',
-  level: 'info',
-  timestamp: '2023-06-12T13:05:04.042Z'
-}
-{
   message: 'Error: jwt malformed',
   userName: 'Not login',
   level: 'error',
   timestamp: '2023-06-12T13:05:04.088Z'
-}
-{
-  message: 'Login Account successfully',
-  userName: 'testuser',
-  level: 'info',
-  timestamp: '2023-06-12T13:05:33.971Z'
 }
 {
   message: 'Error: jwt malformed',
@@ -723,22 +396,10 @@
   timestamp: '2023-06-12T13:05:34.048Z'
 }
 {
-  message: 'Login Account successfully',
-  userName: 'testuser',
-  level: 'info',
-  timestamp: '2023-06-12T13:06:48.505Z'
-}
-{
   message: 'Error: jwt malformed',
   userName: 'Not login',
   level: 'error',
   timestamp: '2023-06-12T13:06:48.568Z'
-}
-{
-  message: 'Login Account successfully',
-  userName: 'testuser',
-  level: 'info',
-  timestamp: '2023-06-12T13:07:31.064Z'
 }
 {
   message: 'Error: jwt malformed',
@@ -747,22 +408,10 @@
   timestamp: '2023-06-12T13:07:31.116Z'
 }
 {
-  message: 'Login Account successfully',
-  userName: 'testuser',
-  level: 'info',
-  timestamp: '2023-06-12T13:07:52.291Z'
-}
-{
   message: 'Error: jwt malformed',
   userName: 'Not login',
   level: 'error',
   timestamp: '2023-06-12T13:07:52.335Z'
-}
-{
-  message: 'Login Account successfully',
-  userName: 'testuser',
-  level: 'info',
-  timestamp: '2023-06-12T13:08:55.726Z'
 }
 {
   message: 'Error: jwt malformed',
@@ -771,122 +420,97 @@
   timestamp: '2023-06-12T13:08:55.774Z'
 }
 {
-  message: 'Login Account successfully',
-  userName: 'testuser',
-  level: 'info',
-  timestamp: '2023-06-12T13:13:57.609Z'
+  message: 'Token not found',
+  level: 'error',
+  timestamp: '2023-06-12T14:03:05.104Z'
 }
 {
-  message: 'Login Account successfully',
-  userName: 'testuser',
-  level: 'info',
-  timestamp: '2023-06-12T13:14:20.083Z'
+  message: 'Token not found',
+  level: 'error',
+  timestamp: '2023-06-12T14:04:00.882Z'
 }
 {
-  message: 'Login Account successfully',
-  userName: 'testuser',
-  level: 'info',
-  timestamp: '2023-06-12T13:14:49.691Z'
+  message: 'Token not found',
+  level: 'error',
+  timestamp: '2023-06-12T14:04:09.887Z'
 }
 {
-  message: 'Login Account successfully',
-  userName: 'testuser',
-  level: 'info',
-  timestamp: '2023-06-12T13:14:49.876Z'
+  message: 'Token not found',
+  level: 'error',
+  timestamp: '2023-06-12T14:06:45.210Z'
 }
 {
-  message: 'Retrieved employees successfully',
-  userName: 'testuser',
-  level: 'info',
-  timestamp: '2023-06-12T13:14:49.928Z'
+  message: 'Token not found',
+  level: 'error',
+  timestamp: '2023-06-13T02:12:40.175Z'
 }
 {
-  message: 'Login Account successfully',
-  userName: 'testuser',
-  level: 'info',
-  timestamp: '2023-06-12T13:15:19.485Z'
+  message: 'Token not found',
+  level: 'error',
+  timestamp: '2023-06-13T02:24:58.258Z'
 }
 {
-  message: 'Login Account successfully',
-  userName: 'testuser',
-  level: 'info',
-  timestamp: '2023-06-12T13:15:19.737Z'
+  message: 'Token not found',
+  level: 'error',
+  timestamp: '2023-06-13T02:26:05.858Z'
 }
 {
-  message: 'Retrieved employees successfully',
-  userName: 'testuser',
-  level: 'info',
-  timestamp: '2023-06-12T13:15:19.795Z'
+  message: 'Token not found',
+  level: 'error',
+  timestamp: '2023-06-13T02:26:48.561Z'
 }
 {
-  message: 'Login Account successfully',
-  userName: 'testuser',
-  level: 'info',
-  timestamp: '2023-06-12T13:16:06.356Z'
+  message: 'Error: "userName" length must be at least 3 characters long',
+  userName: 'registerFail',
+  level: 'error',
+  timestamp: '2023-06-13T02:29:00.718Z'
 }
 {
-  message: 'Login Account successfully',
-  userName: 'testuser',
-  level: 'info',
-  timestamp: '2023-06-12T13:16:06.587Z'
+  message: 'Token not found',
+  level: 'error',
+  timestamp: '2023-06-13T02:29:01.272Z'
 }
 {
-  message: 'Retrieved employees successfully',
-  userName: 'testuser',
-  level: 'info',
-  timestamp: '2023-06-12T13:16:06.641Z'
+  message: 'Error: "userName" length must be at least 3 characters long',
+  userName: 'registerFail',
+  level: 'error',
+  timestamp: '2023-06-13T02:29:34.526Z'
 }
 {
-  message: 'Login Account successfully',
-  userName: 'testuser',
-  level: 'info',
-  timestamp: '2023-06-12T13:16:34.397Z'
+  message: 'Token not found',
+  level: 'error',
+  timestamp: '2023-06-13T02:29:34.982Z'
 }
 {
-  message: 'Login Account successfully',
-  userName: 'testuser',
-  level: 'info',
-  timestamp: '2023-06-12T13:16:34.616Z'
+  message: 'Error: "userName" length must be at least 3 characters long',
+  userName: 'registerFail',
+  level: 'error',
+  timestamp: '2023-06-13T02:32:08.408Z'
 }
 {
-  message: 'Retrieved employees successfully',
-  userName: 'testuser',
-  level: 'info',
-  timestamp: '2023-06-12T13:16:34.715Z'
+  message: 'Token not found',
+  level: 'error',
+  timestamp: '2023-06-13T02:32:09.199Z'
 }
 {
-  message: 'Login Account successfully',
-  userName: 'testuser',
-  level: 'info',
-  timestamp: '2023-06-12T13:20:43.716Z'
+  message: 'Error: "userName" length must be at least 3 characters long',
+  userName: 'registerFail',
+  level: 'error',
+  timestamp: '2023-06-13T02:37:05.850Z'
 }
 {
-  message: 'Login Account successfully',
-  userName: 'testuser',
-  level: 'info',
-  timestamp: '2023-06-12T13:20:43.938Z'
+  message: 'Token not found',
+  level: 'error',
+  timestamp: '2023-06-13T02:37:06.332Z'
 }
 {
-  message: 'Retrieved employees successfully',
-  userName: 'testuser',
-  level: 'info',
-  timestamp: '2023-06-12T13:20:43.996Z'
+  message: 'Error: "userName" length must be at least 3 characters long',
+  userName: 'registerFail',
+  level: 'error',
+  timestamp: '2023-06-13T02:47:32.675Z'
 }
 {
-  message: 'Login Account successfully',
-  userName: 'testuser',
-  level: 'info',
-  timestamp: '2023-06-12T13:22:52.205Z'
-}
-{
-  message: 'Login Account successfully',
-  userName: 'testuser',
-  level: 'info',
-  timestamp: '2023-06-12T13:22:52.415Z'
-}
-{
-  message: 'Retrieved employees successfully',
-  userName: 'testuser',
-  level: 'info',
-  timestamp: '2023-06-12T13:22:52.465Z'
+  message: 'Token not found',
+  level: 'error',
+  timestamp: '2023-06-13T02:47:33.195Z'
 }

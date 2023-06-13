@@ -9,7 +9,6 @@ const logSchema = new Schema({
   },
   userName: {
     type: String,
-    required: true,
   },
   message: {
     type: String,

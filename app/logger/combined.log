@@ -890,3 +890,350 @@
   level: 'info',
   timestamp: '2023-06-12T13:22:52.465Z'
 }
+{
+  message: 'Login Account successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-12T14:00:06.433Z'
+}
+{
+  message: 'Login Account successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-12T14:00:06.641Z'
+}
+{
+  message: 'Retrieved employees successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-12T14:00:06.695Z'
+}
+{
+  message: 'Login Account successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-12T14:03:04.644Z'
+}
+{
+  message: 'Login Account successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-12T14:03:04.991Z'
+}
+{
+  message: 'Retrieved employees successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-12T14:03:05.077Z'
+}
+{
+  message: 'Token not found',
+  level: 'error',
+  timestamp: '2023-06-12T14:03:05.104Z'
+}
+{
+  message: 'Login Account successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-12T14:04:00.583Z'
+}
+{
+  message: 'Login Account successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-12T14:04:00.808Z'
+}
+{
+  message: 'Retrieved employees successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-12T14:04:00.860Z'
+}
+{
+  message: 'Token not found',
+  level: 'error',
+  timestamp: '2023-06-12T14:04:00.882Z'
+}
+{
+  message: 'Login Account successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-12T14:04:09.608Z'
+}
+{
+  message: 'Login Account successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-12T14:04:09.817Z'
+}
+{
+  message: 'Retrieved employees successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-12T14:04:09.865Z'
+}
+{
+  message: 'Token not found',
+  level: 'error',
+  timestamp: '2023-06-12T14:04:09.887Z'
+}
+{
+  message: 'Login Account successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-12T14:06:44.915Z'
+}
+{
+  message: 'Login Account successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-12T14:06:45.134Z'
+}
+{
+  message: 'Retrieved employees successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-12T14:06:45.189Z'
+}
+{
+  message: 'Token not found',
+  level: 'error',
+  timestamp: '2023-06-12T14:06:45.210Z'
+}
+{
+  message: 'Login Account successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-13T02:12:39.874Z'
+}
+{
+  message: 'Login Account successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-13T02:12:40.093Z'
+}
+{
+  message: 'Retrieved employees successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-13T02:12:40.154Z'
+}
+{
+  message: 'Token not found',
+  level: 'error',
+  timestamp: '2023-06-13T02:12:40.175Z'
+}
+{
+  message: 'Login Account successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-13T02:24:58.003Z'
+}
+{
+  message: 'Login Account successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-13T02:24:58.205Z'
+}
+{
+  message: 'Retrieved employees successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-13T02:24:58.241Z'
+}
+{
+  message: 'Token not found',
+  level: 'error',
+  timestamp: '2023-06-13T02:24:58.258Z'
+}
+{
+  message: 'Login Account successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-13T02:26:05.543Z'
+}
+{
+  message: 'Login Account successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-13T02:26:05.770Z'
+}
+{
+  message: 'Retrieved employees successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-13T02:26:05.834Z'
+}
+{
+  message: 'Token not found',
+  level: 'error',
+  timestamp: '2023-06-13T02:26:05.858Z'
+}
+{
+  message: 'Login Account successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-13T02:26:48.196Z'
+}
+{
+  message: 'Login Account successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-13T02:26:48.445Z'
+}
+{
+  message: 'Retrieved employees successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-13T02:26:48.525Z'
+}
+{
+  message: 'Token not found',
+  level: 'error',
+  timestamp: '2023-06-13T02:26:48.561Z'
+}
+{
+  message: 'Error: "userName" length must be at least 3 characters long',
+  userName: 'registerFail',
+  level: 'error',
+  timestamp: '2023-06-13T02:29:00.718Z'
+}
+{
+  message: 'Login Account successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-13T02:29:01.021Z'
+}
+{
+  message: 'Login Account successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-13T02:29:01.194Z'
+}
+{
+  message: 'Retrieved employees successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-13T02:29:01.256Z'
+}
+{
+  message: 'Token not found',
+  level: 'error',
+  timestamp: '2023-06-13T02:29:01.272Z'
+}
+{
+  message: 'Error: "userName" length must be at least 3 characters long',
+  userName: 'registerFail',
+  level: 'error',
+  timestamp: '2023-06-13T02:29:34.526Z'
+}
+{
+  message: 'Login Account successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-13T02:29:34.731Z'
+}
+{
+  message: 'Login Account successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-13T02:29:34.899Z'
+}
+{
+  message: 'Retrieved employees successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-13T02:29:34.965Z'
+}
+{
+  message: 'Token not found',
+  level: 'error',
+  timestamp: '2023-06-13T02:29:34.982Z'
+}
+{
+  message: 'Error: "userName" length must be at least 3 characters long',
+  userName: 'registerFail',
+  level: 'error',
+  timestamp: '2023-06-13T02:32:08.408Z'
+}
+{
+  message: 'Login Account successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-13T02:32:08.793Z'
+}
+{
+  message: 'Login Account successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-13T02:32:09.063Z'
+}
+{
+  message: 'Retrieved employees successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-13T02:32:09.144Z'
+}
+{
+  message: 'Token not found',
+  level: 'error',
+  timestamp: '2023-06-13T02:32:09.199Z'
+}
+{
+  message: 'Error: "userName" length must be at least 3 characters long',
+  userName: 'registerFail',
+  level: 'error',
+  timestamp: '2023-06-13T02:37:05.850Z'
+}
+{
+  message: 'Login Account successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-13T02:37:06.058Z'
+}
+{
+  message: 'Login Account successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-13T02:37:06.251Z'
+}
+{
+  message: 'Retrieved employees successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-13T02:37:06.314Z'
+}
+{
+  message: 'Token not found',
+  level: 'error',
+  timestamp: '2023-06-13T02:37:06.332Z'
+}
+{
+  message: 'Error: "userName" length must be at least 3 characters long',
+  userName: 'registerFail',
+  level: 'error',
+  timestamp: '2023-06-13T02:47:32.675Z'
+}
+{
+  message: 'Login Account successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-13T02:47:32.893Z'
+}
+{
+  message: 'Login Account successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-13T02:47:33.064Z'
+}
+{
+  message: 'Retrieved employees successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-13T02:47:33.162Z'
+}
+{
+  message: 'Token not found',
+  level: 'error',
+  timestamp: '2023-06-13T02:47:33.195Z'
+}

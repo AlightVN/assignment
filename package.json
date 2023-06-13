@@ -4,7 +4,7 @@
   "description": "Lam thu nghiem mySQL-express",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --reporter mochawesome --exit",
+    "test": "cross-env NODE_ENV=test mocha --reporter mochawesome --exit",
     "start": "node index.js",
     "dev": "nodemon index.js",
     "lint": "eslint .",
@@ -29,8 +29,10 @@
     "yamljs": "^0.3.0"
   },
   "devDependencies": {
+    "@faker-js/faker": "^8.0.2",
     "chai": "^4.3.7",
     "chai-http": "^4.4.0",
+    "cross-env": "^7.0.3",
     "eslint": "^8.41.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-prettier": "^4.2.1",

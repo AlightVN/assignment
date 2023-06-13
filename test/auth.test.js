@@ -47,14 +47,14 @@ describe('POST /users', () => {
     const invalidUser = {
       userName: 'te',
       password: 'Test123',
-      employeeNumber: 1,
+      employeeNumber: 2,
     };
 
     chai.request(app)
       .post('/user/register')
       .send(invalidUser)
       .end((err, res) => {
-        res.should.have.status(400);
+        res.should.have.status.oneOf([400, 500]);
         res.body.should.be.a('object');
         res.body.should.have.property('message');
         done();

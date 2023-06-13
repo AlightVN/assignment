@@ -1,5 +1,5 @@
 const Joi = require('joi');
-
+const logger = require('../database/winstonConfig');
 
 // Quy tắc validate cho users/register
 const userRegisterSchema = Joi.object().keys({
@@ -12,6 +12,8 @@ const validateSchema = (req, res, next, schema) => {
   const { error } = schema.validate(req.body);
 
   if (error) {
+    console.log('====================');
+    logger.error({ message: `Error: ${ error.details[0].message}`, userName: 'registerFail' });
     return res.status(400).json({ message: error.details[0].message });
   }
 

@@ -1,15 +1,15 @@
 {
   "stats": {
     "suites": 2,
-    "tests": 4,
-    "passes": 4,
+    "tests": 5,
+    "passes": 3,
     "pending": 0,
-    "failures": 0,
-    "start": "2023-06-12T13:22:51.642Z",
-    "end": "2023-06-12T13:22:52.477Z",
-    "duration": 835,
-    "testsRegistered": 4,
-    "passPercent": 100,
+    "failures": 2,
+    "start": "2023-06-13T02:47:32.290Z",
+    "end": "2023-06-13T02:47:33.220Z",
+    "duration": 930,
+    "testsRegistered": 5,
+    "passPercent": 60,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "c93cbb50-c56a-479d-900b-d9cb61ac2ab3",
+      "uuid": "353465a0-2058-4c84-ad1c-efd5377811b2",
       "title": "",
       "fullFile": "",
       "file": "",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "34af692c-0d88-4866-b501-f5c12484f4e5",
+          "uuid": "bf049be1-1645-43b3-b750-225abeb0ed80",
           "title": "POST /users",
           "fullFile": "D:\\FA\\Thang 05\\17-05\\2_Assignments\\NodeJs_Training\\test\\auth.test.js",
           "file": "\\test\\auth.test.js",
@@ -36,7 +36,7 @@
               "title": "\"before all\" hook in \"POST /users\"",
               "fullTitle": "POST /users \"before all\" hook in \"POST /users\"",
               "timedOut": false,
-              "duration": 94,
+              "duration": 92,
               "state": null,
               "speed": null,
               "pass": false,
@@ -45,8 +45,8 @@
               "context": null,
               "code": "// Xóa tất cả dữ liệu người dùng hiện có trước mỗi bài kiểm tra\nawait User.destroy({ where: {} });",
               "err": {},
-              "uuid": "55cb1047-16d3-45de-91d3-cdb978307d0a",
-              "parentUUID": "34af692c-0d88-4866-b501-f5c12484f4e5",
+              "uuid": "7585e9f4-b44d-494d-a835-ec1f3268fdca",
+              "parentUUID": "bf049be1-1645-43b3-b750-225abeb0ed80",
               "isHook": true,
               "skipped": false
             }
@@ -57,7 +57,7 @@
               "title": "Tạo người dùng mới thành công",
               "fullTitle": "POST /users Tạo người dùng mới thành công",
               "timedOut": false,
-              "duration": 247,
+              "duration": 255,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -66,8 +66,8 @@
               "context": null,
               "code": "const newUser = {\n  userName: 'testuser',\n  password: 'Test@123',\n  employeeNumber: 1,\n};\n  \nchai.request(app)\n  .post('/user/register')\n  .send(newUser)\n  .end((err, res) => {\n    res.should.have.status(200);\n    res.body.should.be.a('object');\n    res.body.should.have.property('user');\n    res.body.user.should.have.property('userName').eql(newUser.userName);\n    res.body.user.should.have.property('employeeNumber').eql(newUser.employeeNumber);\n    res.body.should.have.property('token');\n    done();\n  });",
               "err": {},
-              "uuid": "c3a39999-c0be-49d7-a786-0685af0288a1",
-              "parentUUID": "34af692c-0d88-4866-b501-f5c12484f4e5",
+              "uuid": "6a6061d0-a162-4a73-a647-e41ab101dc6c",
+              "parentUUID": "bf049be1-1645-43b3-b750-225abeb0ed80",
               "isHook": false,
               "skipped": false
             },
@@ -75,17 +75,21 @@
               "title": "Tạo người dùng mới thất bại với dữ liệu không hợp lệ",
               "fullTitle": "POST /users Tạo người dùng mới thất bại với dữ liệu không hợp lệ",
               "timedOut": false,
-              "duration": 19,
-              "state": "passed",
-              "speed": "fast",
-              "pass": true,
-              "fail": false,
+              "duration": 51,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
               "pending": false,
               "context": null,
-              "code": "const invalidUser = {\n  userName: 'te',\n  password: 'Test123',\n  employeeNumber: 1,\n};\nchai.request(app)\n  .post('/user/register')\n  .send(invalidUser)\n  .end((err, res) => {\n    res.should.have.status(400);\n    res.body.should.be.a('object');\n    res.body.should.have.property('message');\n    done();\n  });",
-              "err": {},
-              "uuid": "264f8b98-1402-4df8-bbce-7a5cc9309c68",
-              "parentUUID": "34af692c-0d88-4866-b501-f5c12484f4e5",
+              "code": "const invalidUser = {\n  userName: 'te',\n  password: 'Test123',\n  employeeNumber: 2,\n};\nchai.request(app)\n  .post('/user/register')\n  .send(invalidUser)\n  .end((err, res) => {\n    res.should.have.status.oneOf([400, 500]);\n    res.body.should.be.a('object');\n    res.body.should.have.property('message');\n    done();\n  });",
+              "err": {
+                "message": "Error: Invalid Chai property: status.oneOf. See docs for proper usage of \"status\".",
+                "estack": "Error: Invalid Chai property: status.oneOf. See docs for proper usage of \"status\".\n    at Object.proxyGetter [as get] (node_modules\\chai\\lib\\chai\\utils\\proxify.js:47:17)\n    at D:\\FA\\Thang 05\\17-05\\2_Assignments\\NodeJs_Training\\test\\auth.test.js:57:32\n    at Request.callback (node_modules\\superagent\\lib\\node\\index.js:857:12)\n    at D:\\FA\\Thang 05\\17-05\\2_Assignments\\NodeJs_Training\\node_modules\\superagent\\lib\\node\\index.js:1070:18\n    at IncomingMessage.<anonymous> (node_modules\\superagent\\lib\\node\\parsers\\json.js:21:7)\n    at IncomingMessage.emit (node:events:525:35)\n    at endReadableNT (node:internal/streams/readable:1359:12)\n    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)",
+                "diff": null
+              },
+              "uuid": "ff8e1940-8c77-46c0-9346-8e7494992475",
+              "parentUUID": "bf049be1-1645-43b3-b750-225abeb0ed80",
               "isHook": false,
               "skipped": false
             },
@@ -93,7 +97,7 @@
               "title": "Đăng nhập người dùng với thông tin hợp lệ",
               "fullTitle": "POST /users Đăng nhập người dùng với thông tin hợp lệ",
               "timedOut": false,
-              "duration": 205,
+              "duration": 181,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -102,28 +106,29 @@
               "context": null,
               "code": "loginUser().then((res) => {\n  res.should.have.status(200);\n  res.body.should.be.a('object');\n  res.body.should.have.property('token');\n  done();\n});",
               "err": {},
-              "uuid": "9d82609e-d054-4f2f-b24a-d6d0c70d9fc2",
-              "parentUUID": "34af692c-0d88-4866-b501-f5c12484f4e5",
+              "uuid": "381491cf-7825-45bc-a3e2-8a3825a634f6",
+              "parentUUID": "bf049be1-1645-43b3-b750-225abeb0ed80",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "c3a39999-c0be-49d7-a786-0685af0288a1",
-            "264f8b98-1402-4df8-bbce-7a5cc9309c68",
-            "9d82609e-d054-4f2f-b24a-d6d0c70d9fc2"
+            "6a6061d0-a162-4a73-a647-e41ab101dc6c",
+            "381491cf-7825-45bc-a3e2-8a3825a634f6"
           ],
-          "failures": [],
+          "failures": [
+            "ff8e1940-8c77-46c0-9346-8e7494992475"
+          ],
           "pending": [],
           "skipped": [],
-          "duration": 471,
+          "duration": 487,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
         },
         {
-          "uuid": "bf5e3bd8-cfa9-4c83-937b-a5f15fa9b6f0",
+          "uuid": "096f8c00-74b5-4cb1-b0d1-7d851396ea11",
           "title": "Employee Test",
           "fullFile": "D:\\FA\\Thang 05\\17-05\\2_Assignments\\NodeJs_Training\\test\\employee.test.js",
           "file": "\\test\\employee.test.js",
@@ -132,7 +137,7 @@
               "title": "\"before all\" hook in \"Employee Test\"",
               "fullTitle": "Employee Test \"before all\" hook in \"Employee Test\"",
               "timedOut": false,
-              "duration": 175,
+              "duration": 168,
               "state": null,
               "speed": null,
               "pass": false,
@@ -141,8 +146,8 @@
               "context": null,
               "code": "const loginResponse = await loginUser();\ntoken = loginResponse.body.token;",
               "err": {},
-              "uuid": "29c6c10d-1d75-4150-8065-aecdde9b5f52",
-              "parentUUID": "bf5e3bd8-cfa9-4c83-937b-a5f15fa9b6f0",
+              "uuid": "0dc895b7-f31a-4a97-bb8d-79684b5ca816",
+              "parentUUID": "096f8c00-74b5-4cb1-b0d1-7d851396ea11",
               "isHook": true,
               "skipped": false
             }
@@ -153,29 +158,53 @@
               "title": "Lấy danh sách Employee",
               "fullTitle": "Employee Test Lấy danh sách Employee",
               "timedOut": false,
-              "duration": 51,
+              "duration": 102,
               "state": "passed",
-              "speed": "medium",
+              "speed": "slow",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
               "code": "chai.request(app)\n  .get('/employees')\n  .set('Authorization', `Bearer ${token}`)\n  .end((err, res) => {\n    res.should.have.status(200);\n    res.body.data.should.be.a('array');\n    done();\n  });",
               "err": {},
-              "uuid": "a18f58cc-c672-483b-8b01-758d97684e2e",
-              "parentUUID": "bf5e3bd8-cfa9-4c83-937b-a5f15fa9b6f0",
+              "uuid": "ea356858-f84e-4a59-b688-84a189746eaf",
+              "parentUUID": "096f8c00-74b5-4cb1-b0d1-7d851396ea11",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Tạo employees mới thành công",
+              "fullTitle": "Employee Test Tạo employees mới thành công",
+              "timedOut": false,
+              "duration": 28,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const newEmployee = {\n  firstName: \"Alight\",\n  extension: \"Legend\",\n  email: \"111@gmail.com\",\n  officeCode: \"PA_HY\",\n  reportTo: 2,\n  jobTitle: \"president\"\n};\nchai.request(app)\n  .post('/employees')\n  .send(newEmployee)\n  .end((err, res) => {\n    res.should.have.status(200);\n    res.body.should.be.a('object');\n    res.body.should.have.property('user');\n    res.body.user.should.have.property('userName').eql(newEmployee.userName);\n    res.body.user.should.have.property('employeeNumber').eql(newEmployee.employeeNumber);\n    res.body.should.have.property('token');\n    done();\n  });",
+              "err": {
+                "message": "AssertionError: expected { Object (_events, _eventsCount, ...) } to have status code 200 but got 401",
+                "estack": "AssertionError: expected { Object (_events, _eventsCount, ...) } to have status code 200 but got 401\n    at D:\\FA\\Thang 05\\17-05\\2_Assignments\\NodeJs_Training\\test\\employee.test.js:43:25\n    at Request.callback (node_modules\\superagent\\lib\\node\\index.js:857:12)\n    at D:\\FA\\Thang 05\\17-05\\2_Assignments\\NodeJs_Training\\node_modules\\superagent\\lib\\node\\index.js:1070:18\n    at IncomingMessage.<anonymous> (node_modules\\superagent\\lib\\node\\parsers\\json.js:21:7)\n    at IncomingMessage.emit (node:events:525:35)\n    at endReadableNT (node:internal/streams/readable:1359:12)\n    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)",
+                "diff": "- 401\n+ 200\n"
+              },
+              "uuid": "58f81fb1-9409-450d-a8d1-fea9475873ce",
+              "parentUUID": "096f8c00-74b5-4cb1-b0d1-7d851396ea11",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "a18f58cc-c672-483b-8b01-758d97684e2e"
+            "ea356858-f84e-4a59-b688-84a189746eaf"
           ],
-          "failures": [],
+          "failures": [
+            "58f81fb1-9409-450d-a8d1-fea9475873ce"
+          ],
           "pending": [],
           "skipped": [],
-          "duration": 51,
+          "duration": 130,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
