@@ -4,6 +4,7 @@ const path = require('path');
 
 // Custom format function to create data in Mongoose
 const mongooseCreateFormat = winston.format((info) => {
+  console.log(process.env.NODE_ENV);
   // Only save to MongoDB if the environment is production
   if (process.env.NODE_ENV === 'production') {
     const { level, message, timestamp, userName } = info;
@@ -45,7 +46,7 @@ const logger = winston.createLogger({
   ],
 });
 
-if (process.env.NODE_ENV !== 'production') {
+if (process.env.NODE_ENV === 'production') {
   logger.add(new winston.transports.Console({
     format: winston.format.combine(
         winston.format.colorize(),
