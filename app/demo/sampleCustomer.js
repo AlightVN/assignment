@@ -1,6 +1,7 @@
 const customers = [
   {
     customerNumber: 1,
+    customerName: 'Van A Nguyen',
     contactLastName: 'Nguyen',
     contactFirstName: 'Van A',
     phone: '0123456789',
@@ -17,6 +18,7 @@ const customers = [
   },
   {
     customerNumber: 2,
+    customerName: 'Thi B Tran',
     contactLastName: 'Tran',
     contactFirstName: 'Thi B',
     phone: '0987654321',
@@ -33,6 +35,7 @@ const customers = [
   },
   {
     customerNumber: 3,
+    customerName: 'Van C Le',
     contactLastName: 'Le',
     contactFirstName: 'Van C',
     phone: '0909123456',
@@ -49,6 +52,7 @@ const customers = [
   },
   {
     customerNumber: 4,
+    customerName: 'Thi D Pham',
     contactLastName: 'Pham',
     contactFirstName: 'Thi D',
     phone: '0909123456',
@@ -65,6 +69,7 @@ const customers = [
   },
   {
     customerNumber: 5,
+    customerName: 'Van E Hoang',
     contactLastName: 'Hoang',
     contactFirstName: 'Van E',
     phone: '0123456789',
@@ -81,6 +86,7 @@ const customers = [
   },
   {
     customerNumber: 6,
+    customerName: 'Thi F Do',
     contactLastName: 'Do',
     contactFirstName: 'Thi F',
     phone: '0987654321',
@@ -97,6 +103,7 @@ const customers = [
   },
   {
     customerNumber: 7,
+    customerName: 'Van G Vu',
     contactLastName: 'Vu',
     contactFirstName: 'Van G',
     phone: '0909123456',
@@ -113,6 +120,7 @@ const customers = [
   },
   {
     customerNumber: 8,
+    customerName: 'Thi H Nguyen',
     contactLastName: 'Nguyen',
     contactFirstName: 'Thi H',
     phone: '0909123456',
@@ -129,6 +137,7 @@ const customers = [
   },
   {
     customerNumber: 9,
+    customerName: 'Van I Tran',
     contactLastName: 'Tran',
     contactFirstName: 'Van I',
     phone: '0123456789',

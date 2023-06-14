@@ -3,65 +3,69 @@ const sequelize = require('../database/configDB');
 const Employee = require('./employeeModel');
 
 const Customer = sequelize.define(
-    'Customer',
-    {
-      customerNumber: {
-        type: DataTypes.INTEGER,
-        primaryKey: true,
-        autoIncrement: true,
-      },
-      contactLastName: {
-        type: DataTypes.STRING,
-        allowNull: false,
-      },
-      contactFirstName: {
-        type: DataTypes.STRING,
-        allowNull: false,
-      },
-      phone: {
-        type: DataTypes.STRING,
-        allowNull: false,
-      },
-      addressLine1: {
-        type: DataTypes.STRING,
-        allowNull: false,
-      },
-      addressLine2: {
-        type: DataTypes.STRING,
-        allowNull: true,
-      },
-      city: {
-        type: DataTypes.STRING,
-        allowNull: false,
-      },
-      state: {
-        type: DataTypes.STRING,
-        allowNull: false,
-      },
-      postalCode: {
-        type: DataTypes.STRING,
-        allowNull: false,
-      },
-      country: {
-        type: DataTypes.STRING,
-        allowNull: false,
-      },
-      salesRepEmployeeNumber: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-        references: {
-          model: Employee,
-          key: 'employeeNumber',
-        },
-      },
-      creditLimit: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
+  'Customer',
+  {
+    customerNumber: {
+      type: DataTypes.INTEGER,
+      primaryKey: true,
+      autoIncrement: true,
+    },
+    customerName: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    contactLastName: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    contactFirstName: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    phone: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    addressLine1: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    addressLine2: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    city: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    state: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    postalCode: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    country: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    salesRepEmployeeNumber: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      references: {
+        model: Employee,
+        key: 'employeeNumber',
       },
     },
-    {
-      tableName: 'customers',
+    creditLimit: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
     },
+  },
+  {
+    tableName: 'customers',
+  },
 );
 
 // Setup references

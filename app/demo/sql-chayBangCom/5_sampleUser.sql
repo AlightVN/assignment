@@ -6,5 +6,7 @@ CREATE TABLE users (
   createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   updatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
-INSERT INTO permissions (userName, password, employeeNumber)
+
+INSERT INTO users (userName, password, employeeNumber)
 VALUES ('Alight', '$10$ysyrcjYa3CYFslLXbAj51OpqOK8IgHftwf.rYPIdFiTwiU4quUloO', 1);
+
