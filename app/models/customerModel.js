@@ -28,6 +28,7 @@ const Customer = sequelize.define(
       },
       addressLine2: {
         type: DataTypes.STRING,
+        allowNull: true,
       },
       city: {
         type: DataTypes.STRING,
