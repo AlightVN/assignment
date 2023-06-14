@@ -1,8 +1,8 @@
 const customers = [
   {
     customerNumber: 1,
-    contractLastName: 'Nguyen',
-    contractFirstName: 'Van A',
+    contactLastName: 'Nguyen',
+    contactFirstName: 'Van A',
     phone: '0123456789',
     addressLine1: '123 ABC Street',
     addressLine2: '',
@@ -17,8 +17,8 @@ const customers = [
   },
   {
     customerNumber: 2,
-    contractLastName: 'Tran',
-    contractFirstName: 'Thi B',
+    contactLastName: 'Tran',
+    contactFirstName: 'Thi B',
     phone: '0987654321',
     addressLine1: '456 XYZ Street',
     addressLine2: '',
@@ -33,8 +33,8 @@ const customers = [
   },
   {
     customerNumber: 3,
-    contractLastName: 'Le',
-    contractFirstName: 'Van C',
+    contactLastName: 'Le',
+    contactFirstName: 'Van C',
     phone: '0909123456',
     addressLine1: '789 MNO Street',
     addressLine2: '',
@@ -49,8 +49,8 @@ const customers = [
   },
   {
     customerNumber: 4,
-    contractLastName: 'Pham',
-    contractFirstName: 'Thi D',
+    contactLastName: 'Pham',
+    contactFirstName: 'Thi D',
     phone: '0909123456',
     addressLine1: '789 MNO Street',
     addressLine2: '',
@@ -65,8 +65,8 @@ const customers = [
   },
   {
     customerNumber: 5,
-    contractLastName: 'Hoang',
-    contractFirstName: 'Van E',
+    contactLastName: 'Hoang',
+    contactFirstName: 'Van E',
     phone: '0123456789',
     addressLine1: '123 ABC Street',
     addressLine2: '',
@@ -81,8 +81,8 @@ const customers = [
   },
   {
     customerNumber: 6,
-    contractLastName: 'Do',
-    contractFirstName: 'Thi F',
+    contactLastName: 'Do',
+    contactFirstName: 'Thi F',
     phone: '0987654321',
     addressLine1: '456 XYZ Street',
     addressLine2: '',
@@ -97,8 +97,8 @@ const customers = [
   },
   {
     customerNumber: 7,
-    contractLastName: 'Vu',
-    contractFirstName: 'Van G',
+    contactLastName: 'Vu',
+    contactFirstName: 'Van G',
     phone: '0909123456',
     addressLine1: '789 MNO Street',
     addressLine2: '',
@@ -113,8 +113,8 @@ const customers = [
   },
   {
     customerNumber: 8,
-    contractLastName: 'Nguyen',
-    contractFirstName: 'Thi H',
+    contactLastName: 'Nguyen',
+    contactFirstName: 'Thi H',
     phone: '0909123456',
     addressLine1: '789 MNO Street',
     addressLine2: '',
@@ -129,8 +129,8 @@ const customers = [
   },
   {
     customerNumber: 9,
-    contractLastName: 'Tran',
-    contractFirstName: 'Van I',
+    contactLastName: 'Tran',
+    contactFirstName: 'Van I',
     phone: '0123456789',
     addressLine1: '123 ABC Street',
     addressLine2: '',

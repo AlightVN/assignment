@@ -4,8 +4,8 @@ const Joi = require('joi');
 const POST = Joi.object().keys({
   customerNumber: Joi.number().positive(),
   customerName: Joi.string().min(5).max(50).required(),
-  contractLastName: Joi.string().min(3).max(50).required(),
-  contractFirstName: Joi.string().min(3).max(50).required(),
+  contactLastName: Joi.string().min(3).max(50).required(),
+  contactFirstName: Joi.string().min(3).max(50).required(),
   phone: Joi.string().min(8).max(20).required(),
   addressLine1: Joi.string().min(10).max(50).required(),
   addressLine2: Joi.string().min(10).max(50).allow(null),

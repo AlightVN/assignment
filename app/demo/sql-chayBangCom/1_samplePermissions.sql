@@ -1,0 +1,9 @@
+CREATE TABLE permissions (
+  id INT AUTO_INCREMENT PRIMARY KEY ,
+  roleName VARCHAR(255) NOT NULL,
+  createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+INSERT INTO permissions (id, roleName)
+VALUES (1, 'President'), (2, 'Manager'), (3, 'Leader'), (4, 'Staff');

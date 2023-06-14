@@ -52,6 +52,7 @@ const insertSamplePermissions = async () => {
 
 (async () => {
   try {
+    await sequelize.sync();
     // Insert sample data
     await insertSamplePermissions();
     await insertOffices();

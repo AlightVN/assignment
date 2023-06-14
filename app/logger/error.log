@@ -1187,3 +1187,15 @@
   level: 'error',
   timestamp: '2023-06-13T08:24:36.915Z'
 }
+{
+  message: 'Error: "userName" length must be at least 3 characters long',
+  userName: 'registerFail',
+  level: 'error',
+  timestamp: '2023-06-14T03:38:38.192Z'
+}
+{
+  message: 'Error: "userName" length must be at least 3 characters long',
+  userName: 'registerFail',
+  level: 'error',
+  timestamp: '2023-06-14T03:38:53.020Z'
+}

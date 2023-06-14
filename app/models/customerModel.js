@@ -10,11 +10,11 @@ const Customer = sequelize.define(
         primaryKey: true,
         autoIncrement: true,
       },
-      contractLastName: {
+      contactLastName: {
         type: DataTypes.STRING,
         allowNull: false,
       },
-      contractFirstName: {
+      contactFirstName: {
         type: DataTypes.STRING,
         allowNull: false,
       },
