@@ -2,13 +2,13 @@
 const chai = require('chai');
 const chaiHttp = require('chai-http');
 const app = require('../index');
-const reToken = './auth.test';
+const reToken = './1_auth.test';
 const { loginUser } = require(reToken);
 
 // Configure chai for HTTP requests
 chai.use(chaiHttp);
 chai.should();
-
+const { User } = require('../app/models');
 let customerId;
 
 // Customer test suite
@@ -20,7 +20,11 @@ describe('Customer Test', () => {
     const loginResponse = await loginUser();
     token = loginResponse.body.token;
   });
-
+  after(async () => {
+    // Delete the user with username 'testUser' after all tests are completed
+    await User.destroy({ where: {userName: 'testuser'} });
+  });
+  
   // Test GET (fetch customers)
   it('Fetch list of customers', (done) => {
     chai.request(app)
@@ -37,8 +41,8 @@ describe('Customer Test', () => {
   it('Create new customer successfully', (done) => {
     const newCustomer = {
       customerName: "New Customer",
-      contractLastName: "Doe",
-      contractFirstName: "John",
+      contactLastName: "Doe",
+      contactFirstName: "John",
       phone: "1234567890",
       addressLine1: "123 Main Street",
       addressLine2: null,

@@ -25,7 +25,7 @@ async function loginUser() {
 describe('POST /users', () => {
   before(async () => {
     // Delete all existing users before each test
-    await User.destroy({ where: {} });
+    await User.destroy({ where: {userName: 'testuser'} });
   });
 
   // Test POST (create user)
@@ -33,7 +33,7 @@ describe('POST /users', () => {
     const newUser = {
       userName: 'testuser',
       password: 'Test@123',
-      employeeNumber: 1,
+      employeeNumber: 9,
     };
 
     chai.request(app)

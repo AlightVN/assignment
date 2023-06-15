@@ -1,15 +1,14 @@
 // node app/demo/demo.js
 const sequelize = require('../database/configDB');
-const Customer = require('../models/customerModel');
-const Employee = require('../models/employeeModel');
-const Permission = require('../models/permissionModel'); // Import Permission model
-const Office = require('../models/officeModel');
+const { Office, Employee, Customer,
+  User, Permission } = require('../models')
 
 // sample
 const sampleCustomers = require('./sampleCustomer');
 const sampleEmployees = require('./sampleEmployees');
 const samplePermissions = require('./samplePermissions'); // Import sample permissions
 const sampleOffices = require('./sampleOffice');
+const sampleUsers = require('./sampleUsers');
 
 // add demo customers
 const insertCustomers = async () => {
@@ -19,8 +18,17 @@ const insertCustomers = async () => {
   } catch (error) {
     console.error('Error creating sample customers:', error);
   }
-};
+}; 
 
+// add demo customers
+const insertUsers = async () => {
+  try {
+    await User.bulkCreate(sampleUsers);
+    console.log('Sample User created successfully');
+  } catch (error) {
+    console.error('Error creating sample customers:', error);
+  }
+};
 // add demo office
 const insertOffices = async () => {
   try {
@@ -58,6 +66,7 @@ const insertSamplePermissions = async () => {
     await insertOffices();
     await insertSampleEmployees();
     await insertCustomers();
+    await insertUsers();
     console.log('Demo data created successfully.');
   } catch (error) {
     console.error('Error creating demo data:', error);

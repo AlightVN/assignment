@@ -1199,3 +1199,429 @@
   level: 'error',
   timestamp: '2023-06-14T03:38:53.020Z'
 }
+{
+  message: 'Error: jwt malformed',
+  userName: 'Not login',
+  level: 'error',
+  timestamp: '2023-06-15T02:34:45.841Z'
+}
+{
+  message: 'Error: jwt malformed',
+  userName: 'Not login',
+  level: 'error',
+  timestamp: '2023-06-15T02:34:45.871Z'
+}
+{
+  message: 'Error: jwt malformed',
+  userName: 'Not login',
+  level: 'error',
+  timestamp: '2023-06-15T02:34:45.887Z'
+}
+{
+  message: 'Error: jwt malformed',
+  userName: 'Not login',
+  level: 'error',
+  timestamp: '2023-06-15T02:34:45.913Z'
+}
+{
+  message: 'Error: jwt malformed',
+  userName: 'Not login',
+  level: 'error',
+  timestamp: '2023-06-15T02:34:45.928Z'
+}
+{
+  message: 'Error: jwt malformed',
+  userName: 'Not login',
+  level: 'error',
+  timestamp: '2023-06-15T02:34:45.962Z'
+}
+{
+  message: 'Error: jwt malformed',
+  userName: 'Not login',
+  level: 'error',
+  timestamp: '2023-06-15T02:34:45.978Z'
+}
+{
+  message: 'Error: jwt malformed',
+  userName: 'Not login',
+  level: 'error',
+  timestamp: '2023-06-15T02:34:46.000Z'
+}
+{
+  message: 'Error: jwt malformed',
+  userName: 'Not login',
+  level: 'error',
+  timestamp: '2023-06-15T02:34:46.041Z'
+}
+{
+  message: 'Error: jwt malformed',
+  userName: 'Not login',
+  level: 'error',
+  timestamp: '2023-06-15T02:34:46.058Z'
+}
+{
+  message: 'An error occurred. Please try again later',
+  userName: 'registerNew',
+  level: 'error',
+  timestamp: '2023-06-15T02:55:59.896Z'
+}
+{
+  message: 'Error: "userName" length must be at least 3 characters long',
+  userName: 'registerFail',
+  level: 'error',
+  timestamp: '2023-06-15T02:55:59.985Z'
+}
+{
+  message: 'Error: user or password Incorrect',
+  userName: 'notLogin',
+  level: 'error',
+  timestamp: '2023-06-15T02:56:00.027Z'
+}
+{
+  message: 'Error: user or password Incorrect',
+  userName: 'notLogin',
+  level: 'error',
+  timestamp: '2023-06-15T02:56:02.014Z'
+}
+{
+  message: 'Error: jwt malformed',
+  userName: 'Not login',
+  level: 'error',
+  timestamp: '2023-06-15T02:56:02.021Z'
+}
+{
+  message: 'Error: jwt malformed',
+  userName: 'Not login',
+  level: 'error',
+  timestamp: '2023-06-15T02:56:02.033Z'
+}
+{
+  message: 'Error: jwt malformed',
+  userName: 'Not login',
+  level: 'error',
+  timestamp: '2023-06-15T02:56:02.045Z'
+}
+{
+  message: 'Error: jwt malformed',
+  userName: 'Not login',
+  level: 'error',
+  timestamp: '2023-06-15T02:56:02.058Z'
+}
+{
+  message: 'Error: jwt malformed',
+  userName: 'Not login',
+  level: 'error',
+  timestamp: '2023-06-15T02:56:02.070Z'
+}
+{
+  message: 'Error: user or password Incorrect',
+  userName: 'notLogin',
+  level: 'error',
+  timestamp: '2023-06-15T02:56:02.084Z'
+}
+{
+  message: 'Error: jwt malformed',
+  userName: 'Not login',
+  level: 'error',
+  timestamp: '2023-06-15T02:56:02.091Z'
+}
+{
+  message: 'Error: jwt malformed',
+  userName: 'Not login',
+  level: 'error',
+  timestamp: '2023-06-15T02:56:02.102Z'
+}
+{
+  message: 'Error: jwt malformed',
+  userName: 'Not login',
+  level: 'error',
+  timestamp: '2023-06-15T02:56:02.112Z'
+}
+{
+  message: 'Error: jwt malformed',
+  userName: 'Not login',
+  level: 'error',
+  timestamp: '2023-06-15T02:56:02.125Z'
+}
+{
+  message: 'Error: jwt malformed',
+  userName: 'Not login',
+  level: 'error',
+  timestamp: '2023-06-15T02:56:02.144Z'
+}
+{
+  message: 'An error occurred. Please try again later',
+  userName: 'registerNew',
+  level: 'error',
+  timestamp: '2023-06-15T02:59:11.742Z'
+}
+{
+  message: 'Error: "userName" length must be at least 3 characters long',
+  userName: 'registerFail',
+  level: 'error',
+  timestamp: '2023-06-15T02:59:11.834Z'
+}
+{
+  message: 'Error: user or password Incorrect',
+  userName: 'notLogin',
+  level: 'error',
+  timestamp: '2023-06-15T02:59:11.872Z'
+}
+{
+  message: 'Error: user or password Incorrect',
+  userName: 'notLogin',
+  level: 'error',
+  timestamp: '2023-06-15T02:59:13.871Z'
+}
+{
+  message: 'Error: jwt malformed',
+  userName: 'Not login',
+  level: 'error',
+  timestamp: '2023-06-15T02:59:13.878Z'
+}
+{
+  message: 'Error: jwt malformed',
+  userName: 'Not login',
+  level: 'error',
+  timestamp: '2023-06-15T02:59:13.888Z'
+}
+{
+  message: 'Error: jwt malformed',
+  userName: 'Not login',
+  level: 'error',
+  timestamp: '2023-06-15T02:59:13.899Z'
+}
+{
+  message: 'Error: jwt malformed',
+  userName: 'Not login',
+  level: 'error',
+  timestamp: '2023-06-15T02:59:13.911Z'
+}
+{
+  message: 'Error: jwt malformed',
+  userName: 'Not login',
+  level: 'error',
+  timestamp: '2023-06-15T02:59:13.922Z'
+}
+{
+  message: 'Error: user or password Incorrect',
+  userName: 'notLogin',
+  level: 'error',
+  timestamp: '2023-06-15T02:59:13.934Z'
+}
+{
+  message: 'Error: jwt malformed',
+  userName: 'Not login',
+  level: 'error',
+  timestamp: '2023-06-15T02:59:13.940Z'
+}
+{
+  message: 'Error: jwt malformed',
+  userName: 'Not login',
+  level: 'error',
+  timestamp: '2023-06-15T02:59:13.952Z'
+}
+{
+  message: 'Error: jwt malformed',
+  userName: 'Not login',
+  level: 'error',
+  timestamp: '2023-06-15T02:59:13.964Z'
+}
+{
+  message: 'Error: jwt malformed',
+  userName: 'Not login',
+  level: 'error',
+  timestamp: '2023-06-15T02:59:13.977Z'
+}
+{
+  message: 'Error: jwt malformed',
+  userName: 'Not login',
+  level: 'error',
+  timestamp: '2023-06-15T02:59:13.988Z'
+}
+{
+  message: 'Error: "userName" length must be at least 3 characters long',
+  userName: 'registerFail',
+  level: 'error',
+  timestamp: '2023-06-15T03:01:08.237Z'
+}
+{
+  message: 'Error: "contactLastName" is required',
+  userName: 'registerFail',
+  level: 'error',
+  timestamp: '2023-06-15T03:01:09.321Z'
+}
+{
+  message: 'Error: Customer not found',
+  userName: 'testuser',
+  level: 'error',
+  timestamp: '2023-06-15T03:01:09.356Z'
+}
+{
+  message: 'Error: Customer not found',
+  userName: 'testuser',
+  level: 'error',
+  timestamp: '2023-06-15T03:01:09.376Z'
+}
+{
+  message: 'Error: Customer not found',
+  userName: 'testuser',
+  level: 'error',
+  timestamp: '2023-06-15T03:01:09.396Z'
+}
+{
+  message: 'Error: "userName" length must be at least 3 characters long',
+  userName: 'registerFail',
+  level: 'error',
+  timestamp: '2023-06-15T03:02:53.025Z'
+}
+{
+  message: 'Error: "contactLastName" is required',
+  userName: 'registerFail',
+  level: 'error',
+  timestamp: '2023-06-15T03:02:53.876Z'
+}
+{
+  message: 'Error: Customer not found',
+  userName: 'testuser',
+  level: 'error',
+  timestamp: '2023-06-15T03:02:53.925Z'
+}
+{
+  message: 'Error: Customer not found',
+  userName: 'testuser',
+  level: 'error',
+  timestamp: '2023-06-15T03:02:53.949Z'
+}
+{
+  message: 'Error: Customer not found',
+  userName: 'testuser',
+  level: 'error',
+  timestamp: '2023-06-15T03:02:53.968Z'
+}
+{
+  message: 'Error: "userName" length must be at least 3 characters long',
+  userName: 'registerFail',
+  level: 'error',
+  timestamp: '2023-06-15T03:07:20.114Z'
+}
+{
+  message: 'Error: "contactLastName" is required',
+  userName: 'registerFail',
+  level: 'error',
+  timestamp: '2023-06-15T03:07:20.999Z'
+}
+{
+  message: 'Error: Customer not found',
+  userName: 'testuser',
+  level: 'error',
+  timestamp: '2023-06-15T03:07:21.031Z'
+}
+{
+  message: 'Error: Customer not found',
+  userName: 'testuser',
+  level: 'error',
+  timestamp: '2023-06-15T03:07:21.051Z'
+}
+{
+  message: 'Error: Customer not found',
+  userName: 'testuser',
+  level: 'error',
+  timestamp: '2023-06-15T03:07:21.068Z'
+}
+{
+  message: 'Error: "userName" length must be at least 3 characters long',
+  userName: 'registerFail',
+  level: 'error',
+  timestamp: '2023-06-15T03:08:05.045Z'
+}
+{
+  message: 'Error: "contactLastName" is required',
+  userName: 'registerFail',
+  level: 'error',
+  timestamp: '2023-06-15T03:08:05.903Z'
+}
+{
+  message: 'Error: Customer not found',
+  userName: 'testuser',
+  level: 'error',
+  timestamp: '2023-06-15T03:08:05.943Z'
+}
+{
+  message: 'Error: Customer not found',
+  userName: 'testuser',
+  level: 'error',
+  timestamp: '2023-06-15T03:08:05.968Z'
+}
+{
+  message: 'Error: Customer not found',
+  userName: 'testuser',
+  level: 'error',
+  timestamp: '2023-06-15T03:08:05.986Z'
+}
+{
+  message: 'Error: "userName" length must be at least 3 characters long',
+  userName: 'registerFail',
+  level: 'error',
+  timestamp: '2023-06-15T03:09:58.029Z'
+}
+{
+  message: 'Error: notNull Violation: Customer.customerName cannot be null',
+  userName: 'testuser',
+  level: 'error',
+  timestamp: '2023-06-15T03:09:58.964Z'
+}
+{
+  message: 'Error: Customer not found',
+  userName: 'testuser',
+  level: 'error',
+  timestamp: '2023-06-15T03:09:59.002Z'
+}
+{
+  message: 'Error: Customer not found',
+  userName: 'testuser',
+  level: 'error',
+  timestamp: '2023-06-15T03:09:59.021Z'
+}
+{
+  message: 'Error: Customer not found',
+  userName: 'testuser',
+  level: 'error',
+  timestamp: '2023-06-15T03:09:59.038Z'
+}
+{
+  message: 'Error: "userName" length must be at least 3 characters long',
+  userName: 'registerFail',
+  level: 'error',
+  timestamp: '2023-06-15T03:10:29.344Z'
+}
+{
+  message: 'Error: notNull Violation: Customer.customerName cannot be null',
+  userName: 'testuser',
+  level: 'error',
+  timestamp: '2023-06-15T03:10:30.209Z'
+}
+{
+  message: 'Error: Customer not found',
+  userName: 'testuser',
+  level: 'error',
+  timestamp: '2023-06-15T03:10:30.243Z'
+}
+{
+  message: 'Error: Customer not found',
+  userName: 'testuser',
+  level: 'error',
+  timestamp: '2023-06-15T03:10:30.261Z'
+}
+{
+  message: 'Error: Customer not found',
+  userName: 'testuser',
+  level: 'error',
+  timestamp: '2023-06-15T03:10:30.280Z'
+}
+{
+  message: 'Error: "userName" length must be at least 3 characters long',
+  userName: 'registerFail',
+  level: 'error',
+  timestamp: '2023-06-15T03:12:17.151Z'
+}

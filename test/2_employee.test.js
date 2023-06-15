@@ -2,9 +2,7 @@
 const chai = require('chai');
 const chaiHttp = require('chai-http');
 const app = require('../index');
-const { loginUser } = require('./auth.test');
-const { after } = require('mocha');
-const { User } = require('../app/models');
+const { loginUser } = require('./1_auth.test');
 // Configure chai for HTTP requests
 chai.use(chaiHttp);
 chai.should();
@@ -20,10 +18,7 @@ describe('Employee Test', () => {
     const loginResponse = await loginUser();
     token = loginResponse.body.token;
   });
-after(async () => {
-  // Delete all existing users before each test
-  await User.destroy({ where: {} });
-})
+
   // Test GET (fetch employees)
   it('Fetch list of employees', (done) => {
     chai.request(app)

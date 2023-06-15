@@ -42,7 +42,7 @@ const getCustomers = async (req, res, next) => {
 // Create a new customer
 const createCustomer = async (req, res, next) => {
   const {
-    contactLastName, contactFirstName, phone, addressLine1,
+    customerName,contactLastName, contactFirstName, phone, addressLine1,
     addressLine2, city, state, postalCode,
     country, salesRepEmployeeNumber, creditLimit,
   } = req.body;
@@ -70,7 +70,7 @@ const createCustomer = async (req, res, next) => {
 
     // Create a new customer record in the database
     const customer = await Customer.create({
-      contactLastName, contactFirstName, phone,
+      customerName,contactLastName, contactFirstName, phone,
       addressLine1, addressLine2, city,
       state, postalCode, country,
       salesRepEmployeeNumber, creditLimit,
@@ -89,7 +89,7 @@ const createCustomer = async (req, res, next) => {
 // Update information of a customer
 const updateCustomerById = async (req, res, next) => {
   const allowedFields = [
-    'contactLastName', 'contactFirstName', 'phone',
+    'customerName','contactLastName', 'contactFirstName', 'phone',
     'addressLine1', 'addressLine2', 'city',
     'state', 'postalCode', 'country',
     'salesRepEmployeeNumber', 'creditLimit',
