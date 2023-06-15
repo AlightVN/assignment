@@ -110,7 +110,6 @@ describe('Customer Test', () => {
       .delete(`/customers/${customerId}`)
       .set('Authorization', `Bearer ${token}`)
       .end((err, res) => {
-        console.log(res.body);
         res.should.have.status(204);
         res.body.should.be.a('object');
         done();

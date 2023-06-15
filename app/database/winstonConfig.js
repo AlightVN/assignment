@@ -30,6 +30,16 @@ const customConsoleFormat = winston.format.printf(({ level, message, timestamp, 
   return `${timestamp} [${level}] ${userName ? userName : 'undefined'}: ${message}`;
 });
 
+const loggerTransports = [];
+
+if (process.env.NODE_ENV !== 'test') {
+  loggerTransports.push(
+    new winston.transports.File({ filename: path.join('app', 'logger', 'error.log'), level: 'error' }),
+    new winston.transports.File({ filename: path.join('app', 'logger', 'combined.log') }),
+    new winston.transports.File({ filename: path.join('app', 'logger', 'info.log'), level: 'info' }),
+  );
+}
+
 // Create the logger instance
 const logger = winston.createLogger({
   level: 'info',
@@ -38,11 +48,7 @@ const logger = winston.createLogger({
       winston.format.prettyPrint(),
       mongooseCreateFormat(), // Add the custom format function
   ),
-  transports: [
-    new winston.transports.File({ filename: path.join('app', 'logger', 'error.log'), level: 'error' }),
-    new winston.transports.File({ filename: path.join('app', 'logger', 'combined.log') }),
-    new winston.transports.File({ filename: path.join('app', 'logger', 'info.log'), level: 'info' }),
-  ],
+  transports: loggerTransports,
 });
 
 if (process.env.NODE_ENV !== 'test') {

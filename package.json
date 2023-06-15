@@ -7,6 +7,7 @@
     "test": "cross-env NODE_ENV=test mocha --reporter mochawesome --exit",
     "start": "node index.js",
     "dev": "nodemon index.js",
+    "sample": "node app/demo/demo.js",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "prettierrc": "npx prettier --write \"src/**/*.js\""
