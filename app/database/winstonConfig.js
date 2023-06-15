@@ -5,7 +5,7 @@ const path = require('path');
 // Custom format function to create data in Mongoose
 const mongooseCreateFormat = winston.format((info) => {
   // Only save to MongoDB if the environment is production
-  if (process.env.NODE_ENV === 'production') {
+  if (process.env.NODE_ENV !== 'test') {
     const { level, message, timestamp, userName } = info;
     // Create the log entry in Mongoose
     const logEntry = new LogModel({
@@ -30,16 +30,6 @@ const customConsoleFormat = winston.format.printf(({ level, message, timestamp, 
   return `${timestamp} [${level}] ${userName ? userName : 'undefined'}: ${message}`;
 });
 
-const loggerTransports = [];
-
-if (process.env.NODE_ENV !== 'test') {
-  loggerTransports.push(
-    new winston.transports.File({ filename: path.join('app', 'logger', 'error.log'), level: 'error' }),
-    new winston.transports.File({ filename: path.join('app', 'logger', 'combined.log') }),
-    new winston.transports.File({ filename: path.join('app', 'logger', 'info.log'), level: 'info' }),
-  );
-}
-
 // Create the logger instance
 const logger = winston.createLogger({
   level: 'info',
@@ -48,7 +38,11 @@ const logger = winston.createLogger({
       winston.format.prettyPrint(),
       mongooseCreateFormat(), // Add the custom format function
   ),
-  transports: loggerTransports,
+  transports: [
+    new winston.transports.File({ filename: path.join('app', 'logger', 'error.log'), level: 'error' }),
+    new winston.transports.File({ filename: path.join('app', 'logger', 'combined.log') }),
+    new winston.transports.File({ filename: path.join('app', 'logger', 'info.log'), level: 'info' }),
+  ],
 });
 
 if (process.env.NODE_ENV !== 'test') {

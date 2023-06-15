@@ -3,12 +3,13 @@ const sequelize = require('../database/configDB');
 const { Office, Employee, Customer,
   User, Permission } = require('../models')
 
+  const bcrypt = require('bcrypt'); 
 // sample
 const sampleCustomers = require('./sampleCustomer');
 const sampleEmployees = require('./sampleEmployees');
 const samplePermissions = require('./samplePermissions'); // Import sample permissions
 const sampleOffices = require('./sampleOffice');
-const sampleUsers = require('./sampleUsers');
+
 
 // add demo customers
 const insertCustomers = async () => {
@@ -23,7 +24,10 @@ const insertCustomers = async () => {
 // add demo customers
 const insertUsers = async () => {
   try {
-    await User.bulkCreate(sampleUsers);
+    //create account
+    const salt = await bcrypt.genSalt();
+    const hashedPassword = await bcrypt.hash('123Taodeonho@', salt);
+    await User.create({ userName:'Alight', password: hashedPassword, employeeNumber:1 });
     console.log('Sample User created successfully');
   } catch (error) {
     console.error('Error creating sample customers:', error);

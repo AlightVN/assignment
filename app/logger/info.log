@@ -4466,3 +4466,99 @@
   level: 'info',
   timestamp: '2023-06-15T03:27:34.119Z'
 }
+{
+  message: 'Error: "userName" length must be at least 3 characters long',
+  userName: 'registerFail',
+  level: 'error',
+  timestamp: '2023-06-15T03:43:48.764Z'
+}
+{
+  message: 'Login Account successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-15T03:43:48.980Z'
+}
+{
+  message: 'Login Account successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-15T03:43:49.202Z'
+}
+{
+  message: 'Retrieved employees successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-15T03:43:49.270Z'
+}
+{
+  message: 'Employee created successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-15T03:43:49.360Z'
+}
+{
+  message: 'Retrieved employee successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-15T03:43:49.395Z'
+}
+{
+  message: 'Employee updated successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-15T03:43:49.455Z'
+}
+{
+  message: 'Employee deleted successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-15T03:43:49.506Z'
+}
+{
+  message: 'Login Account successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-15T03:43:49.717Z'
+}
+{
+  message: 'Retrieved customers successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-15T03:43:49.789Z'
+}
+{
+  message: 'Created customers successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-15T03:43:49.823Z'
+}
+{
+  message: 'Retrieved customer information successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-15T03:43:49.850Z'
+}
+{
+  message: 'Created customers successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-15T03:43:49.877Z'
+}
+{
+  message: 'Deleted customers successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-15T03:43:49.904Z'
+}
+{
+  message: 'Error: user or password Incorrect',
+  userName: 'notLogin',
+  level: 'error',
+  timestamp: '2023-06-15T03:45:10.317Z'
+}
+{
+  message: 'Username is already in use',
+  userName: 'registerNew',
+  level: 'error',
+  timestamp: '2023-06-15T03:45:23.248Z'
+}

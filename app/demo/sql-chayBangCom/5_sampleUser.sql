@@ -8,5 +8,5 @@ CREATE TABLE users (
 );
 
 INSERT INTO users (userName, password, employeeNumber)
-VALUES ('Alight', '$10$ysyrcjYa3CYFslLXbAj51OpqOK8IgHftwf.rYPIdFiTwiU4quUloO', 1);
+VALUES ('Alight', '$2b$10$oWxtti.p3kn0JZRy8HFCiOsarNYDwhmypK3Hg2pK55OvzJOODrmga', 1);
 

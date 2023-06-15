@@ -1,8 +1,7 @@
 const roles = [
   { userName: 'Alight',
-   password: '$10$ysyrcjYa3CYFslLXbAj51OpqOK8IgHftwf.rYPIdFiTwiU4quUloO',
+   password: '$2b$10$oWxtti.p3kn0JZRy8HFCiOsarNYDwhmypK3Hg2pK55OvzJOODrmga',
   employeeNumber:1 },
-
 ];
 
 module.exports = roles;
