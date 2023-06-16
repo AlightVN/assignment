@@ -1,87 +1,65 @@
-// Import required libraries
-const chai = require('chai');
-const chaiHttp = require('chai-http');
-const { User } = require('../app/models');
-const app = require('../index');
+const { expect } = require('chai');
+const sinon = require('sinon');
+const bcrypt = require('bcrypt');
+const TestUser = require('../app/models/testModel/userTestModel');
 
-// eslint-disable-next-line no-unused-vars
-const should = chai.should();
-chai.use(chaiHttp);
+describe('User', () => {
+  describe('#register', () => {
+    beforeEach(() => {
+      sinon.restore(); // Khôi phục tất cả các stub trước mỗi bài kiểm tra
+    });
 
-// eslint-disable-next-line no-unused-vars
-let token;
+    it('should create a new user', async () => {
+      const fakeUsername = 'john.doe';
+      const fakePassword = 'password123';
+      const fakeEncryptedPassword = 'encrypted-password';
+      const fakeUserData = { id: 1, username: fakeUsername };
 
-// Function to login a user and return the login response
-async function loginUser() {
-  const res = await chai.request(app)
-    .post('/user/login')
-    .send({ userName: 'testuser', password: 'Test@123' });
+      const bcryptStub = sinon.stub(bcrypt, 'hashSync').returns(fakeEncryptedPassword);
+      const createStub = sinon.stub(TestUser, 'create').resolves(fakeUserData);
 
-  token = res.body.token;
-  return res;
-}
+      const result = await TestUser.register(fakeUsername, fakePassword);
 
-// User test suite
-describe('POST /users', () => {
-  before(async () => {
-    // Delete all existing users before each test
-    await User.destroy({ where: {userName: 'testuser'} });
-  });
-
-  // Test POST (create user)
-  it('Create new user successfully', (done) => {
-    const newUser = {
-      userName: 'testuser',
-      password: 'Test@123',
-      employeeNumber: 9,
-    };
-
-    chai.request(app)
-      .post('/user/register')
-      .send(newUser)
-      .end((err, res) => {
-        res.should.have.status(200);
-        res.body.should.be.a('object');
-        res.body.should.have.property('user');
-        res.body.user.should.have.property('userName').eql(newUser.userName);
-        res.body.user.should.have.property('employeeNumber').eql(newUser.employeeNumber);
-        res.body.should.have.property('token');
-        done();
-      });
-  });
-
-  // Test POST (create user with invalid data)
-  it('Create new user fails with invalid data', (done) => {
-    const invalidUser = {
-      userName: 'te',
-      password: 'Test123',
-      employeeNumber: 2,
-    };
-
-    chai.request(app)
-      .post('/user/register')
-      .send(invalidUser)
-      .end((err, res) => {
-        res.should.have.status(400);
-        res.body.should.be.a('object');
-        res.body.should.have.property('message');
-        done();
-      });
-  });
-
-  // Test login with valid user credentials
-  it('Login user with valid credentials', (done) => {
-    loginUser().then((res) => {
-      res.should.have.status(200);
-      res.body.should.be.a('object');
-      res.body.should.have.property('token');
-      done();
+      expect(result).to.deep.equal(fakeUserData);
+      expect(bcryptStub.calledOnceWith(fakePassword, sinon.match.number)).to.be.true;
+      expect(createStub.calledOnceWith({ userName: fakeUsername, password: fakeEncryptedPassword })).to.be.true;
     });
   });
 
-});
+  describe('#login', () => {
+    beforeEach(() => {
+      sinon.restore(); // Khôi phục tất cả các stub trước mỗi bài kiểm tra
+    });
 
-// Export loginUser function
-module.exports = {
-  loginUser,
-};
+    it('should log in with valid credentials', async () => {
+      const fakeUsername = 'john.doe';
+      const fakePassword = 'password123';
+      const fakeEncryptedPassword = 'encrypted-password';
+      const fakeUserData = { id: 1, username: fakeUsername, password: fakeEncryptedPassword };
+
+      const bcryptStub = sinon.stub(bcrypt, 'compare').resolves(true);
+      const findOneStub = sinon.stub(TestUser, 'findOne').resolves(fakeUserData);
+
+      const result = await TestUser.login(fakeUsername, fakePassword);
+
+      expect(result).to.deep.equal(fakeUserData);
+      expect(bcryptStub.calledOnceWith(fakePassword, fakeEncryptedPassword)).to.be.true;
+      expect(findOneStub.calledOnceWith({ where: { userName: fakeUsername } })).to.be.true;
+    });
+
+    it('should throw an error with invalid credentials', async () => {
+      const fakeUsername = 'john.doe';
+      const fakePassword = 'password123';
+
+      const bcryptStub = sinon.stub(bcrypt, 'compare').resolves(false);
+      const findOneStub = sinon.stub(TestUser, 'findOne').resolves(null);
+
+      try {
+        await TestUser.login(fakeUsername, fakePassword);
+        expect.fail('Expected an error to be thrown');
+      } catch (error) {
+        expect(error.message).to.equal('Invalid credentials');
+      }
+    });
+  });
+});

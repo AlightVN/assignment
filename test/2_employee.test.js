@@ -1,110 +1,178 @@
-// Import required libraries
-const chai = require('chai');
-const chaiHttp = require('chai-http');
-const app = require('../index');
-const { loginUser } = require('./1_auth.test');
-// Configure chai for HTTP requests
-chai.use(chaiHttp);
-chai.should();
+const sinon = require('sinon');
+const { expect } = require('chai');
+const EmployeeTest = require('../app/models/employeeTestModel');
 
-let idTest;
 
-// Employee test suite
-describe('Employee Test', () => {
-  let token;
+describe('Employee Controller', () => {
+  describe('GET /employees', () => {
+    it('should return a list of employees', async () => {
+      const employees = [
+        {
+          employeeNumber: 1,
+          firstName: 'John',
+          lastName: 'Doe',
+          extension: '1234',
+          email: 'johndoe@example.com',
+          officeCode: 1,
+          reportsTo: null,
+          jobTitle: 'Manager',
+          roleId: 1,
+        },
+        {
+          employeeNumber: 2,
+          firstName: 'Jane',
+          lastName: 'Doe',
+          extension: '5678',
+          email: 'janedoe@example.com',
+          officeCode: 2,
+          reportsTo: 1,
+          jobTitle: 'Assistant Manager',
+          roleId: 2,
+        },
+      ];
 
-  // Get the token for authentication before running tests
-  before(async () => {
-    const loginResponse = await loginUser();
-    token = loginResponse.body.token;
-  });
+      const findAllStub = sinon.stub(Employee, 'findAll').resolves(employees);
 
-  // Test GET (fetch employees)
-  it('Fetch list of employees', (done) => {
-    chai.request(app)
-      .get('/employees')
-      .set('Authorization', `Bearer ${token}`)
-      .end((err, res) => {
-        res.should.have.status(200);
-        res.body.data.should.be.a('array');
-        done();
+      const req = {};
+      const res = {
+        status: sinon.stub().returnsThis(),
+        json: sinon.stub(),
+      };
+
+      await employeeController.getEmployees(req, res, () => {
+        console.log(res.body);
       });
+
+      expect(res.status.calledWith(200)).to.be.true;
+      expect(res.json.calledWith({ status: 'Success', message: 'Retrieved employees successfully', data: employees })).to.be.true;
+
+      findAllStub.restore();
+    });
   });
 
-  // Test POST (create employee)
-  it('Create new employee successfully', (done) => {
-    const newEmployee = {
-      firstName: "Alight",
-      lastName: "Legend",
-      extension: "Legend",
-      email: "111@gmail.com",
-      officeCode: 3,
-      reportsTo: null,
-      jobTitle: "president",
-      roleId: 1
-    };
+  describe('POST /employees', () => {
+    it('should create a new employee', async () => {
+      const newEmployee = {
+        firstName: 'John',
+        lastName: 'Doe',
+        extension: '1234',
+        email: 'johndoe@example.com',
+        officeCode: 1,
+        reportsTo: null,
+        jobTitle: 'Manager',
+        roleId: 1,
+      };
 
-    chai.request(app)
-      .post('/employees')
-      .set('Authorization', `Bearer ${token}`)
-      .send(newEmployee)
-      .end((err, res) => {
-        res.should.have.status(201);
-        res.body.should.be.a('object');
-        res.body.should.have.property('status').eql("Success");
-        res.body.should.have.property('message').eql("Employee created successfully");
-        idTest = res.body.data.id;
-        done();
-      });
+      const createStub = sinon.stub(Employee, 'create').resolves(newEmployee);
+
+      const req = {
+        body: newEmployee,
+      };
+      const res = {
+        status: sinon.stub().returnsThis(),
+        json: sinon.stub(),
+      };
+
+      await employeeController.createEmployee(req, res, () => {});
+
+      expect(res.status.calledWith(201)).to.be.true;
+      expect(res.json.calledWith({ status: 'Success', message: 'Employee created successfully', data: { id: newEmployee.employeeNumber } })).to.be.true;
+
+      createStub.restore();
+    });
   });
 
-  // Test GET (fetch employee by ID)
-  it('Fetch employee by newly created ID', (done) => {
-    chai.request(app)
-      .get(`/employees/${idTest}`)
-      .set('Authorization', `Bearer ${token}`)
-      .end((err, res) => {
-        res.should.have.status(200);
-        res.body.data.should.be.a('object');
-        done();
-      });
+  describe('GET /employees/:id', () => {
+    it('should return an employee by ID', async () => {
+      const employee = {
+        employeeNumber: 1,
+        firstName: 'John',
+        lastName: 'Doe',
+        extension: '1234',
+        email: 'johndoe@example.com',
+        officeCode: 1,
+        reportsTo: null,
+        jobTitle: 'Manager',
+        roleId: 1,
+      };
+
+      const findByPkStub = sinon.stub(Employee, 'findByPk').resolves(employee);
+
+      const req = {
+        params: {
+          id: 1,
+        },
+      };
+      const res = {
+        status: sinon.stub().returnsThis(),
+        json: sinon.stub(),
+      };
+
+      await employeeController.getEmployeeById(req, res, () => {});
+
+      expect(res.status.calledWith(200)).to.be.true;
+      expect(res.json.calledWith({ status: 'Success', message: 'Retrieved employee successfully', data: employee })).to.be.true;
+
+      findByPkStub.restore();
+    });
   });
 
-  // Test PUT (update employee)
-  it('Update employee successfully', (done) => {
-    const updatedEmployee = {
-      firstName: "Updated",
-      extension: "Legend",
-      email: "updated@gmail.com",
-      officeCode:  3,
-      reportsTo: 2,
-      jobTitle: "president",
-      roleId: 1
-    };
+  describe('PUT /employees/:id', () => {
+    it('should update an employee', async () => {
+      const updatedEmployee = {
+        employeeNumber: 1,
+        firstName: 'John',
+        lastName: 'Doe',
+        extension: '1234',
+        email: 'johndoe@example.com',
+        officeCode: 1,
+        reportsTo: null,
+        jobTitle: 'Manager',
+        roleId: 1,
+      };
 
-    chai.request(app)
-      .put(`/employees/${idTest}`)
-      .set('Authorization', `Bearer ${token}`)
-      .send(updatedEmployee)
-      .end((err, res) => {
-        res.should.have.status(200);
-        res.body.should.be.a('object');
-        res.body.should.have.property('message').eql('Employee updated successfully');
-        done();
-      });
+      const saveStub = sinon.stub(Employee.prototype, 'save').resolves(updatedEmployee);
+
+      const req = {
+        params: {
+          id: 1,
+        },
+        body: updatedEmployee,
+      };
+      const res = {
+        status: sinon.stub().returnsThis(),
+        json: sinon.stub(),
+      };
+
+      await employeeController.updateEmployeeById(req, res, () => {});
+
+      expect(res.status.calledWith(200)).to.be.true;
+      expect(res.json.calledWith({ status: 'Success', message: 'Employee updated successfully', data: updatedEmployee })).to.be.true;
+
+      saveStub.restore();
+    });
   });
 
-  // Test DELETE (delete employee)
-  it('Delete employee successfully', (done) => {
-    chai.request(app)
-      .delete(`/employees/${idTest}`)
-      .set('Authorization', `Bearer ${token}`)
-      .end((err, res) => {
-        res.should.have.status(200);
-        res.body.should.be.a('object');
-        res.body.should.have.property('message').eql('Employee deleted successfully');
-        done();
-      });
-  });
+  describe('DELETE /employees/:id', () => {
+    it('should delete an employee', async () => {
+      const destroyStub = sinon.stub(Employee, 'destroy').resolves();
 
+      const req = {
+        params: {
+          id: 1,
+        },
+      };
+      const res = {
+        status: sinon.stub().returnsThis(),
+        json: sinon.stub(),
+      };
+
+      await employeeController.deleteEmployee(req, res, () => {});
+
+      expect(res.status.calledWith(200)).to.be.true;
+      expect(res.json.calledWith({ status: 'Success', message: 'Employee deleted successfully' })).to.be.true;
+
+      destroyStub.restore();
+    });
+  });
 });

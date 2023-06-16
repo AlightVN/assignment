@@ -4562,3 +4562,171 @@
   level: 'error',
   timestamp: '2023-06-15T03:45:23.248Z'
 }
+{
+  message: 'Error: "userName" length must be at least 3 characters long',
+  userName: 'registerFail',
+  level: 'error',
+  timestamp: '2023-06-16T03:12:11.176Z'
+}
+{
+  message: 'Login Account successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-16T03:12:11.348Z'
+}
+{
+  message: 'Login Account successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-16T03:12:11.520Z'
+}
+{
+  message: 'Retrieved employees successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-16T03:12:11.557Z'
+}
+{
+  message: 'Employee created successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-16T03:12:11.628Z'
+}
+{
+  message: 'Retrieved employee successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-16T03:12:11.655Z'
+}
+{
+  message: 'Employee updated successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-16T03:12:11.741Z'
+}
+{
+  message: 'Employee deleted successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-16T03:12:11.781Z'
+}
+{
+  message: 'Login Account successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-16T03:12:11.947Z'
+}
+{
+  message: 'Retrieved customers successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-16T03:12:11.970Z'
+}
+{
+  message: 'Created customers successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-16T03:12:12.043Z'
+}
+{
+  message: 'Retrieved customer information successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-16T03:12:12.078Z'
+}
+{
+  message: 'Created customers successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-16T03:12:12.113Z'
+}
+{
+  message: 'Deleted customers successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-16T03:12:12.133Z'
+}
+{
+  message: 'Error: "userName" length must be at least 3 characters long',
+  userName: 'registerFail',
+  level: 'error',
+  timestamp: '2023-06-16T03:13:08.167Z'
+}
+{
+  message: 'Login Account successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-16T03:13:08.342Z'
+}
+{
+  message: 'Login Account successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-16T03:13:08.504Z'
+}
+{
+  message: 'Retrieved employees successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-16T03:13:08.560Z'
+}
+{
+  message: 'Employee created successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-16T03:13:08.645Z'
+}
+{
+  message: 'Retrieved employee successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-16T03:13:08.671Z'
+}
+{
+  message: 'Employee updated successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-16T03:13:08.819Z'
+}
+{
+  message: 'Employee deleted successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-16T03:13:08.852Z'
+}
+{
+  message: 'Login Account successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-16T03:13:09.039Z'
+}
+{
+  message: 'Retrieved customers successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-16T03:13:09.089Z'
+}
+{
+  message: 'Created customers successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-16T03:13:09.127Z'
+}
+{
+  message: 'Retrieved customer information successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-16T03:13:09.157Z'
+}
+{
+  message: 'Created customers successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-16T03:13:09.188Z'
+}
+{
+  message: 'Deleted customers successfully',
+  userName: 'testuser',
+  level: 'info',
+  timestamp: '2023-06-16T03:13:09.215Z'
+}
