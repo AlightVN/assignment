@@ -1,7 +1,7 @@
 const { DataTypes } = require('sequelize');
-const sequelize = require('../database/configDB');
-const Permission = require('./permissionModel'); // Import Permission model
-const Office = require('./officeModel'); // Import Permission model
+const sequelize = require('../../database/configDB');
+const Permission = require('../permissionModel'); // Import Permission model
+const Office = require('../officeModel'); // Import Permission model
 
 
 const EmployeeTest = sequelize.define(

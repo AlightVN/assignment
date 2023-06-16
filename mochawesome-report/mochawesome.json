@@ -1,0 +1,643 @@
+{
+  "stats": {
+    "suites": 15,
+    "tests": 13,
+    "passes": 13,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-06-16T07:59:01.470Z",
+    "end": "2023-06-16T07:59:01.614Z",
+    "duration": 144,
+    "testsRegistered": 13,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "7a1af75e-df28-455a-bdca-97a86ef3de99",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e979c2a3-374c-4378-8955-b63319988139",
+          "title": "User",
+          "fullFile": "D:\\FA\\Thang 05\\17-05\\2_Assignments\\NodeJs_Training\\test\\1_auth.test.js",
+          "file": "\\test\\1_auth.test.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "5355a03b-cbbe-44b2-83cd-f3ba95ab0d57",
+              "title": "#register",
+              "fullFile": "D:\\FA\\Thang 05\\17-05\\2_Assignments\\NodeJs_Training\\test\\1_auth.test.js",
+              "file": "\\test\\1_auth.test.js",
+              "beforeHooks": [
+                {
+                  "title": "\"before each\" hook in \"#register\"",
+                  "fullTitle": "User #register \"before each\" hook in \"#register\"",
+                  "timedOut": false,
+                  "duration": 0,
+                  "state": null,
+                  "speed": null,
+                  "pass": false,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "sinon.restore(); // Khôi phục tất cả các stub trước mỗi bài kiểm tra",
+                  "err": {},
+                  "uuid": "0d8c3d85-a57d-4180-ab6e-7c9be4a2aa74",
+                  "parentUUID": "5355a03b-cbbe-44b2-83cd-f3ba95ab0d57",
+                  "isHook": true,
+                  "skipped": false
+                }
+              ],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "should create a new user",
+                  "fullTitle": "User #register should create a new user",
+                  "timedOut": false,
+                  "duration": 7,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "const fakeUsername = 'john.doe';\nconst fakePassword = 'password123';\nconst fakeEncryptedPassword = 'encrypted-password';\nconst fakeUserData = { id: 1, username: fakeUsername };\nconst bcryptStub = sinon.stub(bcrypt, 'hashSync').returns(fakeEncryptedPassword);\nconst createStub = sinon.stub(TestUser, 'create').resolves(fakeUserData);\nconst result = await TestUser.register(fakeUsername, fakePassword);\nexpect(result).to.deep.equal(fakeUserData);\nexpect(bcryptStub.calledOnceWith(fakePassword, sinon.match.number)).to.be.true;\nexpect(createStub.calledOnceWith({ userName: fakeUsername, password: fakeEncryptedPassword })).to.be.true;",
+                  "err": {},
+                  "uuid": "c554f928-fd58-4221-a466-b45b616c72ec",
+                  "parentUUID": "5355a03b-cbbe-44b2-83cd-f3ba95ab0d57",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "c554f928-fd58-4221-a466-b45b616c72ec"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 7,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "041062e7-9e32-4874-b574-599df6a8f8e3",
+              "title": "#login",
+              "fullFile": "D:\\FA\\Thang 05\\17-05\\2_Assignments\\NodeJs_Training\\test\\1_auth.test.js",
+              "file": "\\test\\1_auth.test.js",
+              "beforeHooks": [
+                {
+                  "title": "\"before each\" hook in \"#login\"",
+                  "fullTitle": "User #login \"before each\" hook in \"#login\"",
+                  "timedOut": false,
+                  "duration": 0,
+                  "state": null,
+                  "speed": null,
+                  "pass": false,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "sinon.restore(); // Khôi phục tất cả các stub trước mỗi bài kiểm tra",
+                  "err": {},
+                  "uuid": "b0f73084-df01-4b6e-8a15-f975d737b359",
+                  "parentUUID": "041062e7-9e32-4874-b574-599df6a8f8e3",
+                  "isHook": true,
+                  "skipped": false
+                }
+              ],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "should log in with valid credentials",
+                  "fullTitle": "User #login should log in with valid credentials",
+                  "timedOut": false,
+                  "duration": 3,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "const fakeUsername = 'john.doe';\nconst fakePassword = 'password123';\nconst fakeEncryptedPassword = 'encrypted-password';\nconst fakeUserData = { id: 1, username: fakeUsername, password: fakeEncryptedPassword };\nconst bcryptStub = sinon.stub(bcrypt, 'compare').resolves(true);\nconst findOneStub = sinon.stub(TestUser, 'findOne').resolves(fakeUserData);\nconst result = await TestUser.login(fakeUsername, fakePassword);\nexpect(result).to.deep.equal(fakeUserData);\nexpect(bcryptStub.calledOnceWith(fakePassword, fakeEncryptedPassword)).to.be.true;\nexpect(findOneStub.calledOnceWith({ where: { userName: fakeUsername } })).to.be.true;",
+                  "err": {},
+                  "uuid": "d539ee42-3592-4a05-9de1-78222788f40f",
+                  "parentUUID": "041062e7-9e32-4874-b574-599df6a8f8e3",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "should throw an error with invalid credentials",
+                  "fullTitle": "User #login should throw an error with invalid credentials",
+                  "timedOut": false,
+                  "duration": 2,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "const fakeUsername = 'john.doe';\nconst fakePassword = 'password123';\nconst bcryptStub = sinon.stub(bcrypt, 'compare').resolves(false);\nconst findOneStub = sinon.stub(TestUser, 'findOne').resolves(null);\ntry {\n  await TestUser.login(fakeUsername, fakePassword);\n  expect.fail('Expected an error to be thrown');\n} catch (error) {\n  expect(error.message).to.equal('Invalid credentials');\n}",
+                  "err": {},
+                  "uuid": "8940d508-6611-4c43-b7eb-fdc82c272afa",
+                  "parentUUID": "041062e7-9e32-4874-b574-599df6a8f8e3",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "d539ee42-3592-4a05-9de1-78222788f40f",
+                "8940d508-6611-4c43-b7eb-fdc82c272afa"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 5,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "7ae7565c-8d1c-4ca4-81d2-47937791a368",
+          "title": "Employee Test Model",
+          "fullFile": "D:\\FA\\Thang 05\\17-05\\2_Assignments\\NodeJs_Training\\test\\2_employee.test.js",
+          "file": "\\test\\2_employee.test.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "3fca8e24-16d9-4202-9a1b-e990acbbf8ed",
+              "title": "createEmployee",
+              "fullFile": "D:\\FA\\Thang 05\\17-05\\2_Assignments\\NodeJs_Training\\test\\2_employee.test.js",
+              "file": "\\test\\2_employee.test.js",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "should create a new employee",
+                  "fullTitle": "Employee Test Model createEmployee should create a new employee",
+                  "timedOut": false,
+                  "duration": 1,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "const newEmployee = {\n  firstName: 'John',\n  lastName: 'Doe',\n  extension: '1234',\n  email: 'johndoe@example.com',\n  officeCode: 1,\n  reportsTo: null,\n  jobTitle: 'Manager',\n  roleId: 1,\n};\nconst createStub = sinon.stub(EmployeeTest, 'createEmployee').resolves(newEmployee);\nconst createdEmployee = await EmployeeTest.createEmployee(newEmployee);\nexpect(createdEmployee).to.deep.equal(newEmployee);\ncreateStub.restore();",
+                  "err": {},
+                  "uuid": "845f65d3-0b1f-4180-b2e9-8b91f60180f0",
+                  "parentUUID": "3fca8e24-16d9-4202-9a1b-e990acbbf8ed",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "845f65d3-0b1f-4180-b2e9-8b91f60180f0"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 1,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "5f687664-297a-4117-8941-599f99df1a56",
+              "title": "getAll",
+              "fullFile": "D:\\FA\\Thang 05\\17-05\\2_Assignments\\NodeJs_Training\\test\\2_employee.test.js",
+              "file": "\\test\\2_employee.test.js",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "should return a list of employees",
+                  "fullTitle": "Employee Test Model getAll should return a list of employees",
+                  "timedOut": false,
+                  "duration": 2,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "const employees = [\n  {\n    employeeNumber: 1,\n    firstName: 'John',\n    lastName: 'Doe',\n    extension: '1234',\n    email: 'johndoe@example.com',\n    officeCode: 1,\n    reportsTo: null,\n    jobTitle: 'Manager',\n    roleId: 1,\n  },\n];\nconst findAllStub = sinon.stub(EmployeeTest, 'getAll').resolves(employees);\nconst allEmployees = await EmployeeTest.getAll();\nexpect(allEmployees).to.deep.equal(employees);\nfindAllStub.restore();",
+                  "err": {},
+                  "uuid": "70bb1e1f-991f-46c8-a6b4-1b25c6ae66e5",
+                  "parentUUID": "5f687664-297a-4117-8941-599f99df1a56",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "70bb1e1f-991f-46c8-a6b4-1b25c6ae66e5"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 2,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "e1edbac4-b5fc-40e8-b5af-192b5d69b41e",
+              "title": "getById",
+              "fullFile": "D:\\FA\\Thang 05\\17-05\\2_Assignments\\NodeJs_Training\\test\\2_employee.test.js",
+              "file": "\\test\\2_employee.test.js",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "should return an employee by ID",
+                  "fullTitle": "Employee Test Model getById should return an employee by ID",
+                  "timedOut": false,
+                  "duration": 1,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "const employee = {\n  employeeNumber: 1,\n  firstName: 'John',\n  lastName: 'Doe',\n  extension: '1234',\n  email: 'johndoe@example.com',\n  officeCode: 1,\n  reportsTo: null,\n  jobTitle: 'Manager',\n  roleId: 1,\n};\nconst findByPkStub = sinon.stub(EmployeeTest, 'getById').resolves(employee);\nconst foundEmployee = await EmployeeTest.getById(employee.employeeNumber);\nexpect(foundEmployee).to.deep.equal(employee);\nfindByPkStub.restore();",
+                  "err": {},
+                  "uuid": "a0b05545-7456-42bb-81e6-d97625973ab3",
+                  "parentUUID": "e1edbac4-b5fc-40e8-b5af-192b5d69b41e",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "a0b05545-7456-42bb-81e6-d97625973ab3"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 1,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "779b66f0-4a2a-4998-a01b-72d442fb37a3",
+              "title": "updateById",
+              "fullFile": "D:\\FA\\Thang 05\\17-05\\2_Assignments\\NodeJs_Training\\test\\2_employee.test.js",
+              "file": "\\test\\2_employee.test.js",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "should update an employee",
+                  "fullTitle": "Employee Test Model updateById should update an employee",
+                  "timedOut": false,
+                  "duration": 1,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "const updatedEmployee = {\n  employeeNumber: 1,\n  firstName: 'John',\n  lastName: 'Doe',\n  extension: '1234',\n  email: 'johndoe@example.com',\n  officeCode: 1,\n  reportsTo: null,\n  jobTitle: 'Manager',\n  roleId: 1,\n};\nconst saveStub = sinon.stub(EmployeeTest, 'updateById').resolves(updatedEmployee);\nconst updated = await EmployeeTest.updateById(updatedEmployee.employeeNumber, updatedEmployee);\nexpect(updated).to.deep.equal(updatedEmployee);\nsaveStub.restore();",
+                  "err": {},
+                  "uuid": "d5a47f0d-a543-42c3-bebf-690249bdf068",
+                  "parentUUID": "779b66f0-4a2a-4998-a01b-72d442fb37a3",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "d5a47f0d-a543-42c3-bebf-690249bdf068"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 1,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "cedc86a9-f64f-4210-a3af-a1f6d9bca5de",
+              "title": "deleteById",
+              "fullFile": "D:\\FA\\Thang 05\\17-05\\2_Assignments\\NodeJs_Training\\test\\2_employee.test.js",
+              "file": "\\test\\2_employee.test.js",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "should delete an employee",
+                  "fullTitle": "Employee Test Model deleteById should delete an employee",
+                  "timedOut": false,
+                  "duration": 1,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "const destroyStub = sinon.stub(EmployeeTest, 'deleteById').resolves(true);\nconst result = await EmployeeTest.deleteById(1);\nexpect(result).to.be.true;\ndestroyStub.restore();",
+                  "err": {},
+                  "uuid": "c141827c-7879-43a4-a6b4-44be9e6cb891",
+                  "parentUUID": "cedc86a9-f64f-4210-a3af-a1f6d9bca5de",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "c141827c-7879-43a4-a6b4-44be9e6cb891"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 1,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "463b040b-c57e-4660-8a67-3b8f98a20977",
+          "title": "Customer Test Model",
+          "fullFile": "D:\\FA\\Thang 05\\17-05\\2_Assignments\\NodeJs_Training\\test\\3_customer.test.js",
+          "file": "\\test\\3_customer.test.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "708700ef-92ad-49ee-b381-ad29ccdb247b",
+              "title": "createCustomer",
+              "fullFile": "D:\\FA\\Thang 05\\17-05\\2_Assignments\\NodeJs_Training\\test\\3_customer.test.js",
+              "file": "\\test\\3_customer.test.js",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "should create a new customer",
+                  "fullTitle": "Customer Test Model createCustomer should create a new customer",
+                  "timedOut": false,
+                  "duration": 1,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "const newCustomer = {\n  customerName: \"New Customer\",\n  contactLastName: \"Doe\",\n  contactFirstName: \"John\",\n  phone: \"1234567890\",\n  addressLine1: \"123 Main Street\",\n  addressLine2: null,\n  city: \"New York\",\n  state: \"NY\",\n  postalCode: \"10001\",\n  country: \"USA\",\n  salesRepEmployeeNumber: 1,\n  creditLimit: 1000,\n};\nconst createStub = sinon.stub(CustomerTest, 'createCustomer').resolves(newCustomer);\nconst createdCustomer = await CustomerTest.createCustomer(newCustomer);\nexpect(createdCustomer).to.deep.equal(newCustomer);\ncreateStub.restore();",
+                  "err": {},
+                  "uuid": "5173a546-c602-4cb5-aeda-3869446674a0",
+                  "parentUUID": "708700ef-92ad-49ee-b381-ad29ccdb247b",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "5173a546-c602-4cb5-aeda-3869446674a0"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 1,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "4f65a59b-ac45-479f-beeb-bda98966bded",
+              "title": "getAll",
+              "fullFile": "D:\\FA\\Thang 05\\17-05\\2_Assignments\\NodeJs_Training\\test\\3_customer.test.js",
+              "file": "\\test\\3_customer.test.js",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "should return a list of customers",
+                  "fullTitle": "Customer Test Model getAll should return a list of customers",
+                  "timedOut": false,
+                  "duration": 1,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "const customers = [\n  {\n    customerNumber: 1,\n    customerName: \"New Customer\",\n    contactLastName: \"Doe\",\n    contactFirstName: \"John\",\n    phone: \"1234567890\",\n    addressLine1: \"123 Main Street\",\n    addressLine2: null,\n    city: \"New York\",\n    state: \"NY\",\n    postalCode: \"10001\",\n    country: \"USA\",\n    salesRepEmployeeNumber: 1,\n    creditLimit: 1000,\n  },\n];\nconst findAllStub = sinon.stub(CustomerTest, 'getAll').resolves(customers);\nconst allCustomers = await CustomerTest.getAll();\nexpect(allCustomers).to.deep.equal(customers);\nfindAllStub.restore();",
+                  "err": {},
+                  "uuid": "8be35ae6-4eb2-4848-af43-45a2684ce56a",
+                  "parentUUID": "4f65a59b-ac45-479f-beeb-bda98966bded",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "8be35ae6-4eb2-4848-af43-45a2684ce56a"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 1,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "439a9756-73aa-48dd-bed5-afcccbeef20b",
+              "title": "getById",
+              "fullFile": "D:\\FA\\Thang 05\\17-05\\2_Assignments\\NodeJs_Training\\test\\3_customer.test.js",
+              "file": "\\test\\3_customer.test.js",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "should return a customer by ID",
+                  "fullTitle": "Customer Test Model getById should return a customer by ID",
+                  "timedOut": false,
+                  "duration": 3,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "const customer = {\n  customerNumber: 1,\n  customerName: \"New Customer\",\n  contactLastName: \"Doe\",\n  contactFirstName: \"John\",\n  phone: \"1234567890\",\n  addressLine1: \"123 Main Street\",\n  addressLine2: null,\n  city: \"New York\",\n  state: \"NY\",\n  postalCode: \"10001\",\n  country: \"USA\",\n  salesRepEmployeeNumber: 1,\n  creditLimit: 1000,\n};\nconst findByPkStub = sinon.stub(CustomerTest, 'getById').resolves(customer);\nconst foundCustomer = await CustomerTest.getById(customer.customerNumber);\nexpect(foundCustomer).to.deep.equal(customer);\nfindByPkStub.restore();",
+                  "err": {},
+                  "uuid": "835d6d77-9963-4770-b396-5ad05383f508",
+                  "parentUUID": "439a9756-73aa-48dd-bed5-afcccbeef20b",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "835d6d77-9963-4770-b396-5ad05383f508"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 3,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "ede35445-7edb-401a-9665-97ddf0387a5a",
+              "title": "updateById",
+              "fullFile": "D:\\FA\\Thang 05\\17-05\\2_Assignments\\NodeJs_Training\\test\\3_customer.test.js",
+              "file": "\\test\\3_customer.test.js",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "should update a customer",
+                  "fullTitle": "Customer Test Model updateById should update a customer",
+                  "timedOut": false,
+                  "duration": 2,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "const updatedCustomer = {\n  customerNumber: 1,\n  customerName: \"Updated Customer\",\n  contactLastName: \"Smith\",\n  contactFirstName: \"Jane\",\n  phone: \"0987654321\",\n  addressLine1: \"456 Main Street\",\n  city: \"New York\",\n  country: \"USA\"\n};\nconst saveStub = sinon.stub(CustomerTest, 'updateById').resolves(updatedCustomer);\nconst updated = await CustomerTest.updateById(updatedCustomer.customerNumber, updatedCustomer);\nexpect(updated).to.deep.equal(updatedCustomer);\nsaveStub.restore();",
+                  "err": {},
+                  "uuid": "2ad12179-f9f8-4349-bb57-8dee28e84372",
+                  "parentUUID": "ede35445-7edb-401a-9665-97ddf0387a5a",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "2ad12179-f9f8-4349-bb57-8dee28e84372"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 2,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "646e3e7e-7f20-4c4e-8122-60b5fc0753d2",
+              "title": "deleteById",
+              "fullFile": "D:\\FA\\Thang 05\\17-05\\2_Assignments\\NodeJs_Training\\test\\3_customer.test.js",
+              "file": "\\test\\3_customer.test.js",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "should delete a customer",
+                  "fullTitle": "Customer Test Model deleteById should delete a customer",
+                  "timedOut": false,
+                  "duration": 1,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "const destroyStub = sinon.stub(CustomerTest, 'deleteById').resolves(true);\nconst result = await CustomerTest.deleteById(1);\nexpect(result).to.be.true;\ndestroyStub.restore();",
+                  "err": {},
+                  "uuid": "c6df8e3e-928d-424c-bba7-743561ce734b",
+                  "parentUUID": "646e3e7e-7f20-4c4e-8122-60b5fc0753d2",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "c6df8e3e-928d-424c-bba7-743561ce734b"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 1,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "10.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}

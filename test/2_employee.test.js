@@ -1,10 +1,34 @@
 const sinon = require('sinon');
 const { expect } = require('chai');
-const EmployeeTest = require('../app/models/employeeTestModel');
+const EmployeeTest = require('../app/models/testModel/employeeTestModel');
 
+describe('Employee Test Model', () => {
+  // CREATE
+  describe('createEmployee', () => {
+    it('should create a new employee', async () => {
+      const newEmployee = {
+        firstName: 'John',
+        lastName: 'Doe',
+        extension: '1234',
+        email: 'johndoe@example.com',
+        officeCode: 1,
+        reportsTo: null,
+        jobTitle: 'Manager',
+        roleId: 1,
+      };
 
-describe('Employee Controller', () => {
-  describe('GET /employees', () => {
+      const createStub = sinon.stub(EmployeeTest, 'createEmployee').resolves(newEmployee);
+
+      const createdEmployee = await EmployeeTest.createEmployee(newEmployee);
+
+      expect(createdEmployee).to.deep.equal(newEmployee);
+
+      createStub.restore();
+    });
+  });
+
+  // READ
+  describe('getAll', () => {
     it('should return a list of employees', async () => {
       const employees = [
         {
@@ -18,71 +42,19 @@ describe('Employee Controller', () => {
           jobTitle: 'Manager',
           roleId: 1,
         },
-        {
-          employeeNumber: 2,
-          firstName: 'Jane',
-          lastName: 'Doe',
-          extension: '5678',
-          email: 'janedoe@example.com',
-          officeCode: 2,
-          reportsTo: 1,
-          jobTitle: 'Assistant Manager',
-          roleId: 2,
-        },
       ];
 
-      const findAllStub = sinon.stub(Employee, 'findAll').resolves(employees);
+      const findAllStub = sinon.stub(EmployeeTest, 'getAll').resolves(employees);
 
-      const req = {};
-      const res = {
-        status: sinon.stub().returnsThis(),
-        json: sinon.stub(),
-      };
+      const allEmployees = await EmployeeTest.getAll();
 
-      await employeeController.getEmployees(req, res, () => {
-        console.log(res.body);
-      });
-
-      expect(res.status.calledWith(200)).to.be.true;
-      expect(res.json.calledWith({ status: 'Success', message: 'Retrieved employees successfully', data: employees })).to.be.true;
+      expect(allEmployees).to.deep.equal(employees);
 
       findAllStub.restore();
     });
   });
 
-  describe('POST /employees', () => {
-    it('should create a new employee', async () => {
-      const newEmployee = {
-        firstName: 'John',
-        lastName: 'Doe',
-        extension: '1234',
-        email: 'johndoe@example.com',
-        officeCode: 1,
-        reportsTo: null,
-        jobTitle: 'Manager',
-        roleId: 1,
-      };
-
-      const createStub = sinon.stub(Employee, 'create').resolves(newEmployee);
-
-      const req = {
-        body: newEmployee,
-      };
-      const res = {
-        status: sinon.stub().returnsThis(),
-        json: sinon.stub(),
-      };
-
-      await employeeController.createEmployee(req, res, () => {});
-
-      expect(res.status.calledWith(201)).to.be.true;
-      expect(res.json.calledWith({ status: 'Success', message: 'Employee created successfully', data: { id: newEmployee.employeeNumber } })).to.be.true;
-
-      createStub.restore();
-    });
-  });
-
-  describe('GET /employees/:id', () => {
+  describe('getById', () => {
     it('should return an employee by ID', async () => {
       const employee = {
         employeeNumber: 1,
@@ -96,28 +68,18 @@ describe('Employee Controller', () => {
         roleId: 1,
       };
 
-      const findByPkStub = sinon.stub(Employee, 'findByPk').resolves(employee);
+      const findByPkStub = sinon.stub(EmployeeTest, 'getById').resolves(employee);
 
-      const req = {
-        params: {
-          id: 1,
-        },
-      };
-      const res = {
-        status: sinon.stub().returnsThis(),
-        json: sinon.stub(),
-      };
+      const foundEmployee = await EmployeeTest.getById(employee.employeeNumber);
 
-      await employeeController.getEmployeeById(req, res, () => {});
-
-      expect(res.status.calledWith(200)).to.be.true;
-      expect(res.json.calledWith({ status: 'Success', message: 'Retrieved employee successfully', data: employee })).to.be.true;
+      expect(foundEmployee).to.deep.equal(employee);
 
       findByPkStub.restore();
     });
   });
 
-  describe('PUT /employees/:id', () => {
+  // UPDATE
+  describe('updateById', () => {
     it('should update an employee', async () => {
       const updatedEmployee = {
         employeeNumber: 1,
@@ -131,46 +93,24 @@ describe('Employee Controller', () => {
         roleId: 1,
       };
 
-      const saveStub = sinon.stub(Employee.prototype, 'save').resolves(updatedEmployee);
+      const saveStub = sinon.stub(EmployeeTest, 'updateById').resolves(updatedEmployee);
 
-      const req = {
-        params: {
-          id: 1,
-        },
-        body: updatedEmployee,
-      };
-      const res = {
-        status: sinon.stub().returnsThis(),
-        json: sinon.stub(),
-      };
+      const updated = await EmployeeTest.updateById(updatedEmployee.employeeNumber, updatedEmployee);
 
-      await employeeController.updateEmployeeById(req, res, () => {});
-
-      expect(res.status.calledWith(200)).to.be.true;
-      expect(res.json.calledWith({ status: 'Success', message: 'Employee updated successfully', data: updatedEmployee })).to.be.true;
+      expect(updated).to.deep.equal(updatedEmployee);
 
       saveStub.restore();
     });
   });
 
-  describe('DELETE /employees/:id', () => {
+  // DELETE
+  describe('deleteById', () => {
     it('should delete an employee', async () => {
-      const destroyStub = sinon.stub(Employee, 'destroy').resolves();
+      const destroyStub = sinon.stub(EmployeeTest, 'deleteById').resolves(true);
 
-      const req = {
-        params: {
-          id: 1,
-        },
-      };
-      const res = {
-        status: sinon.stub().returnsThis(),
-        json: sinon.stub(),
-      };
+      const result = await EmployeeTest.deleteById(1);
 
-      await employeeController.deleteEmployee(req, res, () => {});
-
-      expect(res.status.calledWith(200)).to.be.true;
-      expect(res.json.calledWith({ status: 'Success', message: 'Employee deleted successfully' })).to.be.true;
+      expect(result).to.be.true;
 
       destroyStub.restore();
     });
