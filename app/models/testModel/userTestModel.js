@@ -29,20 +29,7 @@ TestUser.register = async function (userName, password) {
   return user;
 };
 
-// Tạo phương thức tùy chỉnh login
-TestUser.login = async function (userName, password) {
-  const user = await TestUser.findOne({ where: { userName } });
-  if (!user) {
-    throw new Error('Invalid credentials');
-  }
 
-  const isValidPassword = await bcrypt.compare(password, user.password);
-  if (!isValidPassword) {
-    throw new Error('Invalid credentials');
-  }
-
-  return user;
-};
 
 // Setup references
 EmployeeTest.hasOne(TestUser, { foreignKey: 'employeeNumber' });

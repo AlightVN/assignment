@@ -1,129 +1,146 @@
+const chai = require('chai');
 const sinon = require('sinon');
-const { expect } = require('chai');
-const CustomerTest = require('../app/models/testModel/customerTestModel');
+const { mockReq, mockRes } = require('sinon-express-mock');
 
-describe('Customer Test Model', () => {
-  // CREATE
-  describe('createCustomer', () => {
-    it('should create a new customer', async () => {
-      const newCustomer = {
-        customerName: "New Customer",
-        contactLastName: "Doe",
-        contactFirstName: "John",
-        phone: "1234567890",
-        addressLine1: "123 Main Street",
-        addressLine2: null,
-        city: "New York",
-        state: "NY",
-        postalCode: "10001",
-        country: "USA",
+const CustomerController = require('../app/controller/customerController');
+const { Customer, Employee } = require('../app/models');
+
+chai.should();
+
+describe('Customer Controller', () => {
+  afterEach(() => {
+    sinon.restore();
+  });
+
+  it('should get a list of customers', async () => {
+    const req = mockReq({
+      userData: { userName: 'testUser', role: 'admin' },
+    });
+    const res = mockRes();
+    const next = sinon.stub();
+
+    const customers = [
+      { id: 1, customerName: 'John Doe' },
+      { id: 2, customerName: 'Jane Doe' },
+    ];
+
+    sinon.stub(Customer, 'findAll').resolves(customers);
+
+    await CustomerController.getCustomers(req, res, next);
+
+    res.status.calledWith(200).should.be.true;
+    res.json.calledWith({
+      status: 'Success',
+      message: 'Retrieved customers successfully',
+      data: customers,
+    }).should.be.true;
+  });
+
+  it('should create a new customer', async () => {
+    const req = mockReq({
+      userData: { userName: 'testUser', role: 'admin' },
+      body: {
+        customerName: 'John Doe',
+        contactLastName: 'Doe',
+        contactFirstName: 'John',
+        phone: '123-456-7890',
+        addressLine1: '123 Main St',
+        addressLine2: '',
+        city: 'New York',
+        state: 'NY',
+        postalCode: '10001',
+        country: 'USA',
         salesRepEmployeeNumber: 1,
         creditLimit: 1000,
-      };
-
-      const createStub = sinon.stub(CustomerTest, 'createCustomer').resolves(newCustomer);
-
-      const createdCustomer = await CustomerTest.createCustomer(newCustomer);
-
-      expect(createdCustomer).to.deep.equal(newCustomer);
-
-      createStub.restore();
+      },
     });
+    const res = mockRes();
+    const next = sinon.stub();
+
+    const createdCustomer = { ...req.body, customerNumber: 1 };
+    sinon.stub(Customer, 'create').resolves(createdCustomer);
+
+    await CustomerController.createCustomer(req, res, next);
+
+    res.status.calledWith(201).should.be.true;
+    res.json.calledWith({
+      status: 'Success',
+      message: 'Created customer successfully',
+      data: createdCustomer,
+    }).should.be.true;
   });
 
-  // READ
-  describe('getAll', () => {
-    it('should return a list of customers', async () => {
-      const customers = [
-        {
-          customerNumber: 1,
-          customerName: "New Customer",
-          contactLastName: "Doe",
-          contactFirstName: "John",
-          phone: "1234567890",
-          addressLine1: "123 Main Street",
-          addressLine2: null,
-          city: "New York",
-          state: "NY",
-          postalCode: "10001",
-          country: "USA",
-          salesRepEmployeeNumber: 1,
-          creditLimit: 1000,
-        },
-      ];
-
-      const findAllStub = sinon.stub(CustomerTest, 'getAll').resolves(customers);
-
-      const allCustomers = await CustomerTest.getAll();
-
-      expect(allCustomers).to.deep.equal(customers);
-
-      findAllStub.restore();
+  it('should update a customer by ID', async () => {
+    const req = mockReq({
+      userData: { userName: 'testUser', role: 'admin' },
+      params: { id: 1 },
+      body: {
+        customerName: 'John Doe',
+        contactLastName: 'Doe',
+        contactFirstName: 'John',
+      },
     });
+    const res = mockRes();
+    const next = sinon.stub();
+
+    const customer = {
+      customerNumber: 1,
+      customerName: 'John Doe',
+      contactLastName: 'Doe',
+      contactFirstName: 'John',
+      save: sinon.stub().resolves(),
+    };
+    sinon.stub(Customer, 'findByPk').resolves(customer);
+
+    await CustomerController.updateCustomerById(req, res, next);
+
+    res.status.calledWith(200).should.be.true;
+    res.json.calledWith({
+      status: 'Success',
+      message: 'Updated customer successfully',
+      data: customer,
+    }).should.be.true;
   });
 
-  describe('getById', () => {
-    it('should return a customer by ID', async () => {
-      const customer = {
-        customerNumber: 1,
-        customerName: "New Customer",
-        contactLastName: "Doe",
-        contactFirstName: "John",
-        phone: "1234567890",
-        addressLine1: "123 Main Street",
-        addressLine2: null,
-        city: "New York",
-        state: "NY",
-        postalCode: "10001",
-        country: "USA",
-        salesRepEmployeeNumber: 1,
-        creditLimit: 1000,
-      };
-
-      const findByPkStub = sinon.stub(CustomerTest, 'getById').resolves(customer);
-
-      const foundCustomer = await CustomerTest.getById(customer.customerNumber);
-
-      expect(foundCustomer).to.deep.equal(customer);
-
-      findByPkStub.restore();
+  it('should delete a customer by ID', async () => {
+    const req = mockReq({
+      userData: { userName: 'testUser', role: 'admin' },
+      params: { id: 1 },
     });
+    const res = mockRes();
+    const next = sinon.stub();
+
+    const customer = { customerNumber: 1, destroy: sinon.stub().resolves() };
+    sinon.stub(Customer, 'findByPk').resolves(customer);
+
+    await CustomerController.deleteCustomer(req, res, next);
+
+    res.status.calledWith(204).should.be.true;
+    res.json.calledWith({
+      status: 'Success',
+      message: 'Deleted customer successfully',
+    }).should.be.true;
   });
 
-  // UPDATE
-  describe('updateById', () => {
-    it('should update a customer', async () => {
-      const updatedCustomer = {
-        customerNumber: 1,
-        customerName: "Updated Customer",
-        contactLastName: "Smith",
-        contactFirstName: "Jane",
-        phone: "0987654321",
-        addressLine1: "456 Main Street",
-        city: "New York",
-        country: "USA"
-      };
-
-      const saveStub = sinon.stub(CustomerTest, 'updateById').resolves(updatedCustomer);
-
-      const updated = await CustomerTest.updateById(updatedCustomer.customerNumber, updatedCustomer);
-
-      expect(updated).to.deep.equal(updatedCustomer);
-
-      saveStub.restore();
+  it('should get a customer by ID', async () => {
+    const req = mockReq({
+      userData: { userName: 'testUser', role: 'admin' },
+      params: { id: 1 },
     });
+    const res = mockRes();
+    const next = sinon.stub();
+
+    const customer = { customerNumber: 1, customerName: 'John Doe' };
+    sinon.stub(Customer, 'findByPk').resolves(customer);
+
+    await CustomerController.getCustomerById(req, res, next);
+
+    res.status.calledWith(200).should.be.true;
+    res.json.calledWith({
+      status: 'Success',
+      message: 'Retrieved customer information successfully',
+      data: customer,
+    }).should.be.true;
   });
 
-  // DELETE
-  describe('deleteById', () => {
-    it('should delete a customer', async () => {
-      const destroyStub = sinon.stub(CustomerTest, 'deleteById').resolves(true);
-
-      const result = await CustomerTest.deleteById(1);
-
-      expect(result).to.be.true;
-
-      destroyStub.restore();
-    });
-  });
 });
