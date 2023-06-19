@@ -3,7 +3,7 @@ const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const { expect } = require('chai');
 const User = require('../app/models/userModel');
-const UserController = require('../app/controller/userController');
+const UserController = require('../app/controllers/userController');
 
 describe('User Controller', () => {
   afterEach(() => {
@@ -49,15 +49,15 @@ describe('User Controller', () => {
       };
       sinon.stub(User, 'findOne').resolves(null);
       sinon.stub(bcrypt, 'compare').resolves(false);
-    
+
       await UserController.login(req, res);
-    
+
       User.findOne.calledOnceWith({ where: { userName } });
       bcrypt.compare.calledOnceWith(password, null);
       res.status.calledOnceWith(401);
       res.json.calledOnceWith({ message: 'Incorrect username or password. You trying to cheat?' });
     });
-    
+
   });
 
   describe('register', () => {
@@ -69,40 +69,40 @@ describe('User Controller', () => {
         json: sinon.spy(),
         status: sinon.stub().returnsThis(),
       };
-    
+
       sinon.stub(User, 'findOne').resolves(null);
-    
+
       const createStub = sinon.stub(User, 'create');
       createStub.withArgs({ userName, password }).rejects(new Error('Mocked error'));
-    
+
       await UserController.register(req, res);
-    
+
       expect(User.findOne.calledOnceWith({ where: { userName } })).to.be.true;
       expect(createStub.calledOnce).to.be.true;
       expect(res.status.calledOnceWith(500)).to.be.true;
       expect(res.json.calledOnceWith({ message: 'An error occurred. Please try again later.' })).to.be.true;
-    
+
       User.findOne.restore();
       createStub.restore();
     });
-      
-   it('should return an error if an error occurs during user creation', async () => {
-     const userName = 'newUser';
-     const password = 'newPassword';
-     const req = { body: { userName, password } };
-     const res = {
-       json: sinon.spy(),
-       status: sinon.stub().returnsThis(),
-     };
-     sinon.stub(User, 'findOne').resolves(null);
-     sinon.stub(User, 'create').rejects(new Error('Mocked error'));
-   
-     await UserController.register(req, res);
-   
+
+    it('should return an error if an error occurs during user creation', async () => {
+      const userName = 'newUser';
+      const password = 'newPassword';
+      const req = { body: { userName, password } };
+      const res = {
+        json: sinon.spy(),
+        status: sinon.stub().returnsThis(),
+      };
+      sinon.stub(User, 'findOne').resolves(null);
+      sinon.stub(User, 'create').rejects(new Error('Mocked error'));
+
+      await UserController.register(req, res);
+
       User.findOne.calledOnceWith({ where: { userName } });
-     User.create.calledOnceWith({ userName, password });
-     res.status.calledOnceWith(500);
-  res.json.calledOnceWith({ message: 'An error occurred. Please try again later.' });
-   });
+      User.create.calledOnceWith({ userName, password });
+      res.status.calledOnceWith(500);
+      res.json.calledOnceWith({ message: 'An error occurred. Please try again later.' });
+    });
   });
 });
