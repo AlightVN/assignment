@@ -1,7 +1,6 @@
 const sinon = require('sinon');
 const { expect } = require('chai');
 const CustomerTest = require('../app/models/testModel/customerTestModel');
-const EmployeeTest = require('../app/models/testModel/employeeTestModel');
 
 describe('Customer Test Model', () => {
   // CREATE

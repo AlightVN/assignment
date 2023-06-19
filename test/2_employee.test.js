@@ -16,13 +16,9 @@ describe('Employee Test Model', () => {
         jobTitle: 'Manager',
         roleId: 1,
       };
-
       const createStub = sinon.stub(EmployeeTest, 'createEmployee').resolves(newEmployee);
-
       const createdEmployee = await EmployeeTest.createEmployee(newEmployee);
-
       expect(createdEmployee).to.deep.equal(newEmployee);
-
       createStub.restore();
     });
   });
