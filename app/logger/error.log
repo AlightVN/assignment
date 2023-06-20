@@ -3803,3 +3803,153 @@
   level: 'error',
   timestamp: '2023-06-20T20:11:53.998Z'
 }
+{
+  message: 'Error: user or password Incorrect',
+  userName: 'notLogin',
+  level: 'error',
+  timestamp: '2023-06-20T20:12:37.186Z'
+}
+{
+  message: 'Error: user or password Incorrect',
+  userName: 'notLogin',
+  level: 'error',
+  timestamp: '2023-06-20T20:12:37.371Z'
+}
+{
+  message: 'Username is already in use',
+  userName: 'registerNew',
+  level: 'error',
+  timestamp: '2023-06-20T20:12:37.693Z'
+}
+{
+  message: 'An error occurred. Please try again later',
+  userName: 'registerNew',
+  level: 'error',
+  timestamp: '2023-06-20T20:12:37.716Z'
+}
+{
+  message: 'An error occurred. Please try again later',
+  userName: 'registerNew',
+  level: 'error',
+  timestamp: '2023-06-20T20:12:37.722Z'
+}
+{
+  message: 'Error: user or password Incorrect',
+  userName: 'notLogin',
+  level: 'error',
+  timestamp: '2023-06-20T20:14:22.193Z'
+}
+{
+  message: 'Error: user or password Incorrect',
+  userName: 'notLogin',
+  level: 'error',
+  timestamp: '2023-06-20T20:14:22.391Z'
+}
+{
+  message: 'Username is already in use',
+  userName: 'registerNew',
+  level: 'error',
+  timestamp: '2023-06-20T20:14:22.683Z'
+}
+{
+  message: 'An error occurred. Please try again later',
+  userName: 'registerNew',
+  level: 'error',
+  timestamp: '2023-06-20T20:14:22.705Z'
+}
+{
+  message: 'An error occurred. Please try again later',
+  userName: 'registerNew',
+  level: 'error',
+  timestamp: '2023-06-20T20:14:22.714Z'
+}
+{
+  message: 'Error: user or password Incorrect',
+  userName: 'notLogin',
+  level: 'error',
+  timestamp: '2023-06-20T20:15:18.503Z'
+}
+{
+  message: 'Error: user or password Incorrect',
+  userName: 'notLogin',
+  level: 'error',
+  timestamp: '2023-06-20T20:15:18.789Z'
+}
+{
+  message: 'Username is already in use',
+  userName: 'registerNew',
+  level: 'error',
+  timestamp: '2023-06-20T20:15:18.956Z'
+}
+{
+  message: 'An error occurred. Please try again later',
+  userName: 'registerNew',
+  level: 'error',
+  timestamp: '2023-06-20T20:15:18.964Z'
+}
+{
+  message: 'An error occurred. Please try again later',
+  userName: 'registerNew',
+  level: 'error',
+  timestamp: '2023-06-20T20:15:18.970Z'
+}
+{
+  message: 'Error: user or password Incorrect',
+  userName: 'notLogin',
+  level: 'error',
+  timestamp: '2023-06-20T20:18:16.093Z'
+}
+{
+  message: 'Error: user or password Incorrect',
+  userName: 'notLogin',
+  level: 'error',
+  timestamp: '2023-06-20T20:18:16.257Z'
+}
+{
+  message: 'Username is already in use',
+  userName: 'registerNew',
+  level: 'error',
+  timestamp: '2023-06-20T20:18:16.427Z'
+}
+{
+  message: 'An error occurred. Please try again later',
+  userName: 'registerNew',
+  level: 'error',
+  timestamp: '2023-06-20T20:18:16.433Z'
+}
+{
+  message: 'An error occurred. Please try again later',
+  userName: 'registerNew',
+  level: 'error',
+  timestamp: '2023-06-20T20:18:16.439Z'
+}
+{
+  message: 'Error: user or password Incorrect',
+  userName: 'notLogin',
+  level: 'error',
+  timestamp: '2023-06-20T20:19:20.693Z'
+}
+{
+  message: 'Error: user or password Incorrect',
+  userName: 'notLogin',
+  level: 'error',
+  timestamp: '2023-06-20T20:19:20.843Z'
+}
+{
+  message: 'Username is already in use',
+  userName: 'registerNew',
+  level: 'error',
+  timestamp: '2023-06-20T20:19:21.010Z'
+}
+{
+  message: 'An error occurred. Please try again later',
+  userName: 'registerNew',
+  level: 'error',
+  timestamp: '2023-06-20T20:19:21.016Z'
+}
+{
+  message: 'An error occurred. Please try again later',
+  userName: 'registerNew',
+  level: 'error',
+  timestamp: '2023-06-20T20:19:21.021Z'
+}

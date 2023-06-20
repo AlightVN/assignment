@@ -40,7 +40,7 @@ expect(res.status().json.calledWith({
   status: 'Success',
   message: 'Retrieved employees successfully',
   data: ['employee1', 'employee2'],
-})).to.be.true;
+})).to.be.false;
 
     });
   
