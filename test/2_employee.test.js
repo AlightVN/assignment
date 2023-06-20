@@ -23,22 +23,25 @@ describe('Employee Controller', () => {
   
     it('should retrieve a list of employees', async () => {
       findAllStub.resolves(['employee1', 'employee2']);
-  
+    
       const req = {};
+      const jsonStub = sinon.stub();
       const res = {
-        status: sinon.stub().returnsThis(),
-        json: sinon.stub(),
+        status: sinon.stub().returns({
+          json: jsonStub,
+        }),
       };
       const next = sinon.stub();
-  
+    
       await getEmployees(req, res, next);
-  
-      expect(res.status().json.calledWith({
-        status: 'Success',
-        message: 'Retrieved employees successfully',
-        data: ['employee1', 'employee2'],
-      })).to.be.true;
-      expect(next.called).to.be.false;
+    
+      expect(res.status().json.called).to.be.false;
+expect(res.status().json.calledWith({
+  status: 'Success',
+  message: 'Retrieved employees successfully',
+  data: ['employee1', 'employee2'],
+})).to.be.true;
+
     });
   
     it('should handle errors when retrieving employees', async () => {
@@ -60,7 +63,7 @@ describe('Employee Controller', () => {
     });
   });
   
-
+  
   describe('createEmployee', () => {
     it('should create a new employee', async () => {
       const createStub = sinon.stub(Employee, 'create').resolves({ employeeNumber: 1 });

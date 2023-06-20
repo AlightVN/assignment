@@ -9,7 +9,7 @@ const getEmployees = async (req, res, next) => {
     return res.status(200).json({
       status: 'Success',
       message: 'Retrieved employees successfully',
-      data: employees,
+      datnpa: employees,
     });
   } catch (error) {
     next(error);
