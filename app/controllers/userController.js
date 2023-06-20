@@ -21,7 +21,7 @@ exports.login = async (req, res, next) => {
     const token = jwt.sign({ userName }, process.env.JWT_SECRET);
     // Return token to user
     logger.info({ message: 'Login Account successfully', userName: user.userName });
-    res.json({
+    res.status(200).json({
       status: 'Success',
       message: 'Login Account successfully',
       token: token,
@@ -63,7 +63,6 @@ exports.register = async (req, res) => {
     });
   } catch (error) {
     logger.error({ message: `An error occurred. Please try again later`, userName: 'registerNew' });
-    console.error(error);
     return res.status(500).json({ message: 'An error occurred. Please try again later.' });
   }
 };

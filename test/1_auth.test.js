@@ -1,108 +1,238 @@
+// test/auth.test.js
+const chai = require('chai');
 const sinon = require('sinon');
-const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
-const { expect } = require('chai');
+const bcrypt = require('bcrypt');
+const { login, register } = require('../app/controllers/userController');
 const User = require('../app/models/userModel');
-const UserController = require('../app/controllers/userController');
+const { expect } = chai;
 
-describe('User Controller', () => {
+describe('Auth Controller', () => {
   afterEach(() => {
     sinon.restore();
   });
 
-  describe('login', () => {
-    it('should return a JWT token if username and password are valid', async () => {
-      const userName = 'testUser';
-      const password = 'testPassword';
+  describe('Login', () => {
+    it('should return a token if the credentials are valid', async () => {
+      const req = {
+        body: {
+          userName: 'testUser',
+          password: 'testPassword',
+        },
+      };
+      const res = {
+        status: sinon.stub().returnsThis(),
+        json: sinon.spy(),
+      };
+      const next = sinon.spy();
+
       const user = {
         userName: 'testUser',
         password: await bcrypt.hash('testPassword', 10),
       };
-      const req = { body: { userName, password } };
-      const res = {
-        json: sinon.spy(),
-        status: sinon.stub().returnsThis(),
-      };
+
       sinon.stub(User, 'findOne').resolves(user);
       sinon.stub(bcrypt, 'compare').resolves(true);
-      sinon.stub(jwt, 'sign').returns('mockedToken');
+      sinon.stub(jwt, 'sign').returns('testToken');
 
-      await UserController.login(req, res);
+      await login(req, res, next);
 
-      expect(User.findOne.calledOnceWith({ where: { userName } })).to.be.true;
-      expect(bcrypt.compare.calledOnceWith(password, user.password)).to.be.true;
-      expect(jwt.sign.calledOnceWith({ userName }, process.env.JWT_SECRET)).to.be.true;
-      expect(res.json.calledOnceWith({
+      expect(res.status.calledWith(200)).to.be.true;
+      expect(res.json.calledWith({
         status: 'Success',
         message: 'Login Account successfully',
-        token: 'mockedToken',
+        token: 'testToken',
       })).to.be.true;
     });
 
-    it('should return an error if username or password is incorrect', async () => {
-      const userName = 'testUser';
-      const password = 'wrongPassword';
-      const req = { body: { userName, password } };
-      const res = {
-        json: sinon.spy(),
-        status: sinon.stub().returnsThis(),
+    it('should return 401 if user is not found', async () => {
+      const req = {
+        body: {
+          userName: 'nonExistingUser',
+          password: 'testPassword',
+        },
       };
+      const res = {
+        status: sinon.stub().returnsThis(),
+        json: sinon.spy(),
+      };
+      const next = sinon.spy();
+
       sinon.stub(User, 'findOne').resolves(null);
+
+      await login(req, res, next);
+
+      expect(res.status.calledWith(401)).to.be.true;
+      expect(res.json.calledWith({
+        message: 'Incorrect username or password. You trying to cheat?',
+      })).to.be.true;
+    });
+
+    it('should return 401 if the password is incorrect', async () => {
+      const req = {
+        body: {
+          userName: 'testUser',
+          password: 'incorrectPassword',
+        },
+      };
+      const res = {
+        status: sinon.stub().returnsThis(),
+        json: sinon.spy(),
+      };
+      const next = sinon.spy();
+
+      const user = {
+        userName: 'testUser',
+        password: await bcrypt.hash('testPassword', 10),
+      };
+
+      sinon.stub(User, 'findOne').resolves(user);
       sinon.stub(bcrypt, 'compare').resolves(false);
 
-      await UserController.login(req, res);
+      await login(req, res, next);
 
-      User.findOne.calledOnceWith({ where: { userName } });
-      bcrypt.compare.calledOnceWith(password, null);
-      res.status.calledOnceWith(401);
-      res.json.calledOnceWith({ message: 'Incorrect username or password. You trying to cheat?' });
+      expect(res.status.calledWith(401)).to.be.true;
+      expect(res.json.calledWith({
+        message: 'Incorrect username or password. You trying to cheat?',
+      })).to.be.true;
     });
 
+    it('should call next with an error if an error occurs during login', async () => {
+      const req = {
+        body: {
+          userName: 'testUser',
+          password: 'testPassword',
+        },
+      };
+      const res = {
+        status: sinon.stub().returnsThis(),
+        json: sinon.spy(),
+      };
+      const next = sinon.spy();
+
+      const expectedError = new Error('Login error');
+
+      sinon.stub(User, 'findOne').throws(expectedError);
+
+      await login(req, res, next);
+
+      sinon.assert.calledWith(next, expectedError);
+    });
   });
 
-  describe('register', () => {
-    it('should return an error if an error occurs during user creation', async () => {
-      const userName = 'newUser';
-      const password = 'newPassword';
-      const req = { body: { userName, password } };
+  describe('Register', () => {
+    it('should register a new user and return user information and token', async () => {
+      const req = {
+        body: {
+          userName: 'testUser',
+          password: 'testPassword',
+          employeeNumber: 1234,
+        },
+      };
       const res = {
-        json: sinon.spy(),
         status: sinon.stub().returnsThis(),
+        json: sinon.spy(),
+      };
+
+      const newUser = {
+        userName: 'testUser',
+        password: await bcrypt.hash('testPassword', 10),
+        employeeNumber: 1234,
       };
 
       sinon.stub(User, 'findOne').resolves(null);
+      sinon.stub(bcrypt, 'genSalt').resolves(10);
+      sinon.stub(bcrypt, 'hash').resolves(newUser.password);
+      sinon.stub(User, 'create').resolves(newUser);
+      sinon.stub(jwt, 'sign').returns('testToken');
 
-      const createStub = sinon.stub(User, 'create');
-      createStub.withArgs({ userName, password }).rejects(new Error('Mocked error'));
+      await register(req, res);
 
-      await UserController.register(req, res);
-
-      expect(User.findOne.calledOnceWith({ where: { userName } })).to.be.true;
-      expect(createStub.calledOnce).to.be.true;
-      expect(res.status.calledOnceWith(500)).to.be.true;
-      expect(res.json.calledOnceWith({ message: 'An error occurred. Please try again later.' })).to.be.true;
-
-      User.findOne.restore();
-      createStub.restore();
+      expect(res.status.calledWith(200)).to.be.true;
+      expect(res.json.calledWith({
+        user: {
+          userName: newUser.userName,
+          employeeNumber: newUser.employeeNumber,
+        },
+        token: 'testToken',
+      })).to.be.true;
     });
 
-    it('should return an error if an error occurs during user creation', async () => {
-      const userName = 'newUser';
-      const password = 'newPassword';
-      const req = { body: { userName, password } };
-      const res = {
-        json: sinon.spy(),
-        status: sinon.stub().returnsThis(),
+    it('should return 400 if the username is already in use', async () => {
+      const req = {
+        body: {
+          userName: 'existingUser',
+          password: 'testPassword',
+          employeeNumber: 1234,
+        },
       };
-      sinon.stub(User, 'findOne').resolves(null);
-      sinon.stub(User, 'create').rejects(new Error('Mocked error'));
+      const res = {
+        status: sinon.stub().returnsThis(),
+        json: sinon.spy(),
+      };
 
-      await UserController.register(req, res);
+      const existingUser = {
+        userName: 'existingUser',
+      };
 
-      User.findOne.calledOnceWith({ where: { userName } });
-      User.create.calledOnceWith({ userName, password });
-      res.status.calledOnceWith(500);
-      res.json.calledOnceWith({ message: 'An error occurred. Please try again later.' });
+      sinon.stub(User, 'findOne').resolves(existingUser);
+
+      await register(req, res);
+
+      expect(res.status.calledWith(400)).to.be.true;
+      expect(res.json.calledWith({
+        message: 'Username is already in use. Please choose another one.',
+      })).to.be.true;
     });
+
+    it('should return 500 if an error occurs while creating a new user', async () => {
+      const req = {
+        body: {
+          userName: 'testUser',
+          password: 'testPassword',
+          employeeNumber: 1234,
+        },
+      };
+      const res = {
+        status: sinon.stub().returnsThis(),
+        json: sinon.spy(),
+      };
+    
+      sinon.stub(User, 'findOne').resolves(null);
+      sinon.stub(bcrypt, 'genSalt').resolves(10);
+      sinon.stub(bcrypt, 'hash').resolves('hashedPassword');
+      sinon.stub(User, 'create').resolves(null);
+    
+      await register(req, res);
+    
+      expect(res.status.calledWith(500)).to.be.true;
+      expect(res.json.calledWith({
+        message: 'An error occurred. Please try again later.',
+      })).to.be.true;
+    });
+
+    it('should return 500 if an error occurs while registering a new user', async () => {
+      const req = {
+        body: {
+          userName: 'testUser',
+          password: 'testPassword',
+          employeeNumber: 1234,
+        },
+      };
+      const res = {
+        status: sinon.stub().returnsThis(),
+        json: sinon.spy(),
+      };
+    
+      sinon.stub(User, 'findOne').throws(new Error('Database error'));
+    
+      await register(req, res);
+    
+      expect(res.status.calledWith(500)).to.be.true;
+      expect(res.json.calledWith({
+        message: 'An error occurred. Please try again later.',
+      })).to.be.true;
+    });
+    
   });
 });
