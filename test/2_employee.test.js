@@ -8,62 +8,71 @@ const {
   deleteEmployee,
   getEmployeeById,
 } = require('../app/controllers/employeeController');
+const logger = require('../app/database/winstonConfig');
 
 describe('Employee Controller', () => {
+  let loggerInfoStub;
+  beforeEach(() => {
+    loggerInfoStub = sinon.stub(logger, 'info');
+  });
+  afterEach(() => {
+    loggerInfoStub.restore();
+  });
   describe('getEmployees', () => {
     let findAllStub;
-  
+   
     beforeEach(() => {
       findAllStub = sinon.stub(Employee, 'findAll');
     });
-  
+
     afterEach(() => {
       findAllStub.restore();
     });
-  
+
     it('should retrieve a list of employees', async () => {
       findAllStub.resolves(['employee1', 'employee2']);
-    
-      const req = {};
-      const jsonStub = sinon.stub();
+
+      const req = {
+        userData: {
+          userName: 'admin',
+        }
+      };
       const res = {
-        status: sinon.stub().returns({
-          json: jsonStub,
-        }),
+        status: sinon.stub().returnsThis(),
+        json: sinon.stub(),
+        
       };
       const next = sinon.stub();
-    
+
       await getEmployees(req, res, next);
-    
-      expect(res.status().json.called).to.be.false;
-expect(res.status().json.calledWith({
-  status: 'Success',
-  message: 'Retrieved employees successfully',
-  data: ['employee1', 'employee2'],
-})).to.be.false;
+      expect(res.status.calledWith(200)).to.be.true;
+      expect(res.status().json.calledWith({
+        status: 'Success',
+        message: 'Retrieved employees successfully',
+        data: ['employee1', 'employee2'],
+      })).to.be.true;
 
     });
-  
+
     it('should handle errors when retrieving employees', async () => {
       const error = new Error('Database error');
       findAllStub.throws(error);
-  
+
       const req = {};
       const res = {
         status: sinon.stub().returnsThis(),
         json: sinon.stub(),
       };
       const next = sinon.stub();
-  
+
       await getEmployees(req, res, next);
-  
+
       expect(next.calledWith(error)).to.be.true;
       expect(res.status.called).to.be.false;
       expect(res.json.called).to.be.false;
     });
   });
-  
-  
+
   describe('createEmployee', () => {
     it('should create a new employee', async () => {
       const createStub = sinon.stub(Employee, 'create').resolves({ employeeNumber: 1 });

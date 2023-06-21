@@ -9,7 +9,7 @@ const getEmployees = async (req, res, next) => {
     return res.status(200).json({
       status: 'Success',
       message: 'Retrieved employees successfully',
-      datnpa: employees,
+      data: employees,
     });
   } catch (error) {
     next(error);
@@ -18,11 +18,11 @@ const getEmployees = async (req, res, next) => {
 
 // Create a new employee
 const createEmployee = async (req, res, next) => {
-  const { firstName, lastName, extension, email, officeCode, reportsTo, jobTitle,roleId } = req.body;
+  const { firstName, lastName, extension, email, officeCode, reportsTo, jobTitle, roleId } = req.body;
   try {
     const employee = await Employee.create({
       firstName, lastName, extension, email,
-      officeCode, reportsTo, jobTitle,roleId
+      officeCode, reportsTo, jobTitle, roleId
     });
     logger.info({ message: 'Employee created successfully', userName: req.userData.userName });
     return res.status(201).json({

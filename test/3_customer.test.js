@@ -8,8 +8,16 @@ const {
   deleteCustomer,
   getCustomerById,
 } = require('../app/controllers/customerController');
+const logger = require('../app/database/winstonConfig');
 
 describe('Customer Controller', () => {
+  let loggerInfoStub;
+  beforeEach(() => {
+    loggerInfoStub = sinon.stub(logger, 'info');
+  });
+  afterEach(() => {
+    loggerInfoStub.restore();
+  });
   describe('getCustomers', () => {
     let findAllStub;
 
@@ -24,18 +32,22 @@ describe('Customer Controller', () => {
     it('should retrieve a list of customers', async () => {
       findAllStub.resolves(['customer1', 'customer2']);
 
-      const req = {};
+      const req = {
+        userData: {
+          userName: 'admin',
+        }
+      };
       const jsonStub = sinon.stub();
       const res = {
         status: sinon.stub().returns({
           json: jsonStub,
         }),
+
       };
       const next = sinon.stub();
-
       await getCustomers(req, res, next);
 
-      expect(res.status().json.called).to.be.false;
+      expect(res.status().json.called).to.be.true;
       expect(res.status().json.calledWith({
         status: 'Success',
         message: 'Retrieved customers successfully',
@@ -60,40 +72,38 @@ describe('Customer Controller', () => {
       expect(res.status.called).to.be.false;
       expect(res.json.called).to.be.false;
     });
-    
+
     it('should retrieve customers for staff members', async () => {
-      const staffUser = {
-        role: 'staff',
-        employeeNumber: 123,
-      };
-    
       const findAllStub = sinon.stub(Customer, 'findAll').resolves(['customer1', 'customer2']);
-    
+
       const req = {
-        userData: staffUser,
+        userData: {
+          role: 'staff',
+          employeeNumber:1
+        }
       };
       const res = {
         status: sinon.stub().returnsThis(),
         json: sinon.stub(),
       };
       const next = sinon.stub();
-    
+
       await getCustomers(req, res, next);
-    
+
       expect(findAllStub.calledOnce).to.be.true;
       expect(findAllStub.firstCall.args[0].where).to.deep.equal({
-        salesRepEmployeeNumber: staffUser.employeeNumber,
+        salesRepEmployeeNumber: req.userData.employeeNumber,
       });
       expect(res.status().json.calledWithExactly({
         status: 'Success',
         message: 'Retrieved customers successfully',
         data: ['customer1', 'customer2'],
       })).to.be.true;
-    
+
       findAllStub.restore();
     });
-    
-    
+
+
   });
 
   describe('createCustomer', () => {
@@ -252,7 +262,7 @@ describe('Customer Controller', () => {
 
     it('should handle forbidden error when creating a customer for another employee as staff', async () => {
       const createStub = sinon.stub(Customer, 'create');
-    
+
       const req = {
         body: {
           salesRepEmployeeNumber: 2, // Assuming the user is staff and their employeeNumber is 1
@@ -267,18 +277,18 @@ describe('Customer Controller', () => {
         json: sinon.stub(),
       };
       const next = sinon.stub();
-    
+
       await createCustomer(req, res, next);
-    
+
       expect(next.calledOnce).to.be.true;
       const error = next.firstCall.args[0];
       expect(error).to.be.instanceOf(Error);
       expect(error.message).to.equal('You are not allowed to create a customer for another employee.');
       expect(error.statusCode).to.equal(403);
-    
+
       createStub.restore();
     });
-    
+
     it('should handle forbidden error when creating a customer for an employee in another office as leader', async () => {
       const employeesInSameOffice = [
         { employeeNumber: 2 },
@@ -286,7 +296,7 @@ describe('Customer Controller', () => {
       ];
       const findAllStub = sinon.stub(Employee, 'findAll').resolves(employeesInSameOffice);
       const createStub = sinon.stub(Customer, 'create');
-    
+
       const req = {
         body: {
           salesRepEmployeeNumber: 4, // Assuming the user is leader and their officeCode matches one of the employees
@@ -301,15 +311,15 @@ describe('Customer Controller', () => {
         json: sinon.stub(),
       };
       const next = sinon.stub();
-    
+
       await createCustomer(req, res, next);
-    
+
       expect(next.calledOnce).to.be.true;
       const error = next.firstCall.args[0];
       expect(error).to.be.instanceOf(Error);
       expect(error.message).to.equal('You are not allowed to create a customer for an employee in another office.');
       expect(error.statusCode).to.equal(403);
-    
+
       findAllStub.restore();
       createStub.restore();
     });
@@ -320,7 +330,7 @@ describe('Customer Controller', () => {
         save: sinon.stub(),
       };
       const findByPkStub = sinon.stub(Customer, 'findByPk').resolves(customer);
-    
+
       const req = {
         params: {
           id: 1,
@@ -338,18 +348,18 @@ describe('Customer Controller', () => {
         json: sinon.stub(),
       };
       const next = sinon.stub();
-    
+
       await updateCustomerById(req, res, next);
-    
+
       expect(next.calledOnce).to.be.true;
       const error = next.firstCall.args[0];
       expect(error).to.be.instanceOf(Error);
       expect(error.message).to.equal('You are not allowed to update another employee\'s customer.');
       expect(error.statusCode).to.equal(403);
-    
+
       findByPkStub.restore();
     });
-    
+
     it('should handle forbidden error when updating a customer for an employee in another office as leader', async () => {
       const customer = {
         salesRepEmployeeNumber: 4, // Assuming the customer's salesRepEmployeeNumber is 4
@@ -361,7 +371,7 @@ describe('Customer Controller', () => {
         { employeeNumber: 3 },
       ];
       const findAllStub = sinon.stub(Employee, 'findAll').resolves(employeesInSameOffice);
-    
+
       const req = {
         params: {
           id: 1,
@@ -379,20 +389,20 @@ describe('Customer Controller', () => {
         json: sinon.stub(),
       };
       const next = sinon.stub();
-    
+
       await updateCustomerById(req, res, next);
-    
+
       expect(next.calledOnce).to.be.true;
       const error = next.firstCall.args[0];
       expect(error).to.be.instanceOf(Error);
       expect(error.message).to.equal('You are not allowed to update a customer for an employee in another office.');
       expect(error.statusCode).to.equal(403);
-    
+
       findByPkStub.restore();
       findAllStub.restore();
     });
-    
-    
+
+
   });
 
   describe('deleteCustomer', () => {
@@ -480,7 +490,7 @@ describe('Customer Controller', () => {
 
     it('should handle forbidden error when deleting a customer as staff', async () => {
       const findByPkStub = sinon.stub(Customer, 'findByPk').resolves({});
-    
+
       const req = {
         params: {
           id: 1,
@@ -494,18 +504,18 @@ describe('Customer Controller', () => {
         json: sinon.stub(),
       };
       const next = sinon.stub();
-    
+
       await deleteCustomer(req, res, next);
-    
+
       expect(next.calledOnce).to.be.true;
       const error = next.firstCall.args[0];
       expect(error).to.be.instanceOf(Error);
       expect(error.message).to.equal('You are not allowed to delete a customer.');
       expect(error.statusCode).to.equal(403);
-    
+
       findByPkStub.restore();
     });
-    
+
     it('should handle forbidden error when deleting a customer for an employee in another office as leader', async () => {
       const employeesInSameOffice = [
         { employeeNumber: 2 },
@@ -515,7 +525,7 @@ describe('Customer Controller', () => {
       const findByPkStub = sinon.stub(Customer, 'findByPk').resolves({
         salesRepEmployeeNumber: 4,
       });
-    
+
       const req = {
         params: {
           id: 1,
@@ -530,19 +540,19 @@ describe('Customer Controller', () => {
         json: sinon.stub(),
       };
       const next = sinon.stub();
-    
+
       await deleteCustomer(req, res, next);
-    
+
       expect(next.calledOnce).to.be.true;
       const error = next.firstCall.args[0];
       expect(error).to.be.instanceOf(Error);
       expect(error.message).to.equal('You are not allowed to delete a customer for an employee in another office.');
       expect(error.statusCode).to.equal(403);
-    
+
       findAllStub.restore();
       findByPkStub.restore();
     });
-    
+
   });
 
   describe('getCustomerById', () => {
@@ -558,7 +568,7 @@ describe('Customer Controller', () => {
     it('should retrieve a customer by ID', async () => {
       const customer = { customerName: 'John Doe' };
       const findByPkStub = sandbox.stub(Customer, 'findByPk').resolves(customer);
-    
+
       const req = {
         params: {
           id: 1,
@@ -571,23 +581,23 @@ describe('Customer Controller', () => {
         status: sinon.stub().returnsThis(),
         json: sinon.stub(),
       };
-    
+
       await getCustomerById(req, res);
-    
+
       expect(res.status.calledWith(200)).to.be.true;
       expect(res.json.calledWith({
         status: 'Success',
         message: 'Retrieved customer information successfully',
         data: customer,
       })).to.be.true;
-    
+
       findByPkStub.restore();
     });
-    
+
 
     it('should handle errors when retrieving a customer by ID', async () => {
       const error = new Error('Database error');
-    const findByPkStub = sandbox.stub(Customer, 'findByPk').throws(error);
+      const findByPkStub = sandbox.stub(Customer, 'findByPk').throws(error);
 
       const req = {
         params: {
@@ -607,7 +617,7 @@ describe('Customer Controller', () => {
 
       expect(next.calledWith(error)).to.be.true;
 
-    findByPkStub.restore();
+      findByPkStub.restore();
     });
 
     it('should handle not found error when retrieving a customer by ID', async () => {
@@ -630,17 +640,17 @@ describe('Customer Controller', () => {
       await getCustomerById(req, res, next);
 
       expect(next.calledOnce).to.be.true;
-    expect(next.args[0][0].statusCode).to.equal(404);
-    expect(next.args[0][0].message).to.equal('Customer not found');
+      expect(next.args[0][0].statusCode).to.equal(404);
+      expect(next.args[0][0].message).to.equal('Customer not found');
 
-    findByPkStub.restore();
+      findByPkStub.restore();
     });
     it('should handle forbidden error when accessing customer information as staff', async () => {
       const customer = {
         salesRepEmployeeNumber: 'john',
       };
       const findByPkStub = sandbox.stub(Customer, 'findByPk').resolves(customer);
-    
+
       const req = {
         params: {
           id: 1,
@@ -655,18 +665,18 @@ describe('Customer Controller', () => {
         json: sinon.stub(),
       };
       const next = sinon.stub();
-    
+
       await getCustomerById(req, res, next);
-    
+
       expect(next.calledOnce).to.be.true;
       const error = next.firstCall.args[0];
       expect(error).to.be.instanceOf(Error);
       expect(error.message).to.equal('You are not allowed to access this customer information.');
       expect(error.statusCode).to.equal(403);
-    
+
       findByPkStub.restore();
     });
-    
+
     it('should handle forbidden error when accessing customer information for an employee in another office as leader', async () => {
       const customer = {
         salesRep: {
@@ -674,7 +684,7 @@ describe('Customer Controller', () => {
         },
       };
       const findByPkStub = sandbox.stub(Customer, 'findByPk').resolves(customer);
-    
+
       const req = {
         params: {
           id: 1,
@@ -690,18 +700,18 @@ describe('Customer Controller', () => {
         json: sinon.stub(),
       };
       const next = sinon.stub();
-    
+
       await getCustomerById(req, res, next);
-    
+
       expect(next.calledOnce).to.be.true;
       const error = next.firstCall.args[0];
       expect(error).to.be.instanceOf(Error);
       expect(error.message).to.equal('You are not allowed to access this customer information.');
       expect(error.statusCode).to.equal(403);
-    
+
       findByPkStub.restore();
     });
-    
+
   });
 
 });

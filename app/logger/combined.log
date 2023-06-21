@@ -9770,3 +9770,1017 @@
   level: 'info',
   timestamp: '2023-06-20T20:19:21.241Z'
 }
+{
+  message: 'Login Account successfully',
+  userName: 'testUser',
+  level: 'info',
+  timestamp: '2023-06-21T02:05:48.992Z'
+}
+{
+  message: 'Error: user or password Incorrect',
+  userName: 'notLogin',
+  level: 'error',
+  timestamp: '2023-06-21T02:05:49.008Z'
+}
+{
+  message: 'Error: user or password Incorrect',
+  userName: 'notLogin',
+  level: 'error',
+  timestamp: '2023-06-21T02:05:49.166Z'
+}
+{
+  message: 'Username is already in use',
+  userName: 'registerNew',
+  level: 'error',
+  timestamp: '2023-06-21T02:05:49.341Z'
+}
+{
+  message: 'An error occurred. Please try again later',
+  userName: 'registerNew',
+  level: 'error',
+  timestamp: '2023-06-21T02:05:49.347Z'
+}
+{
+  message: 'An error occurred. Please try again later',
+  userName: 'registerNew',
+  level: 'error',
+  timestamp: '2023-06-21T02:05:49.350Z'
+}
+{
+  message: 'Employee created successfully',
+  userName: 'admin',
+  level: 'info',
+  timestamp: '2023-06-21T02:05:49.378Z'
+}
+{
+  message: 'Employee updated successfully',
+  userName: 'admin',
+  level: 'info',
+  timestamp: '2023-06-21T02:05:49.387Z'
+}
+{
+  message: 'Employee deleted successfully',
+  userName: 'admin',
+  level: 'info',
+  timestamp: '2023-06-21T02:05:49.407Z'
+}
+{
+  message: 'Retrieved employee successfully',
+  userName: 'admin',
+  level: 'info',
+  timestamp: '2023-06-21T02:05:49.421Z'
+}
+{
+  message: 'Created customers successfully',
+  userName: 'admin',
+  level: 'info',
+  timestamp: '2023-06-21T02:05:49.460Z'
+}
+{
+  message: 'Created customers successfully',
+  userName: 'admin',
+  level: 'info',
+  timestamp: '2023-06-21T02:05:49.478Z'
+}
+{
+  message: 'Deleted customers successfully',
+  userName: 'admin',
+  level: 'info',
+  timestamp: '2023-06-21T02:05:49.525Z'
+}
+{
+  message: 'Retrieved customer information successfully',
+  userName: undefined,
+  level: 'info',
+  timestamp: '2023-06-21T02:05:49.551Z'
+}
+{
+  message: 'Login Account successfully',
+  userName: 'testUser',
+  level: 'info',
+  timestamp: '2023-06-21T02:09:18.021Z'
+}
+{
+  message: 'Error: user or password Incorrect',
+  userName: 'notLogin',
+  level: 'error',
+  timestamp: '2023-06-21T02:09:18.037Z'
+}
+{
+  message: 'Error: user or password Incorrect',
+  userName: 'notLogin',
+  level: 'error',
+  timestamp: '2023-06-21T02:09:18.191Z'
+}
+{
+  message: 'Username is already in use',
+  userName: 'registerNew',
+  level: 'error',
+  timestamp: '2023-06-21T02:09:18.348Z'
+}
+{
+  message: 'An error occurred. Please try again later',
+  userName: 'registerNew',
+  level: 'error',
+  timestamp: '2023-06-21T02:09:18.355Z'
+}
+{
+  message: 'An error occurred. Please try again later',
+  userName: 'registerNew',
+  level: 'error',
+  timestamp: '2023-06-21T02:09:18.359Z'
+}
+{
+  message: 'Employee created successfully',
+  userName: 'admin',
+  level: 'info',
+  timestamp: '2023-06-21T02:09:18.379Z'
+}
+{
+  message: 'Employee updated successfully',
+  userName: 'admin',
+  level: 'info',
+  timestamp: '2023-06-21T02:09:18.389Z'
+}
+{
+  message: 'Employee deleted successfully',
+  userName: 'admin',
+  level: 'info',
+  timestamp: '2023-06-21T02:09:18.411Z'
+}
+{
+  message: 'Retrieved employee successfully',
+  userName: 'admin',
+  level: 'info',
+  timestamp: '2023-06-21T02:09:18.431Z'
+}
+{
+  message: 'Created customers successfully',
+  userName: 'admin',
+  level: 'info',
+  timestamp: '2023-06-21T02:09:18.463Z'
+}
+{
+  message: 'Created customers successfully',
+  userName: 'admin',
+  level: 'info',
+  timestamp: '2023-06-21T02:09:18.470Z'
+}
+{
+  message: 'Deleted customers successfully',
+  userName: 'admin',
+  level: 'info',
+  timestamp: '2023-06-21T02:09:18.500Z'
+}
+{
+  message: 'Retrieved customer information successfully',
+  userName: undefined,
+  level: 'info',
+  timestamp: '2023-06-21T02:09:18.525Z'
+}
+{
+  message: 'Login Account successfully',
+  userName: 'testUser',
+  level: 'info',
+  timestamp: '2023-06-21T02:12:12.705Z'
+}
+{
+  message: 'Error: user or password Incorrect',
+  userName: 'notLogin',
+  level: 'error',
+  timestamp: '2023-06-21T02:12:12.720Z'
+}
+{
+  message: 'Error: user or password Incorrect',
+  userName: 'notLogin',
+  level: 'error',
+  timestamp: '2023-06-21T02:12:12.865Z'
+}
+{
+  message: 'Username is already in use',
+  userName: 'registerNew',
+  level: 'error',
+  timestamp: '2023-06-21T02:12:13.024Z'
+}
+{
+  message: 'An error occurred. Please try again later',
+  userName: 'registerNew',
+  level: 'error',
+  timestamp: '2023-06-21T02:12:13.029Z'
+}
+{
+  message: 'An error occurred. Please try again later',
+  userName: 'registerNew',
+  level: 'error',
+  timestamp: '2023-06-21T02:12:13.033Z'
+}
+{
+  message: 'Employee created successfully',
+  userName: 'admin',
+  level: 'info',
+  timestamp: '2023-06-21T02:12:13.051Z'
+}
+{
+  message: 'Employee updated successfully',
+  userName: 'admin',
+  level: 'info',
+  timestamp: '2023-06-21T02:12:13.062Z'
+}
+{
+  message: 'Employee deleted successfully',
+  userName: 'admin',
+  level: 'info',
+  timestamp: '2023-06-21T02:12:13.088Z'
+}
+{
+  message: 'Retrieved employee successfully',
+  userName: 'admin',
+  level: 'info',
+  timestamp: '2023-06-21T02:12:13.102Z'
+}
+{
+  message: 'Created customers successfully',
+  userName: 'admin',
+  level: 'info',
+  timestamp: '2023-06-21T02:12:13.135Z'
+}
+{
+  message: 'Created customers successfully',
+  userName: 'admin',
+  level: 'info',
+  timestamp: '2023-06-21T02:12:13.141Z'
+}
+{
+  message: 'Deleted customers successfully',
+  userName: 'admin',
+  level: 'info',
+  timestamp: '2023-06-21T02:12:13.172Z'
+}
+{
+  message: 'Retrieved customer information successfully',
+  userName: undefined,
+  level: 'info',
+  timestamp: '2023-06-21T02:12:13.190Z'
+}
+{
+  message: 'Login Account successfully',
+  userName: 'testUser',
+  level: 'info',
+  timestamp: '2023-06-21T02:13:18.024Z'
+}
+{
+  message: 'Error: user or password Incorrect',
+  userName: 'notLogin',
+  level: 'error',
+  timestamp: '2023-06-21T02:13:18.041Z'
+}
+{
+  message: 'Error: user or password Incorrect',
+  userName: 'notLogin',
+  level: 'error',
+  timestamp: '2023-06-21T02:13:18.190Z'
+}
+{
+  message: 'Username is already in use',
+  userName: 'registerNew',
+  level: 'error',
+  timestamp: '2023-06-21T02:13:18.351Z'
+}
+{
+  message: 'An error occurred. Please try again later',
+  userName: 'registerNew',
+  level: 'error',
+  timestamp: '2023-06-21T02:13:18.357Z'
+}
+{
+  message: 'An error occurred. Please try again later',
+  userName: 'registerNew',
+  level: 'error',
+  timestamp: '2023-06-21T02:13:18.361Z'
+}
+{
+  message: 'Employee created successfully',
+  userName: 'admin',
+  level: 'info',
+  timestamp: '2023-06-21T02:13:18.380Z'
+}
+{
+  message: 'Employee updated successfully',
+  userName: 'admin',
+  level: 'info',
+  timestamp: '2023-06-21T02:13:18.391Z'
+}
+{
+  message: 'Employee deleted successfully',
+  userName: 'admin',
+  level: 'info',
+  timestamp: '2023-06-21T02:13:18.419Z'
+}
+{
+  message: 'Retrieved employee successfully',
+  userName: 'admin',
+  level: 'info',
+  timestamp: '2023-06-21T02:13:18.435Z'
+}
+{
+  message: 'Created customers successfully',
+  userName: 'admin',
+  level: 'info',
+  timestamp: '2023-06-21T02:13:18.487Z'
+}
+{
+  message: 'Created customers successfully',
+  userName: 'admin',
+  level: 'info',
+  timestamp: '2023-06-21T02:13:18.500Z'
+}
+{
+  message: 'Deleted customers successfully',
+  userName: 'admin',
+  level: 'info',
+  timestamp: '2023-06-21T02:13:18.562Z'
+}
+{
+  message: 'Retrieved customer information successfully',
+  userName: undefined,
+  level: 'info',
+  timestamp: '2023-06-21T02:13:18.591Z'
+}
+{
+  message: 'Login Account successfully',
+  userName: 'testUser',
+  level: 'info',
+  timestamp: '2023-06-21T02:14:27.429Z'
+}
+{
+  message: 'Error: user or password Incorrect',
+  userName: 'notLogin',
+  level: 'error',
+  timestamp: '2023-06-21T02:14:27.447Z'
+}
+{
+  message: 'Error: user or password Incorrect',
+  userName: 'notLogin',
+  level: 'error',
+  timestamp: '2023-06-21T02:14:27.600Z'
+}
+{
+  message: 'Username is already in use',
+  userName: 'registerNew',
+  level: 'error',
+  timestamp: '2023-06-21T02:14:27.760Z'
+}
+{
+  message: 'An error occurred. Please try again later',
+  userName: 'registerNew',
+  level: 'error',
+  timestamp: '2023-06-21T02:14:27.765Z'
+}
+{
+  message: 'An error occurred. Please try again later',
+  userName: 'registerNew',
+  level: 'error',
+  timestamp: '2023-06-21T02:14:27.770Z'
+}
+{
+  message: 'Employee created successfully',
+  userName: 'admin',
+  level: 'info',
+  timestamp: '2023-06-21T02:14:27.795Z'
+}
+{
+  message: 'Employee updated successfully',
+  userName: 'admin',
+  level: 'info',
+  timestamp: '2023-06-21T02:14:27.803Z'
+}
+{
+  message: 'Employee deleted successfully',
+  userName: 'admin',
+  level: 'info',
+  timestamp: '2023-06-21T02:14:27.821Z'
+}
+{
+  message: 'Retrieved employee successfully',
+  userName: 'admin',
+  level: 'info',
+  timestamp: '2023-06-21T02:14:27.833Z'
+}
+{
+  message: 'Created customers successfully',
+  userName: 'admin',
+  level: 'info',
+  timestamp: '2023-06-21T02:14:27.859Z'
+}
+{
+  message: 'Created customers successfully',
+  userName: 'admin',
+  level: 'info',
+  timestamp: '2023-06-21T02:14:27.869Z'
+}
+{
+  message: 'Deleted customers successfully',
+  userName: 'admin',
+  level: 'info',
+  timestamp: '2023-06-21T02:14:27.910Z'
+}
+{
+  message: 'Retrieved customer information successfully',
+  userName: undefined,
+  level: 'info',
+  timestamp: '2023-06-21T02:14:27.944Z'
+}
+{
+  message: 'Login Account successfully',
+  userName: 'testUser',
+  level: 'info',
+  timestamp: '2023-06-21T02:16:21.331Z'
+}
+{
+  message: 'Error: user or password Incorrect',
+  userName: 'notLogin',
+  level: 'error',
+  timestamp: '2023-06-21T02:16:21.349Z'
+}
+{
+  message: 'Error: user or password Incorrect',
+  userName: 'notLogin',
+  level: 'error',
+  timestamp: '2023-06-21T02:16:21.498Z'
+}
+{
+  message: 'Username is already in use',
+  userName: 'registerNew',
+  level: 'error',
+  timestamp: '2023-06-21T02:16:21.677Z'
+}
+{
+  message: 'An error occurred. Please try again later',
+  userName: 'registerNew',
+  level: 'error',
+  timestamp: '2023-06-21T02:16:21.683Z'
+}
+{
+  message: 'An error occurred. Please try again later',
+  userName: 'registerNew',
+  level: 'error',
+  timestamp: '2023-06-21T02:16:21.687Z'
+}
+{
+  message: 'Employee created successfully',
+  userName: 'admin',
+  level: 'info',
+  timestamp: '2023-06-21T02:16:21.716Z'
+}
+{
+  message: 'Employee updated successfully',
+  userName: 'admin',
+  level: 'info',
+  timestamp: '2023-06-21T02:16:21.726Z'
+}
+{
+  message: 'Employee deleted successfully',
+  userName: 'admin',
+  level: 'info',
+  timestamp: '2023-06-21T02:16:21.753Z'
+}
+{
+  message: 'Retrieved employee successfully',
+  userName: 'admin',
+  level: 'info',
+  timestamp: '2023-06-21T02:16:21.765Z'
+}
+{
+  message: 'Created customers successfully',
+  userName: 'admin',
+  level: 'info',
+  timestamp: '2023-06-21T02:16:21.809Z'
+}
+{
+  message: 'Created customers successfully',
+  userName: 'admin',
+  level: 'info',
+  timestamp: '2023-06-21T02:16:21.821Z'
+}
+{
+  message: 'Deleted customers successfully',
+  userName: 'admin',
+  level: 'info',
+  timestamp: '2023-06-21T02:16:21.860Z'
+}
+{
+  message: 'Retrieved customer information successfully',
+  userName: undefined,
+  level: 'info',
+  timestamp: '2023-06-21T02:16:21.893Z'
+}
+{
+  message: 'Login Account successfully',
+  userName: 'testUser',
+  level: 'info',
+  timestamp: '2023-06-21T02:18:00.416Z'
+}
+{
+  message: 'Error: user or password Incorrect',
+  userName: 'notLogin',
+  level: 'error',
+  timestamp: '2023-06-21T02:18:00.430Z'
+}
+{
+  message: 'Error: user or password Incorrect',
+  userName: 'notLogin',
+  level: 'error',
+  timestamp: '2023-06-21T02:18:00.582Z'
+}
+{
+  message: 'Username is already in use',
+  userName: 'registerNew',
+  level: 'error',
+  timestamp: '2023-06-21T02:18:00.739Z'
+}
+{
+  message: 'An error occurred. Please try again later',
+  userName: 'registerNew',
+  level: 'error',
+  timestamp: '2023-06-21T02:18:00.744Z'
+}
+{
+  message: 'An error occurred. Please try again later',
+  userName: 'registerNew',
+  level: 'error',
+  timestamp: '2023-06-21T02:18:00.747Z'
+}
+{
+  message: 'Employee created successfully',
+  userName: 'admin',
+  level: 'info',
+  timestamp: '2023-06-21T02:18:00.770Z'
+}
+{
+  message: 'Employee updated successfully',
+  userName: 'admin',
+  level: 'info',
+  timestamp: '2023-06-21T02:18:00.778Z'
+}
+{
+  message: 'Employee deleted successfully',
+  userName: 'admin',
+  level: 'info',
+  timestamp: '2023-06-21T02:18:00.792Z'
+}
+{
+  message: 'Retrieved employee successfully',
+  userName: 'admin',
+  level: 'info',
+  timestamp: '2023-06-21T02:18:00.802Z'
+}
+{
+  message: 'Created customers successfully',
+  userName: 'admin',
+  level: 'info',
+  timestamp: '2023-06-21T02:18:00.829Z'
+}
+{
+  message: 'Created customers successfully',
+  userName: 'admin',
+  level: 'info',
+  timestamp: '2023-06-21T02:18:00.852Z'
+}
+{
+  message: 'Deleted customers successfully',
+  userName: 'admin',
+  level: 'info',
+  timestamp: '2023-06-21T02:18:00.894Z'
+}
+{
+  message: 'Retrieved customer information successfully',
+  userName: undefined,
+  level: 'info',
+  timestamp: '2023-06-21T02:18:00.915Z'
+}
+{
+  message: 'Login Account successfully',
+  userName: 'testUser',
+  level: 'info',
+  timestamp: '2023-06-21T02:20:42.978Z'
+}
+{
+  message: 'Error: user or password Incorrect',
+  userName: 'notLogin',
+  level: 'error',
+  timestamp: '2023-06-21T02:20:42.993Z'
+}
+{
+  message: 'Error: user or password Incorrect',
+  userName: 'notLogin',
+  level: 'error',
+  timestamp: '2023-06-21T02:20:43.137Z'
+}
+{
+  message: 'Username is already in use',
+  userName: 'registerNew',
+  level: 'error',
+  timestamp: '2023-06-21T02:20:43.288Z'
+}
+{
+  message: 'An error occurred. Please try again later',
+  userName: 'registerNew',
+  level: 'error',
+  timestamp: '2023-06-21T02:20:43.295Z'
+}
+{
+  message: 'An error occurred. Please try again later',
+  userName: 'registerNew',
+  level: 'error',
+  timestamp: '2023-06-21T02:20:43.299Z'
+}
+{
+  message: 'Employee created successfully',
+  userName: 'admin',
+  level: 'info',
+  timestamp: '2023-06-21T02:20:43.333Z'
+}
+{
+  message: 'Employee updated successfully',
+  userName: 'admin',
+  level: 'info',
+  timestamp: '2023-06-21T02:20:43.341Z'
+}
+{
+  message: 'Employee deleted successfully',
+  userName: 'admin',
+  level: 'info',
+  timestamp: '2023-06-21T02:20:43.360Z'
+}
+{
+  message: 'Retrieved employee successfully',
+  userName: 'admin',
+  level: 'info',
+  timestamp: '2023-06-21T02:20:43.372Z'
+}
+{
+  message: 'Created customers successfully',
+  userName: 'admin',
+  level: 'info',
+  timestamp: '2023-06-21T02:20:43.407Z'
+}
+{
+  message: 'Created customers successfully',
+  userName: 'admin',
+  level: 'info',
+  timestamp: '2023-06-21T02:20:43.417Z'
+}
+{
+  message: 'Deleted customers successfully',
+  userName: 'admin',
+  level: 'info',
+  timestamp: '2023-06-21T02:20:43.440Z'
+}
+{
+  message: 'Retrieved customer information successfully',
+  userName: undefined,
+  level: 'info',
+  timestamp: '2023-06-21T02:20:43.461Z'
+}
+{
+  message: 'Login Account successfully',
+  userName: 'testUser',
+  level: 'info',
+  timestamp: '2023-06-21T02:22:22.227Z'
+}
+{
+  message: 'Error: user or password Incorrect',
+  userName: 'notLogin',
+  level: 'error',
+  timestamp: '2023-06-21T02:22:22.242Z'
+}
+{
+  message: 'Error: user or password Incorrect',
+  userName: 'notLogin',
+  level: 'error',
+  timestamp: '2023-06-21T02:22:22.386Z'
+}
+{
+  message: 'Username is already in use',
+  userName: 'registerNew',
+  level: 'error',
+  timestamp: '2023-06-21T02:22:22.540Z'
+}
+{
+  message: 'An error occurred. Please try again later',
+  userName: 'registerNew',
+  level: 'error',
+  timestamp: '2023-06-21T02:22:22.546Z'
+}
+{
+  message: 'An error occurred. Please try again later',
+  userName: 'registerNew',
+  level: 'error',
+  timestamp: '2023-06-21T02:22:22.551Z'
+}
+{
+  message: 'Login Account successfully',
+  userName: 'testUser',
+  level: 'info',
+  timestamp: '2023-06-21T02:25:52.276Z'
+}
+{
+  message: 'Error: user or password Incorrect',
+  userName: 'notLogin',
+  level: 'error',
+  timestamp: '2023-06-21T02:25:52.291Z'
+}
+{
+  message: 'Error: user or password Incorrect',
+  userName: 'notLogin',
+  level: 'error',
+  timestamp: '2023-06-21T02:25:52.436Z'
+}
+{
+  message: 'Username is already in use',
+  userName: 'registerNew',
+  level: 'error',
+  timestamp: '2023-06-21T02:25:52.588Z'
+}
+{
+  message: 'An error occurred. Please try again later',
+  userName: 'registerNew',
+  level: 'error',
+  timestamp: '2023-06-21T02:25:52.594Z'
+}
+{
+  message: 'An error occurred. Please try again later',
+  userName: 'registerNew',
+  level: 'error',
+  timestamp: '2023-06-21T02:25:52.597Z'
+}
+{
+  message: 'Login Account successfully',
+  userName: 'testUser',
+  level: 'info',
+  timestamp: '2023-06-21T02:27:28.876Z'
+}
+{
+  message: 'Error: user or password Incorrect',
+  userName: 'notLogin',
+  level: 'error',
+  timestamp: '2023-06-21T02:27:28.894Z'
+}
+{
+  message: 'Error: user or password Incorrect',
+  userName: 'notLogin',
+  level: 'error',
+  timestamp: '2023-06-21T02:27:29.058Z'
+}
+{
+  message: 'Username is already in use',
+  userName: 'registerNew',
+  level: 'error',
+  timestamp: '2023-06-21T02:27:29.244Z'
+}
+{
+  message: 'An error occurred. Please try again later',
+  userName: 'registerNew',
+  level: 'error',
+  timestamp: '2023-06-21T02:27:29.250Z'
+}
+{
+  message: 'An error occurred. Please try again later',
+  userName: 'registerNew',
+  level: 'error',
+  timestamp: '2023-06-21T02:27:29.257Z'
+}
+{
+  message: 'Login Account successfully',
+  userName: 'testUser',
+  level: 'info',
+  timestamp: '2023-06-21T02:29:43.647Z'
+}
+{
+  message: 'Error: user or password Incorrect',
+  userName: 'notLogin',
+  level: 'error',
+  timestamp: '2023-06-21T02:29:43.661Z'
+}
+{
+  message: 'Error: user or password Incorrect',
+  userName: 'notLogin',
+  level: 'error',
+  timestamp: '2023-06-21T02:29:43.802Z'
+}
+{
+  message: 'Username is already in use',
+  userName: 'registerNew',
+  level: 'error',
+  timestamp: '2023-06-21T02:29:43.960Z'
+}
+{
+  message: 'An error occurred. Please try again later',
+  userName: 'registerNew',
+  level: 'error',
+  timestamp: '2023-06-21T02:29:43.968Z'
+}
+{
+  message: 'An error occurred. Please try again later',
+  userName: 'registerNew',
+  level: 'error',
+  timestamp: '2023-06-21T02:29:43.972Z'
+}
+{
+  message: 'Employee created successfully',
+  userName: 'admin',
+  level: 'info',
+  timestamp: '2023-06-21T02:29:43.990Z'
+}
+{
+  message: 'Employee updated successfully',
+  userName: 'admin',
+  level: 'info',
+  timestamp: '2023-06-21T02:29:44.006Z'
+}
+{
+  message: 'Employee deleted successfully',
+  userName: 'admin',
+  level: 'info',
+  timestamp: '2023-06-21T02:29:44.025Z'
+}
+{
+  message: 'Retrieved employee successfully',
+  userName: 'admin',
+  level: 'info',
+  timestamp: '2023-06-21T02:29:44.043Z'
+}
+{
+  message: 'Created customers successfully',
+  userName: 'admin',
+  level: 'info',
+  timestamp: '2023-06-21T02:29:44.082Z'
+}
+{
+  message: 'Created customers successfully',
+  userName: 'admin',
+  level: 'info',
+  timestamp: '2023-06-21T02:29:44.090Z'
+}
+{
+  message: 'Deleted customers successfully',
+  userName: 'admin',
+  level: 'info',
+  timestamp: '2023-06-21T02:29:44.116Z'
+}
+{
+  message: 'Retrieved customer information successfully',
+  userName: undefined,
+  level: 'info',
+  timestamp: '2023-06-21T02:29:44.145Z'
+}
+{
+  message: 'Login Account successfully',
+  userName: 'testUser',
+  level: 'info',
+  timestamp: '2023-06-21T02:37:14.608Z'
+}
+{
+  message: 'Error: user or password Incorrect',
+  userName: 'notLogin',
+  level: 'error',
+  timestamp: '2023-06-21T02:37:14.630Z'
+}
+{
+  message: 'Error: user or password Incorrect',
+  userName: 'notLogin',
+  level: 'error',
+  timestamp: '2023-06-21T02:37:14.878Z'
+}
+{
+  message: 'Username is already in use',
+  userName: 'registerNew',
+  level: 'error',
+  timestamp: '2023-06-21T02:37:15.266Z'
+}
+{
+  message: 'An error occurred. Please try again later',
+  userName: 'registerNew',
+  level: 'error',
+  timestamp: '2023-06-21T02:37:15.300Z'
+}
+{
+  message: 'An error occurred. Please try again later',
+  userName: 'registerNew',
+  level: 'error',
+  timestamp: '2023-06-21T02:37:15.340Z'
+}
+{
+  message: 'Created customers successfully',
+  userName: 'admin',
+  level: 'info',
+  timestamp: '2023-06-21T02:37:15.683Z'
+}
+{
+  message: 'Created customers successfully',
+  userName: 'admin',
+  level: 'info',
+  timestamp: '2023-06-21T02:37:15.692Z'
+}
+{
+  message: 'Deleted customers successfully',
+  userName: 'admin',
+  level: 'info',
+  timestamp: '2023-06-21T02:37:15.718Z'
+}
+{
+  message: 'Retrieved customer information successfully',
+  userName: undefined,
+  level: 'info',
+  timestamp: '2023-06-21T02:37:15.745Z'
+}
+{
+  message: 'Error: user or password Incorrect',
+  userName: 'notLogin',
+  level: 'error',
+  timestamp: '2023-06-21T02:42:39.073Z'
+}
+{
+  message: 'Error: user or password Incorrect',
+  userName: 'notLogin',
+  level: 'error',
+  timestamp: '2023-06-21T02:42:39.227Z'
+}
+{
+  message: 'Username is already in use',
+  userName: 'registerNew',
+  level: 'error',
+  timestamp: '2023-06-21T02:42:39.393Z'
+}
+{
+  message: 'An error occurred. Please try again later',
+  userName: 'registerNew',
+  level: 'error',
+  timestamp: '2023-06-21T02:42:39.398Z'
+}
+{
+  message: 'An error occurred. Please try again later',
+  userName: 'registerNew',
+  level: 'error',
+  timestamp: '2023-06-21T02:42:39.403Z'
+}
+{
+  message: 'Error: user or password Incorrect',
+  userName: 'notLogin',
+  level: 'error',
+  timestamp: '2023-06-21T02:43:33.622Z'
+}
+{
+  message: 'Error: user or password Incorrect',
+  userName: 'notLogin',
+  level: 'error',
+  timestamp: '2023-06-21T02:43:33.783Z'
+}
+{
+  message: 'Username is already in use',
+  userName: 'registerNew',
+  level: 'error',
+  timestamp: '2023-06-21T02:43:33.937Z'
+}
+{
+  message: 'An error occurred. Please try again later',
+  userName: 'registerNew',
+  level: 'error',
+  timestamp: '2023-06-21T02:43:33.945Z'
+}
+{
+  message: 'An error occurred. Please try again later',
+  userName: 'registerNew',
+  level: 'error',
+  timestamp: '2023-06-21T02:43:33.953Z'
+}
+{
+  message: 'Error: user or password Incorrect',
+  userName: 'notLogin',
+  level: 'error',
+  timestamp: '2023-06-21T02:46:04.742Z'
+}
+{
+  message: 'Error: user or password Incorrect',
+  userName: 'notLogin',
+  level: 'error',
+  timestamp: '2023-06-21T02:46:04.947Z'
+}
+{
+  message: 'Username is already in use',
+  userName: 'registerNew',
+  level: 'error',
+  timestamp: '2023-06-21T02:46:05.146Z'
+}
+{
+  message: 'An error occurred. Please try again later',
+  userName: 'registerNew',
+  level: 'error',
+  timestamp: '2023-06-21T02:46:05.156Z'
+}
+{
+  message: 'An error occurred. Please try again later',
+  userName: 'registerNew',
+  level: 'error',
+  timestamp: '2023-06-21T02:46:05.161Z'
+}

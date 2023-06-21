@@ -6,9 +6,15 @@ const bcrypt = require('bcrypt');
 const { login, register } = require('../app/controllers/userController');
 const User = require('../app/models/userModel');
 const { expect } = chai;
+const logger = require('../app/database/winstonConfig');
 
 describe('Auth Controller', () => {
+  let loggerInfoStub;
+  beforeEach(() => {
+    loggerInfoStub = sinon.stub(logger, 'info');
+  });
   afterEach(() => {
+    loggerInfoStub.restore();
     sinon.restore();
   });
 
