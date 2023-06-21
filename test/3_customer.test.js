@@ -74,22 +74,22 @@ describe('Customer Controller', () => {
     });
 
     it('should retrieve customers for staff members', async () => {
-      const findAllStub = sinon.stub(Customer, 'findAll').resolves(['customer1', 'customer2']);
-
+      findAllStub.resolves(['customer1', 'customer2']);
+    
       const req = {
         userData: {
           role: 'staff',
-          employeeNumber:1
-        }
+          employeeNumber: 1,
+        },
       };
       const res = {
         status: sinon.stub().returnsThis(),
         json: sinon.stub(),
       };
       const next = sinon.stub();
-
+    
       await getCustomers(req, res, next);
-
+    
       expect(findAllStub.calledOnce).to.be.true;
       expect(findAllStub.firstCall.args[0].where).to.deep.equal({
         salesRepEmployeeNumber: req.userData.employeeNumber,
@@ -99,11 +99,9 @@ describe('Customer Controller', () => {
         message: 'Retrieved customers successfully',
         data: ['customer1', 'customer2'],
       })).to.be.true;
-
-      findAllStub.restore();
     });
-
-
+    
+    
   });
 
   describe('createCustomer', () => {

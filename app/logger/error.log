@@ -4433,3 +4433,93 @@
   level: 'error',
   timestamp: '2023-06-21T02:46:05.161Z'
 }
+{
+  message: 'Error: user or password Incorrect',
+  userName: 'notLogin',
+  level: 'error',
+  timestamp: '2023-06-21T02:55:13.049Z'
+}
+{
+  message: 'Error: user or password Incorrect',
+  userName: 'notLogin',
+  level: 'error',
+  timestamp: '2023-06-21T02:55:13.220Z'
+}
+{
+  message: 'Username is already in use',
+  userName: 'registerNew',
+  level: 'error',
+  timestamp: '2023-06-21T02:55:13.376Z'
+}
+{
+  message: 'An error occurred. Please try again later',
+  userName: 'registerNew',
+  level: 'error',
+  timestamp: '2023-06-21T02:55:13.380Z'
+}
+{
+  message: 'An error occurred. Please try again later',
+  userName: 'registerNew',
+  level: 'error',
+  timestamp: '2023-06-21T02:55:13.384Z'
+}
+{
+  message: 'Error: user or password Incorrect',
+  userName: 'notLogin',
+  level: 'error',
+  timestamp: '2023-06-21T03:00:34.033Z'
+}
+{
+  message: 'Error: user or password Incorrect',
+  userName: 'notLogin',
+  level: 'error',
+  timestamp: '2023-06-21T03:00:34.189Z'
+}
+{
+  message: 'Username is already in use',
+  userName: 'registerNew',
+  level: 'error',
+  timestamp: '2023-06-21T03:00:34.372Z'
+}
+{
+  message: 'An error occurred. Please try again later',
+  userName: 'registerNew',
+  level: 'error',
+  timestamp: '2023-06-21T03:00:34.379Z'
+}
+{
+  message: 'An error occurred. Please try again later',
+  userName: 'registerNew',
+  level: 'error',
+  timestamp: '2023-06-21T03:00:34.385Z'
+}
+{
+  message: 'Error: user or password Incorrect',
+  userName: 'notLogin',
+  level: 'error',
+  timestamp: '2023-06-21T03:01:11.613Z'
+}
+{
+  message: 'Error: user or password Incorrect',
+  userName: 'notLogin',
+  level: 'error',
+  timestamp: '2023-06-21T03:01:11.763Z'
+}
+{
+  message: 'Username is already in use',
+  userName: 'registerNew',
+  level: 'error',
+  timestamp: '2023-06-21T03:01:11.941Z'
+}
+{
+  message: 'An error occurred. Please try again later',
+  userName: 'registerNew',
+  level: 'error',
+  timestamp: '2023-06-21T03:01:11.946Z'
+}
+{
+  message: 'An error occurred. Please try again later',
+  userName: 'registerNew',
+  level: 'error',
+  timestamp: '2023-06-21T03:01:11.950Z'
+}

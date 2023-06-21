@@ -12,6 +12,11 @@
     "lint:fix": "eslint ./app --ext .js --fix",
     "prettierrc": "npx prettier --write \"src/**/*.js\""
   },
+  "nyc":{ 
+    "exclude": [
+      "app/database"
+    ]
+  },
   "author": "AlightVn",
   "license": "ISC",
   "dependencies": {
